@@ -6,5 +6,5 @@ render(
   <WindowInnerWidthContextProvider>
     <App />
   </WindowInnerWidthContextProvider>,
-  document.getElementById("app")!
+  document.getElementById("root")!
 );
