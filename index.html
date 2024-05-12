@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/styling.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preact Styling</title>
+  </head>
+  <style>
+    :root {
+      --background-color: #242427;
+      --color: #d4d4d4;
+      /* --color: #545454; */
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      background-color: var(--background-color);
+      color-scheme: light dark;
+      color: var(--color);
+      font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-synthesis: none;
+      font-weight: 400;
+      line-height: 1.25;
+      scroll-behavior: smooth;
+      text-rendering: optimizeLegibility;
+      transition: background-color 2000ms ease-in-out, color 2000ms ease-in-out;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --background-color: #d7d4d4;
+        --color: #212127;
+      }
+    }
+  </style>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
