@@ -22,7 +22,7 @@ export function Root() {
       <Sidebar>{["root", "what", "how", "why", "..."]}</Sidebar>
       <Container>
         <Box>
-          <PageHeading>Preact styling</PageHeading>
+          <PageHeading>React styling</PageHeading>
         </Box>
         <section id="what">
           <Box>
