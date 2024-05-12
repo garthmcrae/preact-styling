@@ -138,6 +138,13 @@ const myStyles: CSSProperties = {
 };
             `}</Code>
           </Box>
+          <Box>
+            <Paragraph first last>
+              Consistent sort orders make it easier for compression. Editors
+              have formatting to sort selections in ascending order which makes
+              this low effort.
+            </Paragraph>
+          </Box>
         </section>
       </Container>
     </>
