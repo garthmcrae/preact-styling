@@ -27,7 +27,7 @@ export const Sidebar = ({ children }: { children: string[] }) => {
     right: "calc(100% + 18px)",
     textAlign: "center",
     textDecoration: "none",
-    top: 24,
+    top: 160,
     transition: "background-color 2000ms ease-in-out",
   };
   const label: CSSProperties = {
