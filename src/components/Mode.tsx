@@ -37,7 +37,7 @@ export const Mode = () => {
         padding: 16,
         position: "static",
         transition: "background-color 2000ms ease-in-out",
-        width: 240,
+        width: "max-content",
       },
       960: {
         bottom: 16,

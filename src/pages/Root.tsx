@@ -126,13 +126,13 @@ export function Root() {
           <Box>
             <Code>{`
 // DO THIS
-const myElement: CSSProperties = {
+const elementStyles: CSSProperties = {
   padding: 16,
 };
 
 // NOT THIS
-const myStyles: CSSProperties = {
-  myElement: {
+const styles: CSSProperties = {
+  elementStyles: {
     padding: 16,
   },
 };

@@ -20,7 +20,7 @@ export const Footer = () => {
       <footer style={footer}>
         <Container>
           <Box>
-            <p style={paragraph}>React styling</p>
+            <p style={paragraph}>Built using Vite and Preact</p>
           </Box>
         </Container>
       </footer>

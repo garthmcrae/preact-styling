@@ -24,7 +24,7 @@ export const Sidebar = ({ children }: { children: string[] }) => {
     paddingRight: 16,
     paddingTop: 8,
     position: "absolute",
-    right: "calc(100% + 18px)",
+    right: "calc(100% + 16px)",
     textAlign: "center",
     textDecoration: "none",
     top: 160,
