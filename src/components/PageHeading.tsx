@@ -11,6 +11,7 @@ export const PageHeading = ({ children }: { children: ReactNode }) => {
         lineHeight: 1,
         marginBottom: ".2em",
         marginTop: "0",
+        whiteSpace: "nowrap",
       },
       960: {
         fontSize: 230,
