@@ -8,6 +8,9 @@ import { Heading } from "../components/Heading";
 import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 import { Sidebar } from "../components/Sidebar";
+import { useWindowLocationPathnameLink } from "../hooks/useWindowLocationPathnameLink";
+
+import { button } from "../styles";
 
 import atMediaMinWidthString from "../utilities/atMediaMinWidth.ts?raw";
 import headingString from "../components/Heading.tsx?raw";
@@ -15,6 +18,7 @@ import useWindowInnerWidthString from "../hooks/useWindowInnerWidth.ts?raw";
 import windowInnerWidthContextString from "../contexts/WindowInnerWidthContext.tsx?raw";
 
 export function Root() {
+  const handleWindowLocationPathname = useWindowLocationPathnameLink();
   const [more, setMore] = useState<boolean>(false);
   const handleMore = () => setMore((prevMore) => !prevMore);
   return (
@@ -24,6 +28,16 @@ export function Root() {
         <Box>
           <PageHeading>React styling</PageHeading>
         </Box>
+        {/* <Box>
+          <button
+            style={button}
+            onClick={() => {
+              handleWindowLocationPathname("/components");
+            }}
+          >
+            /components
+          </button>
+        </Box> */}
         <section id="what">
           <Box>
             <Heading>What</Heading>
@@ -35,7 +49,7 @@ export function Root() {
             </Paragraph>
           </Box>
           <Box>
-            <ExpandButton expand={more} onClick={handleMore} />
+            <ExpandButton onClick={handleMore}>Caveats</ExpandButton>
           </Box>
           <Expand expand={more}>
             <Box>
@@ -57,8 +71,7 @@ export function Root() {
           </Box>
           <Box>
             <Paragraph first last>
-              Firstly we use a context to provide the window's inner width to
-              components.
+              A context provides the window's inner width to components.
             </Paragraph>
           </Box>
           <Box>

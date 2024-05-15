@@ -1,10 +1,13 @@
 import { render } from "preact";
 import { App } from "./App.tsx";
 import { WindowInnerWidthContextProvider } from "./contexts/WindowInnerWidthContext";
+import { WindowLocationPathnameContextProvider } from "./contexts/WindowLocationPathnameContext";
 
 render(
-  <WindowInnerWidthContextProvider>
-    <App />
-  </WindowInnerWidthContextProvider>,
+  <WindowLocationPathnameContextProvider>
+    <WindowInnerWidthContextProvider>
+      <App />
+    </WindowInnerWidthContextProvider>
+  </WindowLocationPathnameContextProvider>,
   document.getElementById("root")!
 );

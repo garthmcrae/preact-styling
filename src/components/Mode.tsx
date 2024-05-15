@@ -1,33 +1,11 @@
-import { CSSProperties, useState } from "react";
+import { useState } from "react";
+import { border, button, label } from "../styles";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 
 export const Mode = () => {
   const innerWidth = useWindowInnerWidth();
   const [mode, setMode] = useState("dark");
-  const border: CSSProperties = {
-    borderColor: "currentcolor",
-    borderRadius: 0,
-    borderStyle: "solid",
-    borderWidth: 2,
-  };
-  const button: CSSProperties = {
-    backgroundColor: "var(--background-color)",
-    ...border,
-    boxSizing: "border-box",
-    color: "inherit",
-    display: "block",
-    fontSize: 32,
-    lineHeight: 1,
-    minWidth: 66,
-    paddingBottom: 16,
-    paddingLeft: 16,
-    paddingRight: 16,
-    paddingTop: 8,
-    textAlign: "center",
-    textDecoration: "none",
-    transition: "background-color 2000ms ease-in-out",
-  };
   const control = atMediaMinWidth(
     {
       0: {
@@ -50,11 +28,6 @@ export const Mode = () => {
     },
     innerWidth
   );
-  const label: CSSProperties = {
-    fontSize: 12,
-    marginBottom: 16,
-    marginTop: 0,
-  };
 
   const handleMode = () => {
     if (mode === "dark") {

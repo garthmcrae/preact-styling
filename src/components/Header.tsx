@@ -1,32 +1,15 @@
 import { CSSProperties } from "react";
+import { label, link, listReset } from "../styles";
 import { Container } from "./Container";
+import { useWindowLocationPathnameLink } from "../hooks/useWindowLocationPathnameLink";
 
 export const Header = () => {
-  const label: CSSProperties = {
-    fontSize: 12,
-    marginBottom: 16,
-    marginTop: 0,
-  };
-  const link: CSSProperties = {
-    borderColor: "currentcolor",
-    borderRadius: 0,
-    borderStyle: "solid",
-    borderWidth: 2,
-    color: "inherit",
-    display: "block",
-    fontSize: 32,
-    paddingBottom: 16,
-    paddingLeft: 16,
-    paddingRight: 16,
-    paddingTop: 8,
-    textDecoration: "none",
-  };
+  const handleWindowLocationPathname = useWindowLocationPathnameLink();
   const list: CSSProperties = {
     display: "flex",
+    flexWrap: "wrap",
     gap: 16,
-    listStyle: "none",
-    margin: 0,
-    padding: 0,
+    ...listReset,
   };
   const nav: CSSProperties = {
     padding: 16,
@@ -40,8 +23,22 @@ export const Header = () => {
           </h2>
           <ul style={list}>
             <li>
-              <a style={link} href="/">
+              <a style={link} href="#main">
+                #main
+              </a>
+            </li>
+            <li>
+              <a style={link} href="/" onClick={handleWindowLocationPathname}>
                 /
+              </a>
+            </li>
+            <li>
+              <a
+                style={link}
+                href="/components"
+                onClick={handleWindowLocationPathname}
+              >
+                /components
               </a>
             </li>
           </ul>

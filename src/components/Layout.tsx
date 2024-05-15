@@ -9,12 +9,13 @@ export const Layout = ({ children }: { children: ReactNode }) => {
     justifyContent: "flex-start",
     lineHeight: 1,
     minHeight: "100vh",
+    overflowX: "hidden",
   };
 
   return (
     <div style={layout}>
       <Header />
-      <main>{children}</main>
+      <main id="main">{children}</main>
       <Footer />
     </div>
   );
