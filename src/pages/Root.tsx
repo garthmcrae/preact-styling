@@ -8,9 +8,6 @@ import { Heading } from "../components/Heading";
 import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 import { Sidebar } from "../components/Sidebar";
-import { useWindowLocationPathnameLink } from "../hooks/useWindowLocationPathnameLink";
-
-import { button } from "../styles";
 
 import atMediaMinWidthString from "../utilities/atMediaMinWidth.ts?raw";
 import headingString from "../components/Heading.tsx?raw";
@@ -18,7 +15,6 @@ import useWindowInnerWidthString from "../hooks/useWindowInnerWidth.ts?raw";
 import windowInnerWidthContextString from "../contexts/WindowInnerWidthContext.tsx?raw";
 
 export function Root() {
-  const handleWindowLocationPathname = useWindowLocationPathnameLink();
   const [more, setMore] = useState<boolean>(false);
   const handleMore = () => setMore((prevMore) => !prevMore);
   return (
