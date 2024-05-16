@@ -45,7 +45,7 @@ export function Root() {
             </Paragraph>
           </Box>
           <Box>
-            <ExpandButton onClick={handleMore}>Caveats</ExpandButton>
+            <ExpandButton onClick={handleMore}>caveats</ExpandButton>
           </Box>
           <Expand expand={more}>
             <Box>

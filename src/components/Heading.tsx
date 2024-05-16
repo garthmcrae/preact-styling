@@ -14,12 +14,12 @@ export const Heading = ({
   const headingStyles = atMediaMinWidth(
     {
       0: {
-        fontSize: 64,
+        fontSize: 32,
         lineHeight: 1,
         margin: 0,
       },
       960: {
-        fontSize: 128,
+        fontSize: 64,
       },
     },
     innerWidth

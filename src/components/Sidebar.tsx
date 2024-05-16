@@ -68,7 +68,16 @@ export const Sidebar = ({ children }: { children: string[] }) => {
         {children.map((child) => (
           <li key={child}>
             <a style={link} href={`#${child}`}>
-              #{child}
+              <span
+                style={{
+                  display: "inline-block",
+                  marginRight: "0.25em",
+                  transform: "translateY(0.05em)",
+                }}
+              >
+                #
+              </span>
+              {child}
             </a>
           </li>
         ))}

@@ -1,5 +1,4 @@
 import { CSSProperties, ReactNode } from "react";
-import { border } from "../styles";
 
 export const ExpandButton = ({
   children,
@@ -10,22 +9,23 @@ export const ExpandButton = ({
 }) => {
   const button: CSSProperties = {
     backgroundColor: "var(--background-color)",
-    ...border,
-    borderWidth: 2,
-    boxSizing: "border-box",
+    borderColor: "currentcolor",
+    borderRadius: 0,
+    borderStyle: "solid",
+    borderWidth: 1,
     color: "inherit",
     cursor: "pointer",
     display: "block",
-    fontSize: 32,
+    fontSize: 16,
     lineHeight: 1,
-    paddingBottom: 16,
-    paddingLeft: 16,
-    paddingRight: 16,
-    paddingTop: 8,
-    textAlign: "left",
+    paddingBottom: 8,
+    paddingLeft: 8,
+    paddingRight: 8,
+    paddingTop: 4,
+    textDecoration: "none",
     transition:
       "background-color 2000ms ease-in-out, padding 100ms ease-in-out",
-    width: "100%",
+    width: "max-content",
   };
   return (
     <button style={button} aria-label="Toggle expand" onClick={onClick}>

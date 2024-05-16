@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { border, button, label } from "../styles";
+import { CSSProperties, useState } from "react";
+import { border, button, label, listReset } from "../styles";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 
@@ -28,7 +28,12 @@ export const Mode = () => {
     },
     innerWidth
   );
-
+  const list: CSSProperties = {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: 16,
+    ...listReset,
+  };
   const handleMode = () => {
     if (mode === "dark") {
       setMode("light");
@@ -50,9 +55,18 @@ export const Mode = () => {
   return (
     <div style={control}>
       <h2 style={label}>Modes</h2>
-      <button style={button} aria-label="Toggle" onClick={handleMode}>
-        Light and dark
-      </button>
+      <ul style={list}>
+        <li>
+          <button style={button} aria-label="Toggle" onClick={handleMode}>
+            light
+          </button>
+        </li>
+        <li>
+          <button style={button} aria-label="Toggle" onClick={handleMode}>
+            dark
+          </button>
+        </li>
+      </ul>
     </div>
   );
 };

@@ -44,11 +44,13 @@ export const label: CSSProperties = {
 
 export const link: CSSProperties = {
     ...border,
+    boxSizing: "border-box",
     color: "inherit",
     cursor: "pointer",
     display: "block",
     fontSize: 32,
     lineHeight: 1,
+    minWidth: 48,
     ...padding,
     textDecoration: "none",
 };

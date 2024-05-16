@@ -7,14 +7,13 @@ export const PageHeading = ({ children }: { children: ReactNode }) => {
   const pageHeadingStyles = atMediaMinWidth(
     {
       0: {
-        fontSize: "24vw",
+        fontSize: 48,
         lineHeight: 1,
         marginBottom: ".2em",
         marginTop: "0",
-        whiteSpace: "nowrap",
       },
       960: {
-        fontSize: 230,
+        fontSize: 96,
       },
     },
     innerWidth
