@@ -9,7 +9,7 @@ export const Banner = ({ children }: { children: ReactNode }) => {
     setToggleBanner((prevToggleBanner) => !prevToggleBanner);
 
   const banner: CSSProperties = {
-    alignItems: "center",
+    alignItems: "flex-start",
     borderColor: "currentcolor",
     borderRadius: 0,
     borderStyle: "solid",
@@ -17,11 +17,13 @@ export const Banner = ({ children }: { children: ReactNode }) => {
     display: "flex",
     justifyContent: "space-between",
   };
-
   const content: CSSProperties = {
     fontSize: 24,
-    lineHeight: 1,
+    lineHeight: 1.25,
     margin: 0,
+    padding: 16,
+  };
+  const close: CSSProperties = {
     padding: 16,
   };
 
@@ -30,9 +32,9 @@ export const Banner = ({ children }: { children: ReactNode }) => {
       <Box>
         <div style={banner}>
           <p style={content}>{children}</p>
-          <Box>
+          <div style={close}>
             <ExpandButton onClick={handleToggleBanner}>x</ExpandButton>
-          </Box>
+          </div>
         </div>
       </Box>
     </Expand>

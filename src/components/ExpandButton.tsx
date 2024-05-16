@@ -18,6 +18,7 @@ export const ExpandButton = ({
     display: "block",
     fontSize: 16,
     lineHeight: 1,
+    minWidth: 28,
     paddingBottom: 8,
     paddingLeft: 8,
     paddingRight: 8,
