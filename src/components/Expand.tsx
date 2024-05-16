@@ -9,8 +9,8 @@ export const Expand = ({
   duration?: number;
   expand: boolean;
 }) => {
-  const [height, setHeight] = useState(0);
   const ref = useRef<HTMLDivElement | null>(null);
+  const [height, setHeight] = useState(expand ? "unset" : 0);
 
   useEffect(() => {
     if (ref.current) {

@@ -1,9 +1,9 @@
-import { useWindowLocationPathname } from "../hooks/useWindowLocationPathname";
+import { useWindowLocationPathname } from "./useWindowLocationPathname";
 
-export const useWindowLocationPathnameLink = () => {
+export const useGoToPathname = () => {
   const [, setState] = useWindowLocationPathname();
 
-  const handleClick = (argument: MouseEvent | string) => {
+  const goToPathname = (argument: MouseEvent | string) => {
     if (typeof argument === 'string' || argument instanceof String) {
       window.history.pushState({}, "", argument as string);
       setState(argument);
@@ -20,5 +20,5 @@ export const useWindowLocationPathnameLink = () => {
     return;
   };
 
-  return handleClick;
+  return goToPathname;
 };

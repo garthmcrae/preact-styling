@@ -1,10 +1,10 @@
 import { CSSProperties } from "react";
 import { label, link, listReset } from "../styles";
 import { Container } from "./Container";
-import { useWindowLocationPathnameLink } from "../hooks/useWindowLocationPathnameLink";
+import { useGoToPathname } from "../hooks/useGoToPathname";
 
 export const Header = () => {
-  const handleWindowLocationPathname = useWindowLocationPathnameLink();
+  const goToPathname = useGoToPathname();
   const list: CSSProperties = {
     display: "flex",
     flexWrap: "wrap",
@@ -57,17 +57,13 @@ export const Header = () => {
                 <a
                   style={{ ...link, textAlign: "center" }}
                   href="/"
-                  onClick={handleWindowLocationPathname}
+                  onClick={goToPathname}
                 >
                   /
                 </a>
               </li>
               <li>
-                <a
-                  style={link}
-                  href="/components"
-                  onClick={handleWindowLocationPathname}
-                >
+                <a style={link} href="/components" onClick={goToPathname}>
                   <span
                     style={{
                       display: "inline-block",

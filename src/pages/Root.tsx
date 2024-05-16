@@ -1,9 +1,7 @@
-import { useState } from "react";
+import { Banner } from "../components/Banner";
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
-import { Expand } from "../components/Expand";
-import { ExpandButton } from "../components/ExpandButton";
 import { Heading } from "../components/Heading";
 import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
@@ -15,8 +13,6 @@ import useWindowInnerWidthString from "../hooks/useWindowInnerWidth.ts?raw";
 import windowInnerWidthContextString from "../contexts/WindowInnerWidthContext.tsx?raw";
 
 export function Root() {
-  const [more, setMore] = useState<boolean>(false);
-  const handleMore = () => setMore((prevMore) => !prevMore);
   return (
     <>
       <Sidebar>{["root", "what", "how", "why", "..."]}</Sidebar>
@@ -24,6 +20,7 @@ export function Root() {
         <Box>
           <PageHeading>React styling</PageHeading>
         </Box>
+        <Banner>This is a work in progress.</Banner>
         {/* <Box>
           <button
             style={button}
@@ -39,27 +36,20 @@ export function Root() {
             <Heading>What</Heading>
           </Box>
           <Box>
-            <Paragraph first last>
+            <Paragraph first>
               This exercise explores achievable styling in React without using
               CSS in JS libraries.
             </Paragraph>
+            <Paragraph last>
+              The style property has limitations, including media queries,
+              access to pseudo classes, and targeting pseudo or descendant
+              elements. However, when working in TSX, we can apply styles to any
+              required nodes, making descendant elements less of an issue.
+              Pseudo classes are generally handled by browser defaults, and
+              modifying or removing them can negatively impact accessibility.
+              Our focus then remains on solving media queries.
+            </Paragraph>
           </Box>
-          <Box>
-            <ExpandButton onClick={handleMore}>caveats</ExpandButton>
-          </Box>
-          <Expand expand={more}>
-            <Box>
-              <Paragraph first last>
-                The style property has limitations, including media queries,
-                access to pseudo classes, and targeting pseudo or descendant
-                elements. However, when working in TSX, we can apply styles to
-                any required nodes, making descendant elements less of an issue.
-                Pseudo classes are generally handled by browser defaults, and
-                modifying or removing them can negatively impact accessibility.
-                Our focus then remains on solving media queries.
-              </Paragraph>
-            </Box>
-          </Expand>
         </section>
         <section id="how">
           <Box>
