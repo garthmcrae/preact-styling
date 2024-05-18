@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { label, link, listReset } from "../styles";
+import { border, hash, label, link, listReset } from "../styles";
 import { Container } from "./Container";
 import { useGoToPathname } from "../hooks/useGoToPathname";
 
@@ -15,20 +15,18 @@ export const Header = () => {
     padding: 16,
   };
   const skip: CSSProperties = {
-    borderColor: "currentcolor",
-    borderRadius: 0,
-    borderStyle: "solid",
-    borderWidth: 1,
+    ...border,
     color: "inherit",
     cursor: "pointer",
     display: "block",
     fontSize: 16,
+    fontWeight: 500,
     lineHeight: 1,
     marginBottom: 16,
-    paddingBottom: 8,
-    paddingLeft: 8,
-    paddingRight: 8,
-    paddingTop: 4,
+    paddingBottom: 5,
+    paddingLeft: 6,
+    paddingRight: 6,
+    paddingTop: 3,
     textDecoration: "none",
     width: "max-content",
   };
@@ -38,15 +36,7 @@ export const Header = () => {
         <Container>
           <nav style={nav} aria-describedby="nav-heading">
             <a style={skip} href="#content">
-              <span
-                style={{
-                  display: "inline-block",
-                  marginRight: "0.25em",
-                  transform: "translateY(0.05em)",
-                }}
-              >
-                #
-              </span>
+              <span style={hash}>#</span>
               content
             </a>
             <h2 style={label} id="nav-heading">
@@ -63,6 +53,32 @@ export const Header = () => {
                 </a>
               </li>
               <li>
+                <a style={link} href="/routing" onClick={goToPathname}>
+                  <span
+                    style={{
+                      display: "inline-block",
+                      marginRight: "0.25em",
+                    }}
+                  >
+                    /
+                  </span>
+                  routing
+                </a>
+              </li>
+              <li>
+                <a style={link} href="/styling" onClick={goToPathname}>
+                  <span
+                    style={{
+                      display: "inline-block",
+                      marginRight: "0.25em",
+                    }}
+                  >
+                    /
+                  </span>
+                  styling
+                </a>
+              </li>
+              <li>
                 <a style={link} href="/components" onClick={goToPathname}>
                   <span
                     style={{
@@ -73,6 +89,32 @@ export const Header = () => {
                     /
                   </span>
                   components
+                </a>
+              </li>
+              <li>
+                <a style={link} href="/observations" onClick={goToPathname}>
+                  <span
+                    style={{
+                      display: "inline-block",
+                      marginRight: "0.25em",
+                    }}
+                  >
+                    /
+                  </span>
+                  observations
+                </a>
+              </li>
+              <li>
+                <a style={link} href="/references" onClick={goToPathname}>
+                  <span
+                    style={{
+                      display: "inline-block",
+                      marginRight: "0.25em",
+                    }}
+                  >
+                    /
+                  </span>
+                  references
                 </a>
               </li>
             </ul>

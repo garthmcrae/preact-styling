@@ -2,12 +2,12 @@ import { Box } from "../components/Box";
 import { Container } from "../components/Container";
 import { PageHeading } from "../components/PageHeading";
 
-export function Components() {
+export function Routing() {
   return (
     <>
       <Container>
         <Box>
-          <PageHeading>Components</PageHeading>
+          <PageHeading>Routing</PageHeading>
         </Box>
       </Container>
     </>

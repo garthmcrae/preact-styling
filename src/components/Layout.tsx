@@ -9,7 +9,6 @@ export const Layout = ({ children }: { children: ReactNode }) => {
     justifyContent: "flex-start",
     lineHeight: 1,
     minHeight: "100vh",
-    overflowX: "hidden",
   };
 
   return (

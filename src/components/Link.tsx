@@ -1,5 +1,6 @@
-import { CSSProperties, ReactNode } from "react";
-import { useWindowLocationPathname } from "../hooks/useWindowLocationPathname";
+import { ReactNode } from "react";
+import { link } from "../styles";
+import { useGoToPathname } from "../hooks/useGoToPathname";
 
 export const Link = ({
   children,
@@ -8,24 +9,10 @@ export const Link = ({
   children: ReactNode;
   pathname: string;
 }) => {
-  const [, setState] = useWindowLocationPathname();
-  const link: CSSProperties = {
-    cursor: "pointer",
-  };
-  const handleClick = (argument: MouseEvent) => {
-    const element = argument.target as HTMLAnchorElement;
-    if (element.tagName === "A") {
-      argument.preventDefault();
-      const pathname = element.getAttribute("href");
-      window.history.pushState({}, "", pathname);
-      setState(pathname);
-      return;
-    }
-    return;
-  };
+  const goToPathname = useGoToPathname();
 
   return (
-    <a style={link} href={pathname} onClick={handleClick}>
+    <a style={link} href={pathname} onClick={goToPathname}>
       {children}
     </a>
   );

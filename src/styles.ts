@@ -14,10 +14,10 @@ export const listReset: CSSProperties = {
 }
 
 export const padding = {
-    paddingBottom: 16,
-    paddingLeft: 16,
-    paddingRight: 16,
-    paddingTop: 8,
+    paddingBottom: 14,
+    paddingLeft: 14,
+    paddingRight: 14,
+    paddingTop: 6,
 }
 
 export const button: CSSProperties = {
@@ -34,6 +34,12 @@ export const button: CSSProperties = {
     ...padding,
     textAlign: "center",
     transition: "background-color 2000ms ease-in-out",
+};
+
+export const hash: CSSProperties = {
+    display: "inline-block",
+    marginRight: "0.25em",
+    transform: "translateY(0.0625em)",
 };
 
 export const label: CSSProperties = {

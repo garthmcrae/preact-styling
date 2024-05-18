@@ -1,5 +1,5 @@
 import { CSSProperties, useEffect, useState } from "react";
-import { border, button, label, link, listReset } from "../styles";
+import { border, button, hash, label, link, listReset } from "../styles";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 
@@ -68,15 +68,7 @@ export const Sidebar = ({ children }: { children: string[] }) => {
         {children.map((child) => (
           <li key={child}>
             <a style={link} href={`#${child}`}>
-              <span
-                style={{
-                  display: "inline-block",
-                  marginRight: "0.25em",
-                  transform: "translateY(0.05em)",
-                }}
-              >
-                #
-              </span>
+              <span style={hash}>#</span>
               {child}
             </a>
           </li>

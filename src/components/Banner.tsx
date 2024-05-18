@@ -1,7 +1,7 @@
 import { CSSProperties, ReactNode, useState } from "react";
 import { Box } from "../components/Box";
 import { Expand } from "../components/Expand";
-import { ExpandButton } from "../components/ExpandButton";
+import { border, padding } from "../styles";
 
 export const Banner = ({ children }: { children: ReactNode }) => {
   const [toggleBanner, setToggleBanner] = useState<boolean>(true);
@@ -10,18 +10,35 @@ export const Banner = ({ children }: { children: ReactNode }) => {
 
   const banner: CSSProperties = {
     alignItems: "flex-start",
-    borderColor: "currentcolor",
-    borderRadius: 0,
-    borderStyle: "solid",
-    borderWidth: 1,
+    ...border,
     display: "flex",
     justifyContent: "space-between",
   };
+  const button: CSSProperties = {
+    appearance: "none",
+    backgroundColor: "var(--background-color)",
+    ...border,
+    color: "inherit",
+    cursor: "pointer",
+    display: "block",
+    fontSize: 16,
+    fontWeight: 700,
+    lineHeight: 1,
+    minWidth: 28,
+    paddingBottom: 5,
+    paddingLeft: 6,
+    paddingRight: 6,
+    paddingTop: 3,
+    textDecoration: "none",
+    transition:
+      "background-color 2000ms ease-in-out, padding 100ms ease-in-out",
+    width: "max-content",
+  };
   const content: CSSProperties = {
-    fontSize: 24,
+    fontSize: 32,
     lineHeight: 1.25,
     margin: 0,
-    padding: 16,
+    ...padding,
   };
   const close: CSSProperties = {
     padding: 16,
@@ -33,7 +50,13 @@ export const Banner = ({ children }: { children: ReactNode }) => {
         <div style={banner}>
           <p style={content}>{children}</p>
           <div style={close}>
-            <ExpandButton onClick={handleToggleBanner}>x</ExpandButton>
+            <button
+              aria-label="dismiss"
+              style={button}
+              onClick={handleToggleBanner}
+            >
+              &times;
+            </button>
           </div>
         </div>
       </Box>

@@ -18,7 +18,7 @@ export function Root() {
       <Sidebar>{["root", "what", "how", "why", "..."]}</Sidebar>
       <Container>
         <Box>
-          <PageHeading>React styling</PageHeading>
+          <PageHeading>React ...</PageHeading>
         </Box>
         <Banner>This is a work in progress.</Banner>
         {/* <Box>
