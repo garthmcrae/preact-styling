@@ -1,10 +1,13 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { border, button } from "../styles";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
+import { useOnClickOutside } from "../hooks/useClickOutside";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 
 export const Drawer = ({ children }: { children: ReactNode }) => {
+  const ref = useRef(null);
   const [toggle, setToggle] = useState(false);
+  useOnClickOutside(ref, () => setToggle(false));
   const innerWidth = useWindowInnerWidth();
   const control = atMediaMinWidth(
     {
@@ -78,7 +81,9 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
           =
         </span>
       </button>
-      <div style={drawer}>{children}</div>
+      <div ref={ref} style={drawer}>
+        {children}
+      </div>
     </>
   );
 };
