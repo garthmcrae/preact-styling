@@ -21,7 +21,7 @@ export const Banner = ({ children }: { children: ReactNode }) => {
     cursor: "pointer",
     display: "block",
     fontSize: 16,
-    fontWeight: 700,
+    fontWeight: 500,
     lineHeight: 1,
     minWidth: 28,
     paddingBottom: 5,

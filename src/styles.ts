@@ -38,7 +38,7 @@ export const button: CSSProperties = {
 
 export const label: CSSProperties = {
     fontSize: 12,
-    fontWeight: 'normal',
+    fontWeight: 500,
     marginBottom: 12,
     marginTop: 0,
 };

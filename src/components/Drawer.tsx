@@ -10,7 +10,7 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
     {
       0: {
         ...button,
-        transform: `translateX(${toggle ? 292 : 0}px)`,
+        transform: `translateX(${toggle ? 272 : 0}px)`,
         transition:
           "background-color 2000ms ease-in-out, transform 300ms ease-in-out",
       },
@@ -25,14 +25,14 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
       0: {
         backgroundColor: "var(--background-color)",
         ...border,
-        left: -292,
-        padding: 16,
+        left: -256,
+        padding: 14,
         position: "absolute",
         top: 16,
-        transform: `translateX(${toggle ? 292 : 0}px)`,
+        transform: `translateX(${toggle ? 272 : 0}px)`,
         transition:
           "background-color 2000ms ease-in-out, transform 300ms ease-in-out",
-        width: 240,
+        width: 224,
       },
       800: {
         borderWidth: 0,
