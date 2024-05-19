@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
-
+import { formatPathname } from "../utilities/formatPathname";
 export const WindowLocationPathnameContext = createContext<any>(null);
 
 export const WindowLocationPathnameContextProvider = ({
@@ -8,7 +8,7 @@ export const WindowLocationPathnameContextProvider = ({
   children: ReactNode;
 }) => {
   const [locationPathname, setLocationPathname] = useState<string>(
-    window.location.pathname
+    formatPathname(window.location.pathname)
   );
   useEffect(() => {
     const handlePushState = () => {
