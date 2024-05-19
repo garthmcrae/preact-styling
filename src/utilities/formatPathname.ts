@@ -1,5 +1,5 @@
 export const formatPathname = (string: string) => {
-  if (string.length === 1) {
+  if (string === '/' || string === '//') {
     return string;
   }
   return string.endsWith('/') ? string.slice(0, -1) : string;
