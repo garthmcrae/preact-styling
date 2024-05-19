@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { useGoToPathname } from "../hooks/useGoToPathname";
+// import { useGoToPathname } from "../hooks/useGoToPathname";
 import { useWindowLocationPathname } from "../hooks/useWindowLocationPathname";
 
 export const Routes = ({
@@ -7,10 +7,10 @@ export const Routes = ({
 }: {
   children: { [key: string]: ReactNode };
 }) => {
-  const goToPathname = useGoToPathname();
+  // const goToPathname = useGoToPathname();
   const [locationPathname] = useWindowLocationPathname();
   if (!children[locationPathname]) {
-    goToPathname("/not-found");
+    // goToPathname("/not-found");
   }
   return <>{children[locationPathname]}</>;
 };
