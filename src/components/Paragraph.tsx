@@ -15,7 +15,7 @@ export const Paragraph = ({
   const paragraph = atMediaMinWidth(
     {
       0: {
-        fontSize: 16,
+        fontSize: 20,
         lineHeight: 1.25,
         marginBottom: last ? 0 : 16,
         marginTop: first ? 0 : 16,

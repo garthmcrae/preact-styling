@@ -36,12 +36,6 @@ export const button: CSSProperties = {
     transition: "background-color 2000ms ease-in-out",
 };
 
-export const hash: CSSProperties = {
-    display: "inline-block",
-    marginRight: "0.25em",
-    transform: "translateY(0.0625em)",
-};
-
 export const label: CSSProperties = {
     fontSize: 12,
     marginBottom: 16,
@@ -56,7 +50,6 @@ export const link: CSSProperties = {
     display: "block",
     fontSize: 32,
     lineHeight: 1,
-    minWidth: 48,
     ...padding,
     textDecoration: "none",
 };

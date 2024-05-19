@@ -1,9 +1,6 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
 
-export const WindowLocationPathnameContext = createContext<any>([
-  "",
-  () => null,
-]);
+export const WindowLocationPathnameContext = createContext<any>(null);
 
 export const WindowLocationPathnameContextProvider = ({
   children,

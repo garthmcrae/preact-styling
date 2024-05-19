@@ -7,7 +7,6 @@ export const Banner = ({ children }: { children: ReactNode }) => {
   const [toggleBanner, setToggleBanner] = useState<boolean>(true);
   const handleToggleBanner = () =>
     setToggleBanner((prevToggleBanner) => !prevToggleBanner);
-
   const banner: CSSProperties = {
     alignItems: "flex-start",
     ...border,
@@ -34,21 +33,21 @@ export const Banner = ({ children }: { children: ReactNode }) => {
       "background-color 2000ms ease-in-out, padding 100ms ease-in-out",
     width: "max-content",
   };
-  const content: CSSProperties = {
+  const paragraph: CSSProperties = {
     fontSize: 32,
     lineHeight: 1.25,
     margin: 0,
-    ...padding,
   };
   const close: CSSProperties = {
     padding: 16,
   };
-
   return (
     <Expand expand={toggleBanner}>
       <Box>
         <div style={banner}>
-          <p style={content}>{children}</p>
+          <div style={padding}>
+            <p style={paragraph}>{children}</p>
+          </div>
           <div style={close}>
             <button
               aria-label="dismiss"

@@ -17,7 +17,7 @@ export const Mode = () => {
         transition: "background-color 2000ms ease-in-out",
         width: "max-content",
       },
-      960: {
+      1096: {
         bottom: 16,
         left: "calc(100vw - 16px)",
         marginLeft: undefined,
