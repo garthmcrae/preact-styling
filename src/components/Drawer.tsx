@@ -69,7 +69,14 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
         aria-label="Toggle navigation"
         onClick={handleToggle}
       >
-        <span style={{ transform: "translateY(0.125em)" }}>=</span>
+        <span
+          style={{
+            display: "inline-block",
+            transform: "translateY(0.03125em)",
+          }}
+        >
+          =
+        </span>
       </button>
       <div style={drawer}>{children}</div>
     </>
