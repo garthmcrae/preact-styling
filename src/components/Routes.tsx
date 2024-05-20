@@ -8,7 +8,7 @@ export const Routes = ({
   children: { [key: string]: ReactNode };
 }) => {
   const goToPathname = useGoToPathname();
-  const [locationPathname] = useWindowLocationPathname();
+  const { locationPathname } = useWindowLocationPathname();
   if (!children[locationPathname]) {
     goToPathname("/not-found");
   }

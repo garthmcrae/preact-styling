@@ -2,16 +2,19 @@ import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
 import { Heading } from "../components/Heading";
+import { Page } from "../components/Page";
 import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
+import { useGoToPathname } from "../hooks/useGoToPathname";
+import { label, link } from "../styles";
 
 import atMediaMinWidthString from "../utilities/atMediaMinWidth.ts?raw";
 import headingString from "../components/Heading.tsx?raw";
 import useWindowInnerWidthString from "../hooks/useWindowInnerWidth.ts?raw";
 import windowInnerWidthContextString from "../contexts/WindowInnerWidthContext.tsx?raw";
-import { Page } from "../components/Page";
 
 export function Styling() {
+  const goToPathname = useGoToPathname();
   return (
     <Page>
       <Container>
@@ -112,6 +115,12 @@ const styles: CSSProperties = {
             </Paragraph>
           </Box>
         </section>
+        <Box>
+          <h3 style={label}>Up next</h3>
+          <a style={link} href="/components" onClick={goToPathname}>
+            /components
+          </a>
+        </Box>
       </Container>
     </Page>
   );

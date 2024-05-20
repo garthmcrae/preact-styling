@@ -1,5 +1,11 @@
 import { CSSProperties } from "react";
-import { border, fadeInUp, label, link, listReset } from "../styles";
+import {
+  border,
+  fadeInUp,
+  label,
+  link as linkBase,
+  listReset,
+} from "../styles";
 import { Container } from "./Container";
 import { Drawer } from "./Drawer";
 import { useGoToPathname } from "../hooks/useGoToPathname";
@@ -13,16 +19,21 @@ export const Header = () => {
     display: "inline-block",
     transform: "translateY(0.0625em)",
   };
+  const link: CSSProperties = {
+    ...linkBase,
+    display: "block",
+  };
   const list = atMediaMinWidth(
     {
       0: {
+        alignItems: "stretch",
         display: "flex",
         flexDirection: "column",
         flexWrap: "nowrap",
         gap: 16,
         ...listReset,
       },
-      800: {
+      880: {
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",

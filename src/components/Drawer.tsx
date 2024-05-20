@@ -49,7 +49,7 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
         width: 224,
         zIndex: 2,
       },
-      800: {
+      880: {
         borderWidth: 0,
         padding: 0,
         position: "static",

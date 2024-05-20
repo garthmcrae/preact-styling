@@ -8,6 +8,6 @@ export const Route = ({
   pathname: string;
   children: ReactNode;
 }) => {
-  const [state] = useWindowLocationPathname();
-  return <>{state === pathname ? children : null}</>;
+  const { locationPathname } = useWindowLocationPathname();
+  return <>{locationPathname === pathname ? children : null}</>;
 };

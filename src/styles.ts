@@ -54,7 +54,7 @@ export const link: CSSProperties = {
     boxSizing: "border-box",
     color: "inherit",
     cursor: "pointer",
-    display: "block",
+    display: "inline-block",
     fontSize: 32,
     lineHeight: 1,
     ...padding,

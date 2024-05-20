@@ -5,6 +5,8 @@ import { Heading } from "../components/Heading";
 import { Page } from "../components/Page";
 import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
+import { useGoToPathname } from "../hooks/useGoToPathname";
+import { label, link } from "../styles";
 
 import routesString from "../components/Routes?raw";
 import routerString from "../Router.tsx?raw";
@@ -13,6 +15,7 @@ import useWindowLocationPathnameString from "../hooks/useWindowLocationPathname.
 import windowLocationPathnameContextString from "../contexts/WindowLocationPathnameContext.tsx?raw";
 
 export function Routing() {
+  const goToPathname = useGoToPathname();
   return (
     <Page>
       <Container>
@@ -72,6 +75,12 @@ export function Routing() {
             <Code>{routerString}</Code>
           </Box>
         </section>
+        <Box>
+          <h3 style={label}>Up next</h3>
+          <a style={link} href="/styling" onClick={goToPathname}>
+            /styling
+          </a>
+        </Box>
       </Container>
     </Page>
   );

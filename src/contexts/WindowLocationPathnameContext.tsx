@@ -21,7 +21,7 @@ export const WindowLocationPathnameContextProvider = ({
   }, []);
   return (
     <WindowLocationPathnameContext.Provider
-      value={[locationPathname, setLocationPathname]}
+      value={{ locationPathname, setLocationPathname }}
     >
       {children}
     </WindowLocationPathnameContext.Provider>

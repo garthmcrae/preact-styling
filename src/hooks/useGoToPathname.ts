@@ -1,9 +1,10 @@
 import { useWindowLocationPathname } from "./useWindowLocationPathname";
 
 export const useGoToPathname = () => {
-  const [, setLocationPathname] = useWindowLocationPathname();
+  const { setLocationPathname } = useWindowLocationPathname();
 
   const goToPathname = (argument: MouseEvent | string) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     if (typeof argument === 'string' || argument instanceof String) {
       window.history.pushState({}, "", argument as string);
       setLocationPathname(argument);
