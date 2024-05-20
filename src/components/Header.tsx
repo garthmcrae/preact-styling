@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { border, label, link, listReset } from "../styles";
+import { border, fadeInUp, label, link, listReset } from "../styles";
 import { Container } from "./Container";
 import { Drawer } from "./Drawer";
 import { useGoToPathname } from "../hooks/useGoToPathname";
@@ -52,10 +52,6 @@ export const Header = () => {
     textDecoration: "none",
     width: "max-content",
   };
-  const slash: CSSProperties = {
-    display: "inline-block",
-    marginRight: "0.25em",
-  };
   return (
     <>
       <header>
@@ -70,35 +66,22 @@ export const Header = () => {
                 Site navigation
               </h2>
               <ul style={list}>
-                <li>
-                  <a style={link} href="/" onClick={goToPathname}>
-                    /
-                  </a>
-                </li>
-                <li>
-                  <a style={link} href="/routing" onClick={goToPathname}>
-                    <span style={slash}>/</span>
-                    routing
-                  </a>
-                </li>
-                <li>
-                  <a style={link} href="/styling" onClick={goToPathname}>
-                    <span style={slash}>/</span>
-                    styling
-                  </a>
-                </li>
-                <li>
-                  <a style={link} href="/components" onClick={goToPathname}>
-                    <span style={slash}>/</span>
-                    components
-                  </a>
-                </li>
-                <li>
-                  <a style={link} href="/references" onClick={goToPathname}>
-                    <span style={slash}>/</span>
-                    references
-                  </a>
-                </li>
+                {[
+                  "/",
+                  "/routing",
+                  "/styling",
+                  "/components",
+                  "/references",
+                ].map((item, index) => (
+                  <li
+                    style={{ ...fadeInUp, animationDelay: `${index * 100}ms` }}
+                    key={item}
+                  >
+                    <a style={link} href={item} onClick={goToPathname}>
+                      {item}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </Drawer>
           </nav>

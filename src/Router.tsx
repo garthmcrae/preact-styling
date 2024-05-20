@@ -1,4 +1,5 @@
 import { Routes } from "./components/Routes";
+
 import { Components } from "./pages/Components";
 import { NotFound } from "./pages/NotFound";
 import { References } from "./pages/References";
@@ -12,10 +13,10 @@ export function Router() {
       {{
         "/": <Root />,
         "/components": <Components />,
+        "/not-found": <NotFound />,
         "/references": <References />,
         "/routing": <Routing />,
         "/styling": <Styling />,
-        "/not-found": <NotFound />,
       }}
     </Routes>
   );

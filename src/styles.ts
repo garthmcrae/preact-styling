@@ -7,6 +7,12 @@ export const border: CSSProperties = {
     borderWidth: 2,
 };
 
+export const fadeInUp: CSSProperties = {
+    animationName: "fade-in-up",
+    animationDuration: "600ms",
+    animationFillMode: "both",
+};
+
 export const listReset: CSSProperties = {
     listStyle: "none",
     margin: 0,

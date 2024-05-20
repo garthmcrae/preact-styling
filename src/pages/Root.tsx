@@ -4,6 +4,7 @@ import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
 import { Heading } from "../components/Heading";
+import { Page } from "../components/Page";
 import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 
@@ -15,7 +16,7 @@ const Strike = ({ children }: { children: ReactNode }) => (
 
 export function Root() {
   return (
-    <>
+    <Page>
       <Container>
         <Box>
           <PageHeading>Hello</PageHeading>
@@ -46,6 +47,6 @@ export function Root() {
           </button>
         </Box> */}
       </Container>
-    </>
+    </Page>
   );
 }

@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
 import { border, button } from "../styles";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { useOnClickOutside } from "../hooks/useClickOutside";
@@ -9,6 +9,17 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
   const [toggle, setToggle] = useState(false);
   useOnClickOutside(ref, () => setToggle(false));
   const innerWidth = useWindowInnerWidth();
+  const burger: CSSProperties = {
+    borderBottomStyle: "solid",
+    borderBottomWidth: 2,
+    borderTopStyle: "solid",
+    borderTopWidth: 2,
+    display: "block",
+    height: 12,
+    marginBottom: 5,
+    marginTop: 11,
+    width: 24,
+  };
   const control = atMediaMinWidth(
     {
       0: {
@@ -36,6 +47,7 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
         transition:
           "background-color 2000ms ease-in-out, transform 300ms ease-in-out",
         width: 224,
+        zIndex: 2,
       },
       800: {
         borderWidth: 0,
@@ -68,22 +80,14 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <button
-        style={control}
         aria-label="Toggle navigation"
         onClick={handleToggle}
+        ref={ref}
+        style={control}
       >
-        <span
-          style={{
-            display: "inline-block",
-            transform: "translateY(0.03125em)",
-          }}
-        >
-          =
-        </span>
+        <span style={burger} />
       </button>
-      <div ref={ref} style={drawer}>
-        {children}
-      </div>
+      <div style={drawer}>{children}</div>
     </>
   );
 };

@@ -9,10 +9,11 @@ import atMediaMinWidthString from "../utilities/atMediaMinWidth.ts?raw";
 import headingString from "../components/Heading.tsx?raw";
 import useWindowInnerWidthString from "../hooks/useWindowInnerWidth.ts?raw";
 import windowInnerWidthContextString from "../contexts/WindowInnerWidthContext.tsx?raw";
+import { Page } from "../components/Page";
 
 export function Styling() {
   return (
-    <>
+    <Page>
       <Container>
         <Box>
           <PageHeading>Styling</PageHeading>
@@ -112,6 +113,6 @@ const styles: CSSProperties = {
           </Box>
         </section>
       </Container>
-    </>
+    </Page>
   );
 }
