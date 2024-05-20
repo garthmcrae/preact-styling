@@ -68,8 +68,7 @@ export const Header = () => {
         <Container>
           <nav style={nav} aria-describedby="nav-heading">
             <a style={skip} href="#content">
-              <span style={hash}>#</span>
-              content
+              <span style={hash}>#</span>content
             </a>
             <Drawer>
               <h2 style={label} id="nav-heading">

@@ -31,7 +31,11 @@ export function Styling() {
             them can negatively impact accessibility. Our focus then remains on
             solving media queries.
           </Paragraph>
-          <Paragraph last>The approach ...</Paragraph>
+          <Paragraph last>
+            Also worth noting that the objective isn't to completely remove the
+            need for styling. Some global styles and keyframe animations are
+            included in this project in a style tag in the index HTML.
+          </Paragraph>
         </Box>
         <section id="how">
           <Box>
@@ -78,12 +82,10 @@ export function Styling() {
             <Heading>...</Heading>
           </Box>
           <Box>
-            <Paragraph first last>
+            <Paragraph first>
               Just a section to cover any other observations and notes.
             </Paragraph>
-          </Box>
-          <Box>
-            <Paragraph first last>
+            <Paragraph last>
               When authoring styles, avoid nesting properties within a single
               object. While it might seem convenient to name object properties
               freely, keep in mind that the resulting bundle will only minify

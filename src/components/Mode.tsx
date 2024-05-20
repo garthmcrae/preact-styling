@@ -1,11 +1,11 @@
-import { CSSProperties, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import { border, button, label, listReset } from "../styles";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 
 export const Mode = () => {
   const innerWidth = useWindowInnerWidth();
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("low");
   const control = atMediaMinWidth(
     {
       0: {
@@ -34,15 +34,8 @@ export const Mode = () => {
     gap: 16,
     ...listReset,
   };
-  const handleMode = () => {
+  useEffect(() => {
     if (mode === "dark") {
-      setMode("light");
-      document.documentElement.style.setProperty("--color", "#242427");
-      document.documentElement.style.setProperty(
-        "--background-color",
-        "#d4d4d4"
-      );
-    } else {
       setMode("dark");
       document.documentElement.style.setProperty("--color", "#d4d4d4");
       document.documentElement.style.setProperty(
@@ -50,20 +43,52 @@ export const Mode = () => {
         "#242427"
       );
     }
-  };
-
+    if (mode === "light") {
+      setMode("light");
+      document.documentElement.style.setProperty("--color", "#242427");
+      document.documentElement.style.setProperty(
+        "--background-color",
+        "#d4d4d4"
+      );
+    }
+    if (mode === "low") {
+      setMode("low");
+      document.documentElement.style.setProperty("--color", "#848487");
+      document.documentElement.style.setProperty(
+        "--background-color",
+        "#242427"
+      );
+    }
+  }, [mode]);
   return (
     <div style={control}>
       <h2 style={label}>Modes</h2>
       <ul style={list}>
         <li>
-          <button style={button} aria-label="Toggle" onClick={handleMode}>
+          <button
+            style={button}
+            aria-label="Toggle"
+            onClick={() => setMode("dark")}
+          >
+            dark
+          </button>
+        </li>
+        <li>
+          <button
+            style={button}
+            aria-label="Toggle"
+            onClick={() => setMode("light")}
+          >
             light
           </button>
         </li>
         <li>
-          <button style={button} aria-label="Toggle" onClick={handleMode}>
-            dark
+          <button
+            style={button}
+            aria-label="Toggle"
+            onClick={() => setMode("low")}
+          >
+            low
           </button>
         </li>
       </ul>

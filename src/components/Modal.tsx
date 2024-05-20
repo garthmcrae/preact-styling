@@ -1,4 +1,4 @@
-import { CSSProperties, useEffect, useRef, useState } from "react";
+import { CSSProperties, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { border, button, fadeInUp, padding } from "../styles";
 import { Heading } from "./Heading";
@@ -50,20 +50,21 @@ export function Modal() {
     top: 0,
     zIndex: 2,
   };
-  useEffect(() => {
-    const root = document.getElementById("root");
-    if (showModal) {
-      root?.setAttribute("inert", "true");
-    } else {
-      root?.removeAttribute("inert");
-      if (ref.current) {
-        ref.current.focus();
-      }
+  const root = document.getElementById("root");
+  const handleShowModal = () => {
+    setShowModal(true);
+    root?.setAttribute("inert", "true");
+  };
+  const handleHideModal = () => {
+    root?.removeAttribute("inert");
+    setShowModal(false);
+    if (ref.current) {
+      ref.current.focus();
     }
-  }, [showModal]);
+  };
   return (
     <>
-      <button ref={ref} style={button} onClick={() => setShowModal(true)}>
+      <button ref={ref} style={button} onClick={handleShowModal}>
         show modal
       </button>
       {showModal &&
@@ -74,12 +75,7 @@ export function Modal() {
                 <Heading>Modal title</Heading>
                 <Paragraph>Modal {" .".repeat(2000)} content.</Paragraph>
                 <div style={close}>
-                  <button
-                    style={closeButton}
-                    onClick={() => {
-                      setShowModal(false);
-                    }}
-                  >
+                  <button style={closeButton} onClick={handleHideModal}>
                     &times;
                   </button>
                 </div>
