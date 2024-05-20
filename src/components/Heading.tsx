@@ -4,7 +4,7 @@ import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 
 export const Heading = ({
   children,
-  element = "h1",
+  element = "h2",
 }: {
   children: ReactNode;
   element?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";

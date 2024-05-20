@@ -9,12 +9,15 @@ import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 
 import packageString from "../../package.json?raw";
+import { link } from "../styles";
+import { useGoToPathname } from "../hooks/useGoToPathname";
 
 const Strike = ({ children }: { children: ReactNode }) => (
   <span style={{ textDecoration: "line-through" }}>{children}</span>
 );
 
 export function Root() {
+  const goToPathname = useGoToPathname();
   return (
     <Page>
       <Container>
@@ -36,16 +39,6 @@ export function Root() {
         <Box>
           <Code>{packageString}</Code>
         </Box>
-        {/* <Box>
-          <button
-            style={button}
-            onClick={() => {
-              handleWindowLocationPathname("/components");
-            }}
-          >
-            /components
-          </button>
-        </Box> */}
       </Container>
     </Page>
   );

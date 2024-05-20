@@ -16,8 +16,8 @@ export const Footer = () => {
 
   return (
     <>
-      <Mode />
       <footer style={footer}>
+        <Mode />
         <Container>
           <Box>
             <p style={paragraph}>Built using Vite and Preact</p>

@@ -11,7 +11,6 @@ export const Header = () => {
   const innerWidth = useWindowInnerWidth();
   const hash: CSSProperties = {
     display: "inline-block",
-    marginRight: "0.25em",
     transform: "translateY(0.0625em)",
   };
   const list = atMediaMinWidth(
