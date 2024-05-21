@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { border, button, fadeInUp, padding } from "../styles";
 import { Heading } from "./Heading";
 import { Paragraph } from "./Paragraph";
+import { FocusTrap } from "./FocusTrap";
 
 export function Modal() {
   const ref = useRef<HTMLButtonElement>(null);
@@ -50,13 +51,10 @@ export function Modal() {
     top: 0,
     zIndex: 2,
   };
-  const root = document.getElementById("root");
   const handleShowModal = () => {
     setShowModal(true);
-    root?.setAttribute("inert", "true");
   };
   const handleHideModal = () => {
-    root?.removeAttribute("inert");
     setShowModal(false);
     if (ref.current) {
       ref.current.focus();
@@ -69,19 +67,21 @@ export function Modal() {
       </button>
       {showModal &&
         createPortal(
-          <div style={modal}>
-            <div style={fadeInUp}>
-              <div style={content}>
-                <Heading>Modal title</Heading>
-                <Paragraph>Modal {" .".repeat(2000)} content.</Paragraph>
-                <div style={close}>
-                  <button style={closeButton} onClick={handleHideModal}>
-                    &times;
-                  </button>
+          <FocusTrap>
+            <div style={modal}>
+              <div style={fadeInUp}>
+                <div style={content}>
+                  <Heading>Modal title</Heading>
+                  <Paragraph>Modal {" .".repeat(2000)} content.</Paragraph>
+                  <div style={close}>
+                    <button style={closeButton} onClick={handleHideModal}>
+                      &times;
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>,
+          </FocusTrap>,
           document.body
         )}
     </>

@@ -51,14 +51,6 @@ export const Mode = () => {
         "#d4d4d4"
       );
     }
-    if (mode === "low") {
-      setMode("low");
-      document.documentElement.style.setProperty("--color", "#848487");
-      document.documentElement.style.setProperty(
-        "--background-color",
-        "#242427"
-      );
-    }
   }, [mode]);
   return (
     <div style={control}>
@@ -80,15 +72,6 @@ export const Mode = () => {
             onClick={() => setMode("light")}
           >
             light
-          </button>
-        </li>
-        <li>
-          <button
-            style={button}
-            aria-label="Toggle"
-            onClick={() => setMode("low")}
-          >
-            low
           </button>
         </li>
       </ul>
