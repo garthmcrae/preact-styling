@@ -10,7 +10,8 @@ import { Paragraph } from "../components/Paragraph";
 import { useGoToPathname } from "../hooks/useGoToPathname";
 import { label, link } from "../styles";
 
-import packageString from "../../package.json?raw";
+import buildRaw from "../build.txt?raw";
+import packageRaw from "../../package.json?raw";
 
 const Strike = ({ children }: { children: ReactNode }) => (
   <span style={{ textDecoration: "line-through" }}>{children}</span>
@@ -34,10 +35,13 @@ export function Root() {
           </Paragraph>
         </Box>
         <Box>
+          <Code>{buildRaw}</Code>
+        </Box>
+        <Box>
           <Heading>Package</Heading>
         </Box>
         <Box>
-          <Code>{packageString}</Code>
+          <Code>{packageRaw}</Code>
         </Box>
         <Box>
           <h3 style={label}>Up next</h3>
