@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build > src/build.txt",
+    "output": "tsc && vite build > src/build.txt",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
