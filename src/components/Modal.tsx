@@ -42,6 +42,7 @@ export function Modal() {
     zIndex: 2,
   };
   const modal: CSSProperties = {
+    backgroundColor: "transparent",
     bottom: 0,
     left: 0,
     overflowY: "auto",
