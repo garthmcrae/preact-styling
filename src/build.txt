@@ -1,8 +1,12 @@
+
+> preact-styling@0.0.0 build
+> tsc && vite build
+
 vite v5.2.11 building for production...
 transforming...
 ✓ 53 modules transformed.
 rendering chunks...
 computing gzip size...
 dist/index.html                 1.44 kB │ gzip:  0.70 kB
-dist/assets/index-BHPN8snS.js  41.30 kB │ gzip: 14.01 kB
-✓ built in 265ms
+dist/assets/index-DEXxK2Pr.js  41.35 kB │ gzip: 14.03 kB
+✓ built in 261ms

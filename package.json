@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "output": "tsc && vite build > src/build.txt",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },

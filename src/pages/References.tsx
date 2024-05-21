@@ -1,4 +1,5 @@
 // https://www.youtube.com/watch?v=1gZmkpsVGkk
+// npm run build -- > src/build.txt
 
 import { Box } from "../components/Box";
 import { Container } from "../components/Container";
