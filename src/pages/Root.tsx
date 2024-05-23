@@ -45,8 +45,8 @@ export function Root() {
         </Box>
         <Box>
           <h3 style={label}>Up next</h3>
-          <a style={link} href="/routing" onClick={goToPathname}>
-            /routing
+          <a style={link} href="/routing/" onClick={goToPathname}>
+            /routing/
           </a>
         </Box>
       </Container>

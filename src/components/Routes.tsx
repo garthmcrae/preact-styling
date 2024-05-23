@@ -10,7 +10,7 @@ export const Routes = ({
   const goToPathname = useGoToPathname();
   const { locationPathname } = useWindowLocationPathname();
   if (!children[locationPathname]) {
-    goToPathname("/not-found");
+    goToPathname("/not-found/");
   }
   return <>{children[locationPathname]}</>;
 };

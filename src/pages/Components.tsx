@@ -34,8 +34,8 @@ export function Components() {
         </Box>
         <Box>
           <h3 style={label}>Up next</h3>
-          <a style={link} href="/references" onClick={goToPathname}>
-            /references
+          <a style={link} href="/references/" onClick={goToPathname}>
+            /references/
           </a>
         </Box>
       </Container>

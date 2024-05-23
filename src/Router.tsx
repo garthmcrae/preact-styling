@@ -12,11 +12,11 @@ export function Router() {
     <Routes>
       {{
         "/": <Root />,
-        "/components": <Components />,
-        "/not-found": <NotFound />,
-        "/references": <References />,
-        "/routing": <Routing />,
-        "/styling": <Styling />,
+        "/components/": <Components />,
+        "/not-found/": <NotFound />,
+        "/references/": <References />,
+        "/routing/": <Routing />,
+        "/styling/": <Styling />,
       }}
     </Routes>
   );

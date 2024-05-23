@@ -119,8 +119,8 @@ const styles: CSSProperties = {
         </section>
         <Box>
           <h3 style={label}>Up next</h3>
-          <a style={link} href="/components" onClick={goToPathname}>
-            /components
+          <a style={link} href="/components/" onClick={goToPathname}>
+            /components/
           </a>
         </Box>
       </Container>

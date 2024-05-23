@@ -77,8 +77,8 @@ export function Routing() {
         </section>
         <Box>
           <h3 style={label}>Up next</h3>
-          <a style={link} href="/styling" onClick={goToPathname}>
-            /styling
+          <a style={link} href="/styling/" onClick={goToPathname}>
+            /styling/
           </a>
         </Box>
       </Container>

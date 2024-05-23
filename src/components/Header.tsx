@@ -77,10 +77,10 @@ export const Header = () => {
               <ul style={list}>
                 {[
                   "/",
-                  "/routing",
-                  "/styling",
-                  "/components",
-                  "/references",
+                  "/routing/",
+                  "/styling/",
+                  "/components/",
+                  "/references/",
                 ].map((item, index) => (
                   <li
                     style={{ ...fadeInUp, animationDelay: `${index * 100}ms` }}
