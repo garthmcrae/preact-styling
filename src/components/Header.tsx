@@ -1,13 +1,9 @@
 import { CSSProperties } from "react";
-import {
-  border,
-  fadeInUp,
-  label,
-  link as linkBase,
-  listReset,
-} from "../styles";
+import { border, fadeInUp } from "../styles";
 import { Container } from "./Container";
 import { Drawer } from "./Drawer";
+import { Label } from "./Label";
+import { Link } from "./Link";
 import { useGoToPathname } from "../hooks/useGoToPathname";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
@@ -19,10 +15,6 @@ export const Header = () => {
     display: "inline-block",
     transform: "translateY(0.0625em)",
   };
-  const link: CSSProperties = {
-    ...linkBase,
-    display: "block",
-  };
   const list = atMediaMinWidth(
     {
       0: {
@@ -31,14 +23,14 @@ export const Header = () => {
         flexDirection: "column",
         flexWrap: "nowrap",
         gap: 16,
-        ...listReset,
+        listStyle: "none",
+        marginBottom: 0,
+        marginTop: 12,
+        paddingInlineStart: 0,
       },
       880: {
-        display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",
-        gap: 16,
-        ...listReset,
       },
     },
     innerWidth
@@ -68,12 +60,10 @@ export const Header = () => {
         <Container>
           <nav style={nav} aria-describedby="nav-heading">
             <a style={skip} href="#content">
-              <span style={hash}>#</span>content
+              <span style={hash}>#</span> content
             </a>
             <Drawer>
-              <h2 style={label} id="nav-heading">
-                Site navigation
-              </h2>
+              <Label id="nav-heading">Site navigation</Label>
               <ul style={list}>
                 {[
                   "/",
@@ -86,9 +76,9 @@ export const Header = () => {
                     style={{ ...fadeInUp, animationDelay: `${index * 100}ms` }}
                     key={item}
                   >
-                    <a style={link} href={item} onClick={goToPathname}>
+                    <Link href={item} onClick={goToPathname}>
                       {item}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

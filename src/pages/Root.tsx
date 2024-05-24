@@ -4,11 +4,10 @@ import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
 import { Heading } from "../components/Heading";
+import { Label } from "../components/Label";
 import { Page } from "../components/Page";
-import { PageHeading } from "../components/PageHeading";
+import { HeadingPage } from "../components/HeadingPage";
 import { Paragraph } from "../components/Paragraph";
-import { useGoToPathname } from "../hooks/useGoToPathname";
-import { label, link } from "../styles";
 
 import buildRaw from "../build.txt?raw";
 import packageRaw from "../../package.json?raw";
@@ -18,15 +17,19 @@ const Strike = ({ children }: { children: ReactNode }) => (
 );
 
 export function Root() {
-  const goToPathname = useGoToPathname();
   return (
     <Page>
       <Container>
         <Box>
-          <PageHeading>Hello</PageHeading>
+          <HeadingPage>Hello</HeadingPage>
         </Box>
         <Banner>
-          This is a work in <strong>progress</strong>.
+          <Box>
+            <Label element="h3">Information</Label>
+            <Paragraph first last>
+              This is a work in progress.
+            </Paragraph>
+          </Box>
         </Banner>
         <Box>
           <Paragraph first>
@@ -42,12 +45,6 @@ export function Root() {
         </Box>
         <Box>
           <Code>{packageRaw}</Code>
-        </Box>
-        <Box>
-          <h3 style={label}>Up next</h3>
-          <a style={link} href="/routing/" onClick={goToPathname}>
-            /routing/
-          </a>
         </Box>
       </Container>
     </Page>

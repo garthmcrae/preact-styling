@@ -1,14 +1,14 @@
 import { Box } from "../components/Box";
 import { Container } from "../components/Container";
 import { Page } from "../components/Page";
-import { PageHeading } from "../components/PageHeading";
+import { HeadingPage } from "../components/HeadingPage";
 
 export function NotFound() {
   return (
     <Page>
       <Container>
         <Box>
-          <PageHeading>Not found</PageHeading>
+          <HeadingPage>Not found</HeadingPage>
         </Box>
       </Container>
     </Page>

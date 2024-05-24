@@ -11,7 +11,7 @@ export const Heading = ({
 }) => {
   const innerWidth = useWindowInnerWidth();
   const Element = element;
-  const headingStyles = atMediaMinWidth(
+  const heading = atMediaMinWidth(
     {
       0: {
         fontSize: 32,
@@ -25,5 +25,5 @@ export const Heading = ({
     innerWidth
   );
 
-  return <Element style={headingStyles}>{children}</Element>;
+  return <Element style={heading}>{children}</Element>;
 };

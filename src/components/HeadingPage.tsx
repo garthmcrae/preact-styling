@@ -2,9 +2,9 @@ import { ReactNode } from "react";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 
-export const PageHeading = ({ children }: { children: ReactNode }) => {
+export const HeadingPage = ({ children }: { children: ReactNode }) => {
   const innerWidth = useWindowInnerWidth();
-  const pageHeadingStyles = atMediaMinWidth(
+  const headingPage = atMediaMinWidth(
     {
       0: {
         fontSize: 48,
@@ -19,5 +19,5 @@ export const PageHeading = ({ children }: { children: ReactNode }) => {
     innerWidth
   );
 
-  return <h1 style={pageHeadingStyles}>{children}</h1>;
+  return <h1 style={headingPage}>{children}</h1>;
 };

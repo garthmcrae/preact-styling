@@ -13,12 +13,6 @@ export const fadeInUp: CSSProperties = {
     animationFillMode: "both",
 };
 
-export const listReset: CSSProperties = {
-    listStyle: "none",
-    margin: 0,
-    padding: 0,
-}
-
 export const padding = {
     paddingBottom: 14,
     paddingLeft: 14,
@@ -42,19 +36,12 @@ export const button: CSSProperties = {
     transition: "background-color 2000ms ease-in-out",
 };
 
-export const label: CSSProperties = {
-    fontSize: 12,
-    fontWeight: 500,
-    marginBottom: 12,
-    marginTop: 0,
-};
-
 export const link: CSSProperties = {
     ...border,
     boxSizing: "border-box",
     color: "inherit",
     cursor: "pointer",
-    display: "inline-block",
+    display: "block",
     fontSize: 32,
     lineHeight: 1,
     ...padding,

@@ -1,18 +1,17 @@
 import { ReactNode } from "react";
 import { link } from "../styles";
-import { useGoToPathname } from "../hooks/useGoToPathname";
 
 export const Link = ({
   children,
-  pathname,
+  href,
+  onClick,
 }: {
   children: ReactNode;
-  pathname: string;
+  href: string;
+  onClick?: (argument: MouseEvent) => void;
 }) => {
-  const goToPathname = useGoToPathname();
-
   return (
-    <a style={link} href={pathname} onClick={goToPathname}>
+    <a style={link} href={href} onClick={onClick}>
       {children}
     </a>
   );

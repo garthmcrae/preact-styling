@@ -1,5 +1,6 @@
 import { CSSProperties, useEffect, useState } from "react";
-import { border, button, label, listReset } from "../styles";
+import { border, button } from "../styles";
+import { Label } from "./Label";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 
@@ -32,7 +33,10 @@ export const Mode = () => {
     display: "flex",
     flexWrap: "wrap",
     gap: 16,
-    ...listReset,
+    listStyle: "none",
+    marginBottom: 0,
+    marginTop: 12,
+    paddingInlineStart: 0,
   };
   useEffect(() => {
     if (mode === "dark") {
@@ -54,7 +58,7 @@ export const Mode = () => {
   }, [mode]);
   return (
     <div style={control}>
-      <h2 style={label}>Modes</h2>
+      <Label>Modes</Label>
       <ul style={list}>
         <li>
           <button

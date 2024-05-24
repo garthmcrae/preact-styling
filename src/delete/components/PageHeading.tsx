@@ -4,7 +4,7 @@ import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 
 export const PageHeading = ({ children }: { children: ReactNode }) => {
   const innerWidth = useWindowInnerWidth();
-  const pageHeadingStyles = atMediaMinWidth(
+  const pageHeading = atMediaMinWidth(
     {
       0: {
         fontSize: "24vw",
