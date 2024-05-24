@@ -2,10 +2,11 @@
 > preact-styling@0.0.0 build
 > tsc && vite build
 
-src/delete/components/Heading.tsx(14,9): error TS6133: 'heading' is declared but its value is never read.
-src/delete/components/Heading.tsx(28,26): error TS2304: Cannot find name 'headingStyles'.
-src/delete/components/PageHeading.tsx(7,9): error TS6133: 'pageHeading' is declared but its value is never read.
-src/delete/components/PageHeading.tsx(22,21): error TS2304: Cannot find name 'pageHeadingStyles'.
-src/delete/pages/Root.tsx(8,1): error TS6133: 'PageHeading' is declared but its value is never read.
-src/delete/pages/Root.tsx(25,12): error TS2304: Cannot find name 'HeadingPage'.
-src/delete/pages/Root.tsx(25,40): error TS2304: Cannot find name 'HeadingPage'.
+vite v5.2.11 building for production...
+transforming...
+✓ 54 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                 1.44 kB │ gzip:  0.70 kB
+dist/assets/index-DcH-U7qk.js  40.73 kB │ gzip: 13.92 kB
+✓ built in 259ms
