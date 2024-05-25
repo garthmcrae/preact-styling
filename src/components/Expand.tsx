@@ -11,7 +11,6 @@ export const Expand = ({
 }) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [height, setHeight] = useState(expand ? "unset" : 0);
-
   useEffect(() => {
     if (ref.current) {
       setHeight(ref.current.clientHeight);
@@ -26,17 +25,14 @@ export const Expand = ({
       window.removeEventListener("resize", handleResize);
     };
   }, [setHeight]);
-
   const transitionHeight = {
     transition: `max-height ${duration}ms ease-in-out ${
       expand ? 0 : duration
     }ms`,
   };
-
   const expandStyles: CSSProperties = {
     transition: `opacity ${duration}ms ease-in-out ${expand ? duration : 0}ms`,
   };
-
   return (
     <div
       style={{

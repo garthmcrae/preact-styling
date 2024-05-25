@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
+import { breakpoint } from "../styles";
 
 export const Heading = ({
   children,
@@ -18,7 +19,7 @@ export const Heading = ({
         lineHeight: 1,
         margin: 0,
       },
-      960: {
+      [breakpoint]: {
         fontSize: 64,
       },
     },

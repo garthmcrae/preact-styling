@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
+import { breakpoint } from "../styles";
 
 export const HeadingPage = ({ children }: { children: ReactNode }) => {
   const innerWidth = useWindowInnerWidth();
@@ -12,7 +13,7 @@ export const HeadingPage = ({ children }: { children: ReactNode }) => {
         marginBottom: ".2em",
         marginTop: "0",
       },
-      960: {
+      [breakpoint]: {
         fontSize: 96,
       },
     },

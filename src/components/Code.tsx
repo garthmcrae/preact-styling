@@ -9,7 +9,6 @@ export const Code = ({ children }: { children: string }) => {
     overflowX: "auto",
     padding: 16,
   };
-
   return (
     <pre style={code}>
       <code>{children.trim()}</code>

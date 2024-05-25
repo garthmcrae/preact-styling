@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
+import { breakpoint } from "../styles";
 
 export const Paragraph = ({
   children,
@@ -20,7 +21,7 @@ export const Paragraph = ({
         marginBottom: last ? 0 : 16,
         marginTop: first ? 0 : 16,
       },
-      960: {
+      [breakpoint]: {
         fontSize: 32,
       },
     },

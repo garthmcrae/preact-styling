@@ -1,8 +1,9 @@
 import { CSSProperties, useEffect, useState } from "react";
-import { border, button } from "../styles";
+import { Button } from "./Button";
 import { Label } from "./Label";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
+import { border, breakpoint } from "../styles";
 
 export const Mode = () => {
   const innerWidth = useWindowInnerWidth();
@@ -18,7 +19,7 @@ export const Mode = () => {
         transition: "background-color 2000ms ease-in-out",
         width: "max-content",
       },
-      1096: {
+      [breakpoint]: {
         bottom: 16,
         left: "calc(100vw - 16px)",
         marginLeft: undefined,
@@ -61,22 +62,14 @@ export const Mode = () => {
       <Label>Modes</Label>
       <ul style={list}>
         <li>
-          <button
-            style={button}
-            aria-label="Toggle"
-            onClick={() => setMode("dark")}
-          >
+          <Button aria-label="Toggle" onClick={() => setMode("dark")}>
             dark
-          </button>
+          </Button>
         </li>
         <li>
-          <button
-            style={button}
-            aria-label="Toggle"
-            onClick={() => setMode("light")}
-          >
+          <Button aria-label="Toggle" onClick={() => setMode("light")}>
             light
-          </button>
+          </Button>
         </li>
       </ul>
     </div>

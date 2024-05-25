@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
+import { breakpoint } from "../styles";
 
 export const Box = ({ children }: { children: ReactNode }) => {
   const innerWidth = useWindowInnerWidth();
@@ -12,7 +13,7 @@ export const Box = ({ children }: { children: ReactNode }) => {
         paddingRight: 16,
         paddingTop: 8,
       },
-      960: {
+      [breakpoint]: {
         paddingBottom: 16,
         paddingLeft: 16,
         paddingRight: 16,

@@ -1,20 +1,17 @@
 import { CSSProperties } from "react";
-import { border, fadeInUp } from "../styles";
 import { Container } from "./Container";
 import { Drawer } from "./Drawer";
+import { Icon } from "./Icon";
 import { Label } from "./Label";
 import { Link } from "./Link";
 import { useGoToPathname } from "../hooks/useGoToPathname";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
+import { border, breakpoint, fadeInUp } from "../styles";
 
 export const Header = () => {
   const goToPathname = useGoToPathname();
   const innerWidth = useWindowInnerWidth();
-  const hash: CSSProperties = {
-    display: "inline-block",
-    transform: "translateY(0.0625em)",
-  };
   const list = atMediaMinWidth(
     {
       0: {
@@ -28,7 +25,7 @@ export const Header = () => {
         marginTop: 12,
         paddingInlineStart: 0,
       },
-      880: {
+      [breakpoint]: {
         flexDirection: "row",
         flexWrap: "wrap",
       },
@@ -43,14 +40,15 @@ export const Header = () => {
     color: "inherit",
     cursor: "pointer",
     display: "block",
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 500,
     lineHeight: 1,
     marginBottom: 16,
     paddingBottom: 5,
-    paddingLeft: 6,
+    paddingLeft: 26,
     paddingRight: 6,
     paddingTop: 3,
+    position: "relative",
     textDecoration: "none",
     width: "max-content",
   };
@@ -60,7 +58,17 @@ export const Header = () => {
         <Container>
           <nav style={nav} aria-describedby="nav-heading">
             <a style={skip} href="#content">
-              <span style={hash}>#</span> content
+              <Icon
+                path="hash"
+                style={{
+                  height: 24,
+                  left: 2,
+                  position: "absolute",
+                  top: 2,
+                  width: 24,
+                }}
+              />
+              content
             </a>
             <Drawer>
               <Label id="nav-heading">Site navigation</Label>

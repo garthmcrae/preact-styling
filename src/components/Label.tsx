@@ -1,4 +1,5 @@
 import { CSSProperties, ReactNode } from "react";
+
 export const Label = ({
   children,
   element = "h2",

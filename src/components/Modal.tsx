@@ -1,9 +1,11 @@
-import { CSSProperties, useRef, useState } from "react";
+import { CSSProperties, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { border, button, fadeInUp, padding } from "../styles";
+import { Button } from "./Button";
+import { Close } from "./Close";
+import { FocusTrap } from "./FocusTrap";
 import { Heading } from "./Heading";
 import { Paragraph } from "./Paragraph";
-import { FocusTrap } from "./FocusTrap";
+import { border, fadeInUp, padding } from "../styles";
 
 export function Modal() {
   const ref = useRef<HTMLButtonElement>(null);
@@ -12,26 +14,6 @@ export function Modal() {
     position: "absolute",
     right: 16,
     top: 16,
-  };
-  const closeButton: CSSProperties = {
-    appearance: "none",
-    backgroundColor: "var(--background-color)",
-    ...border,
-    color: "inherit",
-    cursor: "pointer",
-    display: "block",
-    fontSize: 16,
-    fontWeight: 500,
-    lineHeight: 1,
-    minWidth: 28,
-    paddingBottom: 5,
-    paddingLeft: 6,
-    paddingRight: 6,
-    paddingTop: 3,
-    textDecoration: "none",
-    transition:
-      "background-color 2000ms ease-in-out, padding 100ms ease-in-out",
-    width: "max-content",
   };
   const content: CSSProperties = {
     backgroundColor: "var(--background-color)",
@@ -61,11 +43,22 @@ export function Modal() {
       ref.current.focus();
     }
   };
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.code === "Escape") {
+        handleHideModal();
+      }
+    };
+    document.addEventListener("keydown", handleKeyPress);
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
   return (
     <>
-      <button ref={ref} style={button} onClick={handleShowModal}>
+      <Button ref={ref} onClick={handleShowModal}>
         show modal
-      </button>
+      </Button>
       {showModal &&
         createPortal(
           <FocusTrap>
@@ -75,9 +68,7 @@ export function Modal() {
                   <Heading>Modal title</Heading>
                   <Paragraph>Modal {" .".repeat(2000)} content.</Paragraph>
                   <div style={close}>
-                    <button style={closeButton} onClick={handleHideModal}>
-                      &times;
-                    </button>
+                    <Close aria-label="dismiss" onClick={handleHideModal} />
                   </div>
                 </div>
               </div>

@@ -1,34 +1,34 @@
-import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
-import { border, button } from "../styles";
-import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
+import { ReactNode, useEffect, useRef, useState } from "react";
+import { Icon } from "./Icon";
 import { useOnClickOutside } from "../hooks/useClickOutside";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
+import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
+import { border, breakpoint } from "../styles";
 
 export const Drawer = ({ children }: { children: ReactNode }) => {
   const ref = useRef(null);
   const [toggle, setToggle] = useState(false);
   useOnClickOutside(ref, () => setToggle(false));
   const innerWidth = useWindowInnerWidth();
-  const burger: CSSProperties = {
-    borderBottomStyle: "solid",
-    borderBottomWidth: 2,
-    borderTopStyle: "solid",
-    borderTopWidth: 2,
-    display: "block",
-    height: 12,
-    marginBottom: 5,
-    marginTop: 11,
-    width: 24,
-  };
   const control = atMediaMinWidth(
     {
       0: {
-        ...button,
-        transform: `translateX(${toggle ? 272 : 0}px)`,
+        appearance: "none",
+        backgroundColor: "var(--background-color)",
+        ...border,
+        color: "inherit",
+        cursor: "pointer",
+        display: "block",
+        paddingBottom: 14,
+        paddingLeft: 14,
+        paddingRight: 14,
+        paddingTop: 14,
+        textDecoration: "none",
         transition:
-          "background-color 2000ms ease-in-out, transform 300ms ease-in-out",
+          "background-color 2000ms ease-in-out, padding 100ms ease-in-out",
+        width: "max-content",
       },
-      800: {
+      [breakpoint]: {
         display: "none",
       },
     },
@@ -49,7 +49,7 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
         width: 224,
         zIndex: 2,
       },
-      880: {
+      [breakpoint]: {
         borderWidth: 0,
         padding: 0,
         position: "static",
@@ -60,23 +60,21 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
     },
     innerWidth
   );
-
   const handleToggle = () => setToggle((prevToggle) => !prevToggle);
-
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
       if (event.code === "Equal") {
         handleToggle();
       }
+      if (event.code === "Escape") {
+        setToggle(false);
+      }
     };
-
     document.addEventListener("keydown", handleKeyPress);
-
     return () => {
       document.removeEventListener("keydown", handleKeyPress);
     };
   }, []);
-
   return (
     <>
       <button
@@ -85,9 +83,18 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
         ref={ref}
         style={control}
       >
-        <span style={burger} />
+        <Icon
+          path="lunch"
+          style={{
+            display: "block",
+            height: 24,
+            width: 24,
+          }}
+        />
       </button>
-      <div style={drawer}>{children}</div>
+      <div style={drawer} inert={innerWidth < 880 && !toggle}>
+        {children}
+      </div>
     </>
   );
 };

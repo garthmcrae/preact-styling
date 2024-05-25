@@ -1,5 +1,7 @@
 import { CSSProperties } from "react";
 
+export const breakpoint = 960;
+
 export const border: CSSProperties = {
     borderColor: "currentcolor",
     borderRadius: 0,
@@ -19,33 +21,3 @@ export const padding = {
     paddingRight: 14,
     paddingTop: 6,
 }
-
-export const button: CSSProperties = {
-    appearance: 'none',
-    backgroundColor: "var(--background-color)",
-    ...border,
-    boxSizing: "border-box",
-    color: "inherit",
-    cursor: "pointer",
-    display: "block",
-    fontSize: 32,
-    lineHeight: 1,
-    minWidth: 48,
-    ...padding,
-    textAlign: "center",
-    transition: "background-color 2000ms ease-in-out",
-};
-
-export const link: CSSProperties = {
-    ...border,
-    boxSizing: "border-box",
-    color: "inherit",
-    cursor: "pointer",
-    display: "block",
-    fontSize: 32,
-    lineHeight: 1,
-    ...padding,
-    textDecoration: "none",
-};
-
-

@@ -10,7 +10,6 @@ export const Layout = ({ children }: { children: ReactNode }) => {
     lineHeight: 1,
     minHeight: "100vh",
   };
-
   return (
     <div style={layout}>
       <Header />

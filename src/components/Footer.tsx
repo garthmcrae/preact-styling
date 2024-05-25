@@ -13,7 +13,6 @@ export const Footer = () => {
     fontWeight: "bold",
     lineHeight: 1,
   };
-
   return (
     <>
       <footer style={footer}>
