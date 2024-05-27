@@ -3,21 +3,21 @@ import { CSSProperties } from "react";
 export const breakpoint = 960;
 
 export const border: CSSProperties = {
-    borderColor: "currentcolor",
-    borderRadius: 0,
-    borderStyle: "solid",
-    borderWidth: 2,
+  borderColor: "currentcolor",
+  borderRadius: 0,
+  borderStyle: "solid",
+  borderWidth: 2,
 };
 
 export const fadeInUp: CSSProperties = {
-    animationName: "fade-in-up",
-    animationDuration: "200ms",
-    animationFillMode: "both",
+  animationName: "fade-in-up",
+  animationDuration: "200ms",
+  animationFillMode: "both",
 };
 
 export const padding = {
-    paddingBottom: 14,
-    paddingLeft: 14,
-    paddingRight: 14,
-    paddingTop: 6,
+  paddingBottom: 14,
+  paddingLeft: 14,
+  paddingRight: 14,
+  paddingTop: 6,
 }

@@ -17,12 +17,13 @@ export const Icon = ({
     link: <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5z"></path>,
     lunch: <path d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"></path>,
   };
+  const icon: CSSProperties = { display: "block", ...style };
   return (
     <svg
       aria-hidden="true"
       fill="currentColor"
       focusable="false"
-      style={{ display: "block", ...style }}
+      style={icon}
       viewBox="0 0 24 24"
     >
       {paths[path]}
