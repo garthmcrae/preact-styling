@@ -20,7 +20,7 @@ export function Modal() {
     ...border,
     ...padding,
     transform: `translateY(0)`,
-    transition: "background-color 2000ms ease-in-out",
+    transition: "background-color 200ms ease-in-out",
     zIndex: 2,
   };
   const modal: CSSProperties = {

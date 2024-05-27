@@ -14,8 +14,8 @@ export const Card = ({
   const icon: CSSProperties = {
     height: 24,
     position: "absolute",
-    right: 8,
-    top: 4,
+    right: 2,
+    top: 2,
     width: 24,
   };
   const link: CSSProperties = {
@@ -27,7 +27,10 @@ export const Card = ({
     fontSize: 32,
     height: "100%",
     lineHeight: 1,
-    padding: 16,
+    paddingBottom: 14,
+    paddingLeft: 14,
+    paddingRight: 30,
+    paddingTop: 14,
     position: "relative",
     textDecoration: "none",
   };

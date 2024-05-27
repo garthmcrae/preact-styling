@@ -22,7 +22,7 @@ export const Icon = ({
       aria-hidden="true"
       fill="currentColor"
       focusable="false"
-      style={style}
+      style={{ display: "block", ...style }}
       viewBox="0 0 24 24"
     >
       {paths[path]}

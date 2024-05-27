@@ -26,7 +26,7 @@ export const Button = forwardRef(
       lineHeight: 1,
       ...padding,
       textAlign: "center",
-      transition: "background-color 2000ms ease-in-out",
+      transition: "background-color 200ms ease-in-out",
     };
     return (
       <button

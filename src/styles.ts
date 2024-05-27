@@ -11,7 +11,7 @@ export const border: CSSProperties = {
 
 export const fadeInUp: CSSProperties = {
     animationName: "fade-in-up",
-    animationDuration: "600ms",
+    animationDuration: "200ms",
     animationFillMode: "both",
 };
 

@@ -16,7 +16,7 @@ export const Mode = () => {
         marginLeft: 16,
         padding: 16,
         position: "static",
-        transition: "background-color 2000ms ease-in-out",
+        transition: "background-color 200ms ease-in-out",
         width: "max-content",
       },
       [breakpoint]: {

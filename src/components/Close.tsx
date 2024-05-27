@@ -20,8 +20,7 @@ export function Close({
     paddingLeft: 0,
     paddingRight: 0,
     paddingTop: 0,
-    transition:
-      "background-color 2000ms ease-in-out, padding 100ms ease-in-out",
+    transition: "background-color 200ms ease-in-out, padding 100ms ease-in-out",
   };
   return (
     <button style={close} aria-label={ariaLabel} onClick={onClick}>

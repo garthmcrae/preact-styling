@@ -16,7 +16,7 @@ export const Alert = ({ children }: { children: ReactNode }) => {
   const close: CSSProperties = {
     flexGrow: 0,
     flexShrink: 0,
-    padding: 16,
+    padding: 14,
   };
   return (
     <Expand expand={toggle}>
