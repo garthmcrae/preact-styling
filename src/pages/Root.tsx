@@ -1,8 +1,11 @@
 import { ReactNode } from "react";
 import { Alert } from "../components/Alert";
 import { Box } from "../components/Box";
+import { Card } from "../components/Card";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
+import { FlexItem } from "../components/FlexItem";
+import { FlexContainer } from "../components/FlexContainer";
 import { Heading } from "../components/Heading";
 import { Label } from "../components/Label";
 import { Page } from "../components/Page";
@@ -11,10 +14,13 @@ import { Paragraph } from "../components/Paragraph";
 
 import buildRaw from "../build.txt?raw";
 import packageRaw from "../../package.json?raw";
-import { ImageLoader } from "../components/Image";
 
 const Strike = ({ children }: { children: ReactNode }) => (
   <span style={{ textDecoration: "line-through" }}>{children}</span>
+);
+
+const Color = ({ children }: { children: ReactNode }) => (
+  <span style={{ color: "tomato" }}>{children}</span>
 );
 
 export function Root() {
@@ -22,13 +28,16 @@ export function Root() {
     <Page>
       <Container>
         <Box>
-          <HeadingPage>Preact styling</HeadingPage>
+          <HeadingPage>
+            What happens if you <Color>don't</Color> add all the dependencies?
+          </HeadingPage>
         </Box>
-        <ImageLoader
-          url={
-            "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=3011&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          }
-        />
+        <Box>
+          <Paragraph first last>
+            This exercise explores using React without including any{" "}
+            <Strike>CSS in JS</Strike> packages (including React itself).
+          </Paragraph>
+        </Box>
         <Alert>
           <Box>
             <Label element="h2">Information</Label>
@@ -38,19 +47,47 @@ export function Root() {
           </Box>
         </Alert>
         <Box>
-          <Paragraph first last>
-            This exercise explores <Strike>achievable styling in</Strike> React
-            without using <Strike>CSS in JS</Strike> libraries.
-          </Paragraph>
+          <Heading>Articles</Heading>
+        </Box>
+        <Box>
+          <FlexContainer>
+            <FlexItem>
+              <Card href="/routing/">
+                <Label>Routing</Label>
+                <Paragraph first last>
+                  A context and functions for handling pages and navigation.
+                </Paragraph>
+              </Card>
+            </FlexItem>
+            <FlexItem>
+              <Card href="/styling/">
+                <Label>Styling</Label>
+                <Paragraph first last>
+                  A context and functions for handling responsive styles.
+                </Paragraph>
+              </Card>
+            </FlexItem>
+            <FlexItem>
+              <Card href="/components/">
+                <Label>Components</Label>
+                <Paragraph first last>
+                  Some components to see what the built file size looks like.
+                </Paragraph>
+              </Card>
+            </FlexItem>
+          </FlexContainer>
+        </Box>
+        <Box>
+          <Heading>Build output</Heading>
         </Box>
         <Box>
           <Paragraph first last>
-            I'm using the following to write the build output to a file so we
-            can see what the final built asset sizes are.
+            I'm running the following to write the build output to a file so we
+            can see what size the final built assets are.
           </Paragraph>
         </Box>
         <Box>
-          <Code>{"npm run build -- > src/build.txt"}</Code>
+          <Code>{"npm run build > src/build.txt"}</Code>
         </Box>
         <Box>
           <Code>{buildRaw}</Code>

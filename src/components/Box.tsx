@@ -22,6 +22,5 @@ export const Box = ({ children }: { children: ReactNode }) => {
     },
     innerWidth
   );
-
   return <div style={box}>{children}</div>;
 };

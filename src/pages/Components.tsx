@@ -1,10 +1,10 @@
 import { Box } from "../components/Box";
 import { Container } from "../components/Container";
 import { Heading } from "../components/Heading";
+import { HeadingPage } from "../components/HeadingPage";
 import { Modal } from "../components/Modal";
 import { Page } from "../components/Page";
-import { HeadingPage } from "../components/HeadingPage";
-import { Paragraph } from "../components/Paragraph";
+import { Picture } from "../components/Picture";
 
 export function Components() {
   return (
@@ -14,20 +14,20 @@ export function Components() {
           <HeadingPage>Components</HeadingPage>
         </Box>
         <Box>
-          <Paragraph>Work in progress modal.</Paragraph>
+          <Heading>Modal</Heading>
         </Box>
         <Box>
           <Modal />
         </Box>
         <Box>
-          <Heading>Notes</Heading>
+          <Heading>Picture</Heading>
         </Box>
         <Box>
-          <Paragraph>
-            Maybe turn the delow into a navigation or action group component.
-            The pattern is used so far in the navigation, footer and page
-            actions.
-          </Paragraph>
+          <Picture
+            url={
+              "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=3011&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+          />
         </Box>
       </Container>
     </Page>

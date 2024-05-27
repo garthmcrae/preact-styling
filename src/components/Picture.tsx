@@ -1,6 +1,6 @@
 import { useState, useEffect, CSSProperties } from "react";
 
-export const ImageLoader = ({ url }: { url: string }) => {
+export const Picture = ({ url }: { url: string }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   useEffect(() => {
     const image = new Image();
