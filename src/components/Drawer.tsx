@@ -92,9 +92,7 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
           }}
         />
       </button>
-      <div style={drawer} inert={innerWidth < 880 && !toggle}>
-        {children}
-      </div>
+      <div style={drawer}>{children}</div>
     </>
   );
 };
