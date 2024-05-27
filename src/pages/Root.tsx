@@ -20,7 +20,7 @@ const Strike = ({ children }: { children: ReactNode }) => (
 );
 
 const Color = ({ children }: { children: ReactNode }) => (
-  <span style={{ color: "tomato" }}>{children}</span>
+  <span style={{ color: "crimson" }}>{children}</span>
 );
 
 export function Root() {
