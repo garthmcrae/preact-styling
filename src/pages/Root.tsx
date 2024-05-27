@@ -34,8 +34,9 @@ export function Root() {
         </Box>
         <Box>
           <Paragraph first last>
-            This exercise explores using React without including any{" "}
-            <Strike>CSS in JS</Strike> packages (including React itself).
+            This is an exercise to explore using React without including
+            additional <Strike>CSS in JS</Strike> packages (including React
+            itself).
           </Paragraph>
         </Box>
         <Alert>
@@ -47,23 +48,53 @@ export function Root() {
           </Box>
         </Alert>
         <Box>
+          <Heading>Summary</Heading>
+        </Box>
+        <Box>
+          <Code>{packageRaw}</Code>
+        </Box>
+        <Box>
+          <Paragraph first>
+            Bit of a give away here in the name — this is a Preact project not a
+            React project. Preact is a "fast 3kB alternative to React with the
+            same modern API". For an additional ~2kB you can include a React
+            compatibility layer which means at surface level components look
+            identical including imports.
+          </Paragraph>
+          <Paragraph>
+            If you haven't already I recommend checking it out.
+          </Paragraph>
+          <Paragraph>
+            For build we are using Vite the "next generation frontend tooling".
+            It consists of a development server and "a build command that
+            bundles your code with Rollup, pre-configured to output highly
+            optimized static assets for production".
+          </Paragraph>
+          <Paragraph>
+            So Rollup pre-configured — great. Highly recommend checking out
+            Rollup and Vite if you haven't as well. Rollup is also the
+            JavaScript module bundler.
+          </Paragraph>
+          <Paragraph last>Last but not least TypeScript.</Paragraph>
+        </Box>
+        <Box>
           <Heading>Articles</Heading>
         </Box>
         <Box>
           <FlexContainer>
             <FlexItem>
-              <Card href="/routing/">
-                <Label>Routing</Label>
+              <Card href="/styling/">
+                <Label>Styling</Label>
                 <Paragraph first last>
-                  A context and functions for handling pages and navigation.
+                  The handling of styles and responsive behaviour.
                 </Paragraph>
               </Card>
             </FlexItem>
             <FlexItem>
-              <Card href="/styling/">
-                <Label>Styling</Label>
+              <Card href="/routing/">
+                <Label>Routing</Label>
                 <Paragraph first last>
-                  A context and functions for handling responsive styles.
+                  The rendering of different routes and navigation between them.
                 </Paragraph>
               </Card>
             </FlexItem>
@@ -71,7 +102,7 @@ export function Root() {
               <Card href="/components/">
                 <Label>Components</Label>
                 <Paragraph first last>
-                  Some components to see what the built file size looks like.
+                  What this looks like in practice.
                 </Paragraph>
               </Card>
             </FlexItem>
@@ -91,12 +122,6 @@ export function Root() {
         </Box>
         <Box>
           <Code>{buildRaw}</Code>
-        </Box>
-        <Box>
-          <Heading>Package file</Heading>
-        </Box>
-        <Box>
-          <Code>{packageRaw}</Code>
         </Box>
       </Container>
     </Page>
