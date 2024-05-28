@@ -13,7 +13,9 @@ export const Mode = () => {
       0: {
         backgroundColor: "var(--background-color)",
         ...border,
+        marginBottom: 8,
         marginLeft: 16,
+        marginTop: 8,
         padding: 16,
         position: "static",
         transition: "background-color 200ms ease-in-out",
@@ -22,7 +24,9 @@ export const Mode = () => {
       [breakpoint]: {
         bottom: 16,
         left: "calc(100vw - 16px)",
+        marginBottom: undefined,
         marginLeft: undefined,
+        marginTop: undefined,
         position: "fixed",
         transform: "rotate(-90deg)",
         transformOrigin: "bottom left",

@@ -4,6 +4,7 @@ import { Heading } from "../components/Heading";
 import { HeadingPage } from "../components/HeadingPage";
 import { Modal } from "../components/Modal";
 import { Page } from "../components/Page";
+import { Paragraph } from "../components/Paragraph";
 import { Picture } from "../components/Picture";
 
 export function Components() {
@@ -15,6 +16,9 @@ export function Components() {
         </Box>
         <Box>
           <Heading>Modal</Heading>
+        </Box>
+        <Box>
+          <Paragraph>How appropriate to document a modal in a modal.</Paragraph>
         </Box>
         <Box>
           <Modal />

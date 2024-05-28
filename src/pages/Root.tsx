@@ -34,9 +34,8 @@ export function Root() {
         </Box>
         <Box>
           <Paragraph first last>
-            This is an exercise to explore using React without including
-            additional <Strike>CSS in JS</Strike> packages (including React
-            itself).
+            This is an exercise to explore using React without adding additional{" "}
+            <Strike>CSS in JS</Strike> packages (including React itself).
           </Paragraph>
         </Box>
         <Alert>
@@ -59,7 +58,7 @@ export function Root() {
             React project. Preact is a "fast 3kB alternative to React with the
             same modern API". For an additional ~2kB you can include a React
             compatibility layer which means at surface level components look
-            identical including imports.
+            identical.
           </Paragraph>
           <Paragraph>
             If you haven't already I recommend checking it out.
@@ -71,9 +70,12 @@ export function Root() {
             optimized static assets for production".
           </Paragraph>
           <Paragraph>
+            Rollup is also the JavaScript module bundler. If I was to publish
+            this to NPM I would use Rollup to bundle the module.
+          </Paragraph>
+          <Paragraph>
             So Rollup pre-configured — great. Highly recommend checking out
-            Rollup and Vite if you haven't as well. Rollup is also the
-            JavaScript module bundler.
+            Rollup and Vite if you haven't already as well.
           </Paragraph>
           <Paragraph last>Last but not least TypeScript.</Paragraph>
         </Box>
