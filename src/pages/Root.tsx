@@ -11,6 +11,7 @@ import { Label } from "../components/Label";
 import { Page } from "../components/Page";
 import { HeadingPage } from "../components/HeadingPage";
 import { Paragraph } from "../components/Paragraph";
+import { useGoToPathname } from "../hooks/useGoToPathname";
 
 import buildRaw from "../build.txt?raw";
 import packageRaw from "../../package.json?raw";
@@ -24,6 +25,7 @@ const Color = ({ children }: { children: ReactNode }) => (
 );
 
 export function Root() {
+  const goToPathname = useGoToPathname();
   return (
     <Page>
       <Container>
@@ -80,37 +82,6 @@ export function Root() {
           <Paragraph last>Last but not least TypeScript.</Paragraph>
         </Box>
         <Box>
-          <Heading>Articles</Heading>
-        </Box>
-        <Box>
-          <FlexContainer>
-            <FlexItem>
-              <Card href="/styling/">
-                <Label>Styling</Label>
-                <Paragraph first last>
-                  The handling of styles and responsive behaviour.
-                </Paragraph>
-              </Card>
-            </FlexItem>
-            <FlexItem>
-              <Card href="/routing/">
-                <Label>Routing</Label>
-                <Paragraph first last>
-                  The rendering of different routes and navigation between them.
-                </Paragraph>
-              </Card>
-            </FlexItem>
-            <FlexItem>
-              <Card href="/components/">
-                <Label>Components</Label>
-                <Paragraph first last>
-                  What this looks like in practice.
-                </Paragraph>
-              </Card>
-            </FlexItem>
-          </FlexContainer>
-        </Box>
-        <Box>
           <Heading>Build output</Heading>
         </Box>
         <Box>
@@ -124,6 +95,37 @@ export function Root() {
         </Box>
         <Box>
           <Code>{buildRaw}</Code>
+        </Box>
+        <Box>
+          <Heading>Articles</Heading>
+        </Box>
+        <Box>
+          <FlexContainer>
+            <FlexItem>
+              <Card href="/styling/" onClick={goToPathname}>
+                <Label>Styling</Label>
+                <Paragraph first last>
+                  The handling of styles and responsive behaviour.
+                </Paragraph>
+              </Card>
+            </FlexItem>
+            <FlexItem>
+              <Card href="/routing/" onClick={goToPathname}>
+                <Label>Routing</Label>
+                <Paragraph first last>
+                  The rendering of different routes and navigation between them.
+                </Paragraph>
+              </Card>
+            </FlexItem>
+            <FlexItem>
+              <Card href="/components/" onClick={goToPathname}>
+                <Label>Components</Label>
+                <Paragraph first last>
+                  What this looks like in practice.
+                </Paragraph>
+              </Card>
+            </FlexItem>
+          </FlexContainer>
         </Box>
       </Container>
     </Page>
