@@ -9,7 +9,7 @@ export const Card = ({
 }: {
   children: ReactNode;
   href: string;
-  onClick?: (argument: MouseEvent) => void;
+  onClick: (argument: MouseEvent) => void;
 }) => {
   const icon: CSSProperties = {
     height: 24,
@@ -34,12 +34,17 @@ export const Card = ({
     position: "relative",
     textDecoration: "none",
   };
+  const content: CSSProperties = {
+    pointerEvents: "none",
+  };
   return (
-    <a style={link} href={href} onClick={onClick}>
-      <div style={icon}>
-        <Icon path="link" />
+    <a style={link} href={href} onClick={(event) => onClick(event)}>
+      <div style={content}>
+        <div style={icon}>
+          <Icon path="link" />
+        </div>
+        {children}
       </div>
-      {children}
     </a>
   );
 };
