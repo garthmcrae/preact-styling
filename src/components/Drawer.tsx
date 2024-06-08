@@ -80,7 +80,6 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
       <button
         aria-label="Toggle navigation"
         onClick={handleToggle}
-        ref={ref}
         style={control}
       >
         <Icon
@@ -92,7 +91,9 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
           }}
         />
       </button>
-      <div style={drawer}>{children}</div>
+      <div style={drawer} ref={ref}>
+        {children}
+      </div>
     </>
   );
 };

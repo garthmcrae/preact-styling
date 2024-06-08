@@ -1,5 +1,6 @@
 import { Box } from "../components/Box";
 import { Container } from "../components/Container";
+import { DimensionalObject } from "../components/DimensionalObject";
 import { Heading } from "../components/Heading";
 import { HeadingPage } from "../components/HeadingPage";
 import { Modal } from "../components/Modal";
@@ -13,6 +14,9 @@ export function Components() {
       <Container>
         <Box>
           <HeadingPage>Components</HeadingPage>
+        </Box>
+        <Box>
+          <DimensionalObject />
         </Box>
         <Box>
           <Heading>Modal</Heading>

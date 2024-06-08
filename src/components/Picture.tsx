@@ -20,11 +20,9 @@ export const Picture = ({ url }: { url: string }) => {
     };
   }, [url]);
   const styles: CSSProperties = {
-    aspectRatio: "1",
+    aspectRatio: "1 / 1",
     backgroundImage: `url(${url})`,
     backgroundSize: "cover",
-    height: "auto",
-    maxWidth: "100%",
     opacity: imageLoaded ? 1 : 0,
     transition: "opacity 300ms ease-in-out",
     width: "100%",

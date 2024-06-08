@@ -102,18 +102,18 @@ export function Root() {
         <Box>
           <FlexContainer>
             <FlexItem>
-              <Card href="/styling/" onClick={goToPathname}>
-                <Label>Styling</Label>
-                <Paragraph first last>
-                  The handling of styles and responsive behaviour.
-                </Paragraph>
-              </Card>
-            </FlexItem>
-            <FlexItem>
               <Card href="/routing/" onClick={goToPathname}>
                 <Label>Routing</Label>
                 <Paragraph first last>
                   The rendering of different routes and navigation between them.
+                </Paragraph>
+              </Card>
+            </FlexItem>
+            <FlexItem>
+              <Card href="/styling/" onClick={goToPathname}>
+                <Label>Styling</Label>
+                <Paragraph first last>
+                  The handling of styles and responsive behaviour.
                 </Paragraph>
               </Card>
             </FlexItem>
