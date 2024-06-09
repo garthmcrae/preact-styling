@@ -2,7 +2,7 @@ import { CSSProperties } from "preact/compat";
 
 export const Void = () => {
   const container: CSSProperties = {
-    backgroundImage: "linear-gradient(60deg,crimson,tomato)",
+    backgroundImage: "radial-gradient(tomato,crimson)",
     height: 200,
     width: "100%",
   };
