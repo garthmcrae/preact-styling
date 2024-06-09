@@ -6,6 +6,7 @@ export const Code = ({ children }: { children: string }) => {
     boxSizing: "border-box",
     color: "currentColor",
     lineHeight: 1.25,
+    margin: 0,
     overflowX: "auto",
     padding: 16,
   };

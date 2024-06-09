@@ -2,8 +2,9 @@ import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
 import { Heading } from "../components/Heading";
-import { Page } from "../components/Page";
 import { HeadingPage } from "../components/HeadingPage";
+import { Hyperboloid } from "../graphics/Hyperboloid";
+import { Page } from "../components/Page";
 import { Paragraph } from "../components/Paragraph";
 
 import routesRaw from "../components/Routes?raw";
@@ -16,6 +17,9 @@ export function Routing() {
   return (
     <Page>
       <Container>
+        <Box>
+          <Hyperboloid />
+        </Box>
         <Box>
           <HeadingPage>Routing</HeadingPage>
         </Box>

@@ -7,7 +7,7 @@ export const Label = ({
   id,
 }: {
   children: ReactNode;
-  element?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "label";
+  element?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "label" | "p";
   htmlFor?: string;
   id?: string;
 }) => {

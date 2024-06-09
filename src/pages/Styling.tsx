@@ -2,8 +2,9 @@ import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
 import { Heading } from "../components/Heading";
-import { Page } from "../components/Page";
 import { HeadingPage } from "../components/HeadingPage";
+import { Octohedron } from "../graphics/Octohedron";
+import { Page } from "../components/Page";
 import { Paragraph } from "../components/Paragraph";
 
 import atMediaMinWidthString from "../utilities/atMediaMinWidth.ts?raw";
@@ -15,6 +16,9 @@ export function Styling() {
   return (
     <Page>
       <Container>
+        <Box>
+          <Octohedron />
+        </Box>
         <Box>
           <HeadingPage>Styling</HeadingPage>
         </Box>

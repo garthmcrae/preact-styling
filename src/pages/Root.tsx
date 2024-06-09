@@ -4,20 +4,21 @@ import { Box } from "../components/Box";
 import { Card } from "../components/Card";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
-import { FlexItem } from "../components/FlexItem";
 import { FlexContainer } from "../components/FlexContainer";
+import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
+import { HeadingPage } from "../components/HeadingPage";
 import { Label } from "../components/Label";
 import { Page } from "../components/Page";
-import { HeadingPage } from "../components/HeadingPage";
 import { Paragraph } from "../components/Paragraph";
+import { Cube } from "../graphics/Cube";
+import { Hyperboloid } from "../graphics/Hyperboloid";
+import { Octohedron } from "../graphics/Octohedron";
+import { Void } from "../graphics/Void";
 import { useGoToPathname } from "../hooks/useGoToPathname";
 
 import buildRaw from "../build.txt?raw";
 import packageRaw from "../../package.json?raw";
-import { Cube } from "../graphics/Cube";
-import { Octohedron } from "../graphics/Octohedron";
-import { Hyperboloid } from "../graphics/Hyperboloid";
 
 const Strike = ({ children }: { children: ReactNode }) => (
   <span style={{ textDecoration: "line-through" }}>{children}</span>
@@ -32,6 +33,9 @@ export function Root() {
   return (
     <Page>
       <Container>
+        <Box>
+          <Void />
+        </Box>
         <Box>
           <HeadingPage>
             What happens if you <Color>don't</Color> add all the dependencies?
@@ -55,6 +59,25 @@ export function Root() {
           <Heading>Summary</Heading>
         </Box>
         <Box>
+          <Paragraph first last>
+            Something I found really nifty was Vite allows you to easily import
+            raw files as a string so adding code examples to this page was super
+            easy.
+          </Paragraph>
+        </Box>
+        <Box>
+          <Code>{`
+import buildRaw from "../build.txt?raw";
+import packageRaw from "../../package.json?raw";
+          `}</Code>
+        </Box>
+        <Box>
+          <Paragraph first last>
+            So now with that let's take a look at some files.
+          </Paragraph>
+        </Box>
+        <Box>
+          <Label element="h3">package.json</Label>
           <Code>{packageRaw}</Code>
         </Box>
         <Box>
@@ -109,7 +132,7 @@ export function Root() {
                 <div style={{ marginBottom: 16 }}>
                   <Hyperboloid />
                 </div>
-                <Label>Routing</Label>
+                <Label element="h3">Routing</Label>
                 <Paragraph first last>
                   The rendering of different routes and navigation between them.
                 </Paragraph>
@@ -120,7 +143,7 @@ export function Root() {
                 <div style={{ marginBottom: 16 }}>
                   <Octohedron />
                 </div>
-                <Label>Styling</Label>
+                <Label element="h3">Styling</Label>
                 <Paragraph first last>
                   The handling of styles and responsive behaviour.
                 </Paragraph>
@@ -131,7 +154,7 @@ export function Root() {
                 <div style={{ marginBottom: 16 }}>
                   <Cube />
                 </div>
-                <Label>Components</Label>
+                <Label element="h3">Components</Label>
                 <Paragraph first last>
                   What this looks like in practice.
                 </Paragraph>
