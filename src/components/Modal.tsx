@@ -33,9 +33,11 @@ export function Modal({ children }: { children: ReactNode }) {
     zIndex: 2,
   };
   const handleShowModal = () => {
+    document.body.style.overflow = "hidden";
     setShowModal(true);
   };
   const handleHideModal = () => {
+    document.body.style.overflow = "unset";
     setShowModal(false);
     if (ref.current) {
       ref.current.focus();
@@ -60,7 +62,7 @@ export function Modal({ children }: { children: ReactNode }) {
       {showModal &&
         createPortal(
           <FocusTrap>
-            <div style={modal}>
+            <div style={modal} tabIndex={0}>
               <div style={fadeInUp}>
                 <div style={content}>
                   {children}

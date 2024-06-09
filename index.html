@@ -14,6 +14,7 @@
     :root {
       --background-color: #242427;
       --color: #d4d4d4;
+      --focus: crimson;
       -moz-osx-font-smoothing: grayscale;
       -webkit-font-smoothing: antialiased;
       background-color: var(--background-color);
@@ -29,8 +30,10 @@
       transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
     }
     *:focus {
-      outline: 4px solid crimson;
+      outline-color: var(--focus);
       outline-offset: 3px;
+      outline-style: solid;
+      outline-width: 4px;
     }
     @media (prefers-color-scheme: light) {
       :root {

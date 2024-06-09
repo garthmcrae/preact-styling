@@ -5,6 +5,10 @@ export const useGoToPathname = () => {
 
   const goToPathname = (argument: MouseEvent | TouchEvent | string) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    window.focus();
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
     if (typeof argument === 'string' || argument instanceof String) {
       window.history.pushState({}, "", argument as string);
       setLocationPathname(argument);

@@ -2,7 +2,6 @@ import { ReactNode, useEffect, useRef } from "react";
 
 export const FocusTrap = ({ children }: { children: ReactNode }) => {
   const ref = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const focusableElements = ref.current?.querySelectorAll(
       'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])'
@@ -23,13 +22,10 @@ export const FocusTrap = ({ children }: { children: ReactNode }) => {
         }
       }
     };
-
     document.addEventListener("keydown", handleKeyDown);
-
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
-
   return <div ref={ref}>{children}</div>;
 };

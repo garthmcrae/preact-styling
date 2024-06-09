@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { Alert } from "../components/Alert";
 import { Box } from "../components/Box";
 import { Card } from "../components/Card";
@@ -29,6 +29,9 @@ const Color = ({ children }: { children: ReactNode }) => (
 );
 
 export function Root() {
+  useEffect(() => {
+    document.documentElement.style.setProperty("--focus", "crimson");
+  }, []);
   const goToPathname = useGoToPathname();
   return (
     <Page>

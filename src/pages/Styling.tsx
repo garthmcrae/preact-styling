@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
@@ -13,6 +14,9 @@ import useWindowInnerWidthString from "../hooks/useWindowInnerWidth.ts?raw";
 import windowInnerWidthContextString from "../contexts/WindowInnerWidthContext.tsx?raw";
 
 export function Styling() {
+  useEffect(() => {
+    document.documentElement.style.setProperty("--focus", "magenta");
+  }, []);
   return (
     <Page>
       <Container>

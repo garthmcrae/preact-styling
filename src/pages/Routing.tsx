@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
@@ -14,6 +15,9 @@ import useWindowLocationPathnameRaw from "../hooks/useWindowLocationPathname.ts?
 import windowLocationPathnameContextRaw from "../contexts/WindowLocationPathnameContext.tsx?raw";
 
 export function Routing() {
+  useEffect(() => {
+    document.documentElement.style.setProperty("--focus", "blue");
+  }, []);
   return (
     <Page>
       <Container>

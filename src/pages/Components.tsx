@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Box } from "../components/Box";
 import { Container } from "../components/Container";
 import { Cube } from "../graphics/Cube";
@@ -11,6 +12,9 @@ import { Picture } from "../components/Picture";
 import { Hyperboloid } from "../graphics/Hyperboloid";
 
 export function Components() {
+  useEffect(() => {
+    document.documentElement.style.setProperty("--focus", "tomato");
+  }, []);
   return (
     <Page>
       <Container>
