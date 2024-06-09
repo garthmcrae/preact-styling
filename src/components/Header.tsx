@@ -22,7 +22,7 @@ export const Header = () => {
         gap: 16,
         listStyle: "none",
         marginBottom: 0,
-        marginTop: 12,
+        marginTop: 0,
         paddingInlineStart: 0,
       },
       [breakpoint]: {

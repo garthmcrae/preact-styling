@@ -11,7 +11,7 @@ export const Mode = () => {
   const container: CSSProperties = {
     backgroundColor: "var(--background-color)",
     ...border,
-    ...padding,
+    padding: 16,
     transition: "background-color 200ms ease-in-out",
     width: "max-content",
   };
@@ -41,7 +41,7 @@ export const Mode = () => {
     gap: 16,
     listStyle: "none",
     marginBottom: 0,
-    marginTop: 12,
+    marginTop: 0,
     paddingInlineStart: 0,
   };
   useEffect(() => {

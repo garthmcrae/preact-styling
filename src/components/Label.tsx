@@ -15,7 +15,7 @@ export const Label = ({
   const label: CSSProperties = {
     fontSize: 12,
     fontWeight: 500,
-    marginBottom: 0,
+    marginBottom: 8,
     marginTop: 0,
   };
   return (
