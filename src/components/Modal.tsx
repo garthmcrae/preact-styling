@@ -1,13 +1,11 @@
-import { CSSProperties, useEffect, useRef, useState } from "react";
+import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Button } from "./Button";
 import { Close } from "./Close";
 import { FocusTrap } from "./FocusTrap";
-import { Heading } from "./Heading";
-import { Paragraph } from "./Paragraph";
 import { border, fadeInUp, padding } from "../styles";
 
-export function Modal() {
+export function Modal({ children }: { children: ReactNode }) {
   const ref = useRef<HTMLButtonElement>(null);
   const [showModal, setShowModal] = useState(false);
   const close: CSSProperties = {
@@ -65,8 +63,7 @@ export function Modal() {
             <div style={modal}>
               <div style={fadeInUp}>
                 <div style={content}>
-                  <Heading>Modal title</Heading>
-                  <Paragraph>Modal {" .".repeat(2000)} content.</Paragraph>
+                  {children}
                   <div style={close}>
                     <Close aria-label="dismiss" onClick={handleHideModal} />
                   </div>

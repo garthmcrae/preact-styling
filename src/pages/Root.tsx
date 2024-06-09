@@ -15,6 +15,9 @@ import { useGoToPathname } from "../hooks/useGoToPathname";
 
 import buildRaw from "../build.txt?raw";
 import packageRaw from "../../package.json?raw";
+import { Cube } from "../graphics/Cube";
+import { Octohedron } from "../graphics/Octohedron";
+import { Hyperboloid } from "../graphics/Hyperboloid";
 
 const Strike = ({ children }: { children: ReactNode }) => (
   <span style={{ textDecoration: "line-through" }}>{children}</span>
@@ -103,6 +106,9 @@ export function Root() {
           <FlexContainer>
             <FlexItem>
               <Card href="/routing/" onClick={goToPathname}>
+                <div style={{ marginBottom: 16 }}>
+                  <Hyperboloid />
+                </div>
                 <Label>Routing</Label>
                 <Paragraph first last>
                   The rendering of different routes and navigation between them.
@@ -111,6 +117,9 @@ export function Root() {
             </FlexItem>
             <FlexItem>
               <Card href="/styling/" onClick={goToPathname}>
+                <div style={{ marginBottom: 16 }}>
+                  <Octohedron />
+                </div>
                 <Label>Styling</Label>
                 <Paragraph first last>
                   The handling of styles and responsive behaviour.
@@ -119,6 +128,9 @@ export function Root() {
             </FlexItem>
             <FlexItem>
               <Card href="/components/" onClick={goToPathname}>
+                <div style={{ marginBottom: 16 }}>
+                  <Cube />
+                </div>
                 <Label>Components</Label>
                 <Paragraph first last>
                   What this looks like in practice.

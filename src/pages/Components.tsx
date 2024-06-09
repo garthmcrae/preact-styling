@@ -1,12 +1,14 @@
 import { Box } from "../components/Box";
 import { Container } from "../components/Container";
-import { DimensionalObject } from "../components/DimensionalObject";
+import { Cube } from "../graphics/Cube";
 import { Heading } from "../components/Heading";
 import { HeadingPage } from "../components/HeadingPage";
 import { Modal } from "../components/Modal";
+import { Octohedron } from "../graphics/Octohedron";
 import { Page } from "../components/Page";
 import { Paragraph } from "../components/Paragraph";
 import { Picture } from "../components/Picture";
+import { Hyperboloid } from "../graphics/Hyperboloid";
 
 export function Components() {
   return (
@@ -16,7 +18,9 @@ export function Components() {
           <HeadingPage>Components</HeadingPage>
         </Box>
         <Box>
-          <DimensionalObject />
+          <Cube />
+          <Hyperboloid />
+          <Octohedron />
         </Box>
         <Box>
           <Heading>Modal</Heading>
@@ -25,7 +29,14 @@ export function Components() {
           <Paragraph>How appropriate to document a modal in a modal.</Paragraph>
         </Box>
         <Box>
-          <Modal />
+          <Modal>
+            <Heading>Modal title</Heading>
+            <Paragraph>Modal {" .".repeat(2000)} content.</Paragraph>
+            <Modal>
+              <Heading>Nested modal title</Heading>
+              <Paragraph>Modal {" .".repeat(2000)} content.</Paragraph>
+            </Modal>
+          </Modal>
         </Box>
         <Box>
           <Heading>Picture</Heading>

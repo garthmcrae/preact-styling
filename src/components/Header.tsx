@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 import { Container } from "./Container";
 import { Drawer } from "./Drawer";
-import { Icon } from "./Icon";
+import { Icon, hash } from "./Icon";
 import { Label } from "./Label";
 import { Link } from "./Link";
 import { useGoToPathname } from "../hooks/useGoToPathname";
@@ -59,7 +59,7 @@ export const Header = () => {
           <nav style={nav} aria-describedby="nav-heading">
             <a style={skip} href="#content">
               <Icon
-                path="hash"
+                d={hash}
                 style={{
                   height: 24,
                   left: 2,

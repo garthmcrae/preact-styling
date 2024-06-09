@@ -1,15 +1,14 @@
 import { CSSProperties } from "preact/compat";
 
-export const DimensionalObject = () => {
+export const Octohedron = () => {
   const container: CSSProperties = {
     alignItems: "center",
-    aspectRatio: "1 / 1",
-    backgroundImage: "radial-gradient(coral,crimson)",
+    backgroundImage: "radial-gradient(magenta,purple)",
     display: "flex",
     height: 200,
     justifyContent: "center",
     perspective: 550,
-    width: 200,
+    width: "100%",
   };
   const element: CSSProperties = {
     animationName: "rotate",
@@ -25,7 +24,7 @@ export const DimensionalObject = () => {
   const plane: CSSProperties = {
     alignItems: "center",
     backfaceVisibility: "inherit",
-    backgroundColor: "rgba(255,255,0,.255)",
+    backgroundColor: "rgba(0,255,255,.255)",
     color: "#fff",
     display: "flex",
     fontSize: 50,
@@ -42,11 +41,11 @@ export const DimensionalObject = () => {
             key={position}
             style={{
               ...plane,
-              transform: `translateZ(${position}px)`,
+              transform: `scale(${
+                1 - (position / 50 < 0 ? (position / 50) * -1 : position / 50)
+              }) translateZ(${position}px)`,
             }}
-          >
-            {/* {position} */}
-          </div>
+          />
         ))}
       </div>
     </section>

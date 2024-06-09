@@ -1,5 +1,5 @@
 import { ReactNode, useEffect, useRef, useState } from "react";
-import { Icon } from "./Icon";
+import { Icon, lunch } from "./Icon";
 import { useOnClickOutside } from "../hooks/useClickOutside";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
@@ -83,7 +83,7 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
         style={control}
       >
         <Icon
-          path="lunch"
+          d={lunch}
           style={{
             display: "block",
             height: 24,
