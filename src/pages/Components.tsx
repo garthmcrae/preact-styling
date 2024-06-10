@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { References } from "../cards/References";
+import { Thoughts } from "../cards/Thoughts";
 import { Root } from "../cards/Root";
 import { Routing } from "../cards/Routing";
 import { Alert } from "../components/Alert";
@@ -56,17 +56,13 @@ export function Components() {
               <Heading>Thoughts on modals</Heading>
             </Box>
             <Box>
-              <Paragraph first>
+              <Paragraph first last>
                 I've always heard modals are complex and have a lot of
                 consdierations to cater for accessibility. This is true and I've
                 always reached for libraries. That being said it has also
                 prevented me from ever interacting with React's portals and ever
                 reviewing and implementing focus traps myself (*cough*, Bing /
                 GPT-4).
-              </Paragraph>
-              <Paragraph last>
-                I'm not going to talk through this just have geez if you are
-                interested.
               </Paragraph>
             </Box>
             <Box>
@@ -165,7 +161,7 @@ export function Components() {
         <Box>
           <FlexContainer breakpoint={768}>
             <FlexItem>
-              <References />
+              <Thoughts />
             </FlexItem>
             <FlexItem>
               <Root />

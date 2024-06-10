@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Components } from "../cards/Components";
-import { References } from "../cards/References";
+import { Thoughts } from "../cards/Thoughts";
 import { Styling } from "../cards/Styling";
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
@@ -109,7 +109,7 @@ export function Routing() {
               <Components />
             </FlexItem>
             <FlexItem>
-              <References />
+              <Thoughts />
             </FlexItem>
           </FlexContainer>
         </Box>

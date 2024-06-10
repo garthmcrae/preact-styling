@@ -19,7 +19,7 @@ import { Pyramid } from "../graphics/Pyramid";
 // npm run build -- > src/build.txt
 // https://medium.com/@davidyf96/how-to-use-media-queries-in-javascript-6489d46822d8
 
-export function References() {
+export function Thoughts() {
   useEffect(() => {
     document.documentElement.style.setProperty("--focus", "orange");
   }, []);
@@ -30,13 +30,15 @@ export function References() {
           <Plane />
         </Box>
         <Box>
-          <HeadingPage>References</HeadingPage>
+          <HeadingPage>Thoughts</HeadingPage>
         </Box>
         <Box>
           <Paragraph first last>
             Further reading. Final thoughts and also a reminder to talk about
             scroll behaviour on the root element (this was new to me but I tell
-            you what, not bad at all).
+            you what, not bad at all). Next steps, publish some of this to NPM
+            to validate if Preact modules are compatible with React. Install a
+            React lib into a Preact project.
           </Paragraph>
         </Box>
         <Box>

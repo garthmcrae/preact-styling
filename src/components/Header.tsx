@@ -78,7 +78,7 @@ export const Header = () => {
                   "/routing/",
                   "/styling/",
                   "/components/",
-                  "/references/",
+                  "/thoughts/",
                 ].map((item, index) => (
                   <li
                     style={{ ...fadeInUp, animationDelay: `${index * 100}ms` }}

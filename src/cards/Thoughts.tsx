@@ -4,14 +4,14 @@ import { Paragraph } from "../components/Paragraph";
 import { Plane } from "../graphics/Plane";
 import { useGoToPathname } from "../hooks/useGoToPathname";
 
-export const References = () => {
+export const Thoughts = () => {
   const goToPathname = useGoToPathname();
   return (
-    <Card href="/references/" onClick={goToPathname}>
+    <Card href="/thoughts/" onClick={goToPathname}>
       <div style={{ marginBottom: 16 }}>
         <Plane />
       </div>
-      <Label element="h3">References</Label>
+      <Label element="h3">Thoughts</Label>
       <Paragraph first last>
         Further reading.
       </Paragraph>
