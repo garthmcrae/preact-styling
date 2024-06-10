@@ -1,9 +1,9 @@
 import { CSSProperties } from "preact/compat";
 
-export const Octohedron = () => {
+export const Pyramid = () => {
   const container: CSSProperties = {
     alignItems: "center",
-    backgroundImage: "radial-gradient(magenta,purple)",
+    backgroundImage: "radial-gradient(navy,black)",
     display: "flex",
     height: 200,
     justifyContent: "center",
@@ -23,7 +23,7 @@ export const Octohedron = () => {
   };
   const plane: CSSProperties = {
     backfaceVisibility: "inherit",
-    backgroundColor: "rgba(0,255,255,.255)",
+    backgroundColor: "rgba(255,255,255,.255)",
     height: "100%",
     position: "absolute",
     width: "100%",
@@ -31,17 +31,17 @@ export const Octohedron = () => {
   return (
     <section style={container}>
       <div style={element}>
-        {[-50, -40, -30, -20, -10, 0, 10, 20, 30, 40, 50].map((position) => (
-          <div
-            key={position}
-            style={{
-              ...plane,
-              transform: `scale(${
-                1 - (position / 50 < 0 ? (position / 50) * -1 : position / 50)
-              }) translateZ(${position}px)`,
-            }}
-          />
-        ))}
+        {[-70, -60, -50, -40, -30, -20, -10, 0, 10, 20, 30].map(
+          (position, index) => (
+            <div
+              key={position}
+              style={{
+                ...plane,
+                transform: `scale(${index / 10}) translateZ(${position}px)`,
+              }}
+            />
+          )
+        )}
       </div>
     </section>
   );

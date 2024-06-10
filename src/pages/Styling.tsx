@@ -1,17 +1,23 @@
 import { useEffect } from "react";
+import { Components } from "../cards/Components";
+import { References } from "../cards/References";
+import { Root } from "../cards/Root";
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
+import { FlexContainer } from "../components/FlexContainer";
+import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
 import { HeadingPage } from "../components/HeadingPage";
 import { Octohedron } from "../graphics/Octohedron";
 import { Page } from "../components/Page";
 import { Paragraph } from "../components/Paragraph";
 
-import atMediaMinWidthString from "../utilities/atMediaMinWidth.ts?raw";
-import headingString from "../components/Heading.tsx?raw";
-import useWindowInnerWidthString from "../hooks/useWindowInnerWidth.ts?raw";
-import windowInnerWidthContextString from "../contexts/WindowInnerWidthContext.tsx?raw";
+import atMediaMinWidthRaw from "../utilities/atMediaMinWidth.ts?raw";
+import flexContainerRaw from "../components/FlexContainer.tsx?raw";
+import headingRaw from "../components/Heading.tsx?raw";
+import windowInnerWidthContextRaw from "../contexts/WindowInnerWidthContext.tsx?raw";
+import useWindowInnerWidthRaw from "../hooks/useWindowInnerWidth.ts?raw";
 
 export function Styling() {
   useEffect(() => {
@@ -51,7 +57,7 @@ export function Styling() {
           </Paragraph>
         </Box>
         <Box>
-          <Code>{windowInnerWidthContextString}</Code>
+          <Code>{windowInnerWidthContextRaw}</Code>
         </Box>
         <Box>
           <Paragraph first last>
@@ -60,7 +66,7 @@ export function Styling() {
           </Paragraph>
         </Box>
         <Box>
-          <Code>{useWindowInnerWidthString}</Code>
+          <Code>{useWindowInnerWidthRaw}</Code>
         </Box>
         <Box>
           <Paragraph first last>
@@ -69,7 +75,7 @@ export function Styling() {
           </Paragraph>
         </Box>
         <Box>
-          <Code>{atMediaMinWidthString}</Code>
+          <Code>{atMediaMinWidthRaw}</Code>
         </Box>
         <Box>
           <Paragraph first last>
@@ -78,7 +84,7 @@ export function Styling() {
           </Paragraph>
         </Box>
         <Box>
-          <Code>{headingString}</Code>
+          <Code>{headingRaw}</Code>
         </Box>
         <Box>
           <Paragraph first last>
@@ -88,19 +94,18 @@ export function Styling() {
           </Paragraph>
         </Box>
         <Box>
+          <Code>{flexContainerRaw}</Code>
+        </Box>
+        <Box>
           <Heading>Notes</Heading>
         </Box>
         <Box>
-          <Paragraph first>
-            Just a section to cover any other observations and notes.
-          </Paragraph>
-          <Paragraph last>
+          <Paragraph first last>
             When authoring styles, avoid nesting properties within a single
             object. While it might seem convenient to name object properties
             freely, keep in mind that the resulting bundle will only minify the
             name of the object itself, not any of its nested properties. This
-            behavior can lead to a larger built file, as observed in this
-            project using Vite.
+            can lead to a larger built file, as observed in this project.
           </Paragraph>
         </Box>
         <Box>
@@ -124,6 +129,22 @@ const styles: CSSProperties = {
             formatting to sort selections in ascending order which makes this
             low effort.
           </Paragraph>
+        </Box>
+        <Box>
+          <Heading>Articles</Heading>
+        </Box>
+        <Box>
+          <FlexContainer breakpoint={768}>
+            <FlexItem>
+              <Components />
+            </FlexItem>
+            <FlexItem>
+              <References />
+            </FlexItem>
+            <FlexItem>
+              <Root />
+            </FlexItem>
+          </FlexContainer>
         </Box>
       </Container>
     </Page>

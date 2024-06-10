@@ -4,11 +4,13 @@ import { border } from "../styles";
 export const Card = ({
   children,
   href,
-  onClick,
+  onClick = () => null,
+  target,
 }: {
   children: ReactNode;
   href: string;
-  onClick: (argument: MouseEvent) => void;
+  onClick?: (argument: MouseEvent) => void;
+  target?: string;
 }) => {
   const link: CSSProperties = {
     ...border,
@@ -30,7 +32,12 @@ export const Card = ({
     pointerEvents: "none",
   };
   return (
-    <a style={link} href={href} onClick={(event) => onClick(event)}>
+    <a
+      style={link}
+      href={href}
+      onClick={(event) => onClick(event)}
+      target={target}
+    >
       <div style={content}>{children}</div>
     </a>
   );

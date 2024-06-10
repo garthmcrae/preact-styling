@@ -1,7 +1,12 @@
 import { useEffect } from "react";
+import { References } from "../cards/References";
+import { Root } from "../cards/Root";
+import { Routing } from "../cards/Routing";
 import { Box } from "../components/Box";
 import { Container } from "../components/Container";
 import { Cube } from "../graphics/Cube";
+import { FlexContainer } from "../components/FlexContainer";
+import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
 import { HeadingPage } from "../components/HeadingPage";
 import { Modal } from "../components/Modal";
@@ -13,7 +18,7 @@ import { Hyperboloid } from "../graphics/Hyperboloid";
 
 export function Components() {
   useEffect(() => {
-    document.documentElement.style.setProperty("--focus", "tomato");
+    document.documentElement.style.setProperty("--focus", "lime");
   }, []);
   return (
     <Page>
@@ -54,6 +59,22 @@ export function Components() {
           <Cube />
           <Hyperboloid />
           <Octohedron />
+        </Box>
+        <Box>
+          <Heading>Articles</Heading>
+        </Box>
+        <Box>
+          <FlexContainer breakpoint={768}>
+            <FlexItem>
+              <References />
+            </FlexItem>
+            <FlexItem>
+              <Root />
+            </FlexItem>
+            <FlexItem>
+              <Routing />
+            </FlexItem>
+          </FlexContainer>
         </Box>
       </Container>
     </Page>

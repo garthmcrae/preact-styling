@@ -11,7 +11,7 @@ export const FlexContainer = ({
   children: ReactNode;
 }) => {
   const innerWidth = useWindowInnerWidth();
-  const flexer = atMediaMinWidth(
+  const flexContainer = atMediaMinWidth(
     {
       0: {
         display: "flex",
@@ -26,5 +26,5 @@ export const FlexContainer = ({
     innerWidth
   );
 
-  return <div style={flexer}>{children}</div>;
+  return <div style={flexContainer}>{children}</div>;
 };

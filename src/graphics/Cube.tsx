@@ -3,7 +3,7 @@ import { CSSProperties } from "preact/compat";
 export const Cube = () => {
   const container: CSSProperties = {
     alignItems: "center",
-    backgroundImage: "radial-gradient(coral,crimson)",
+    backgroundImage: "radial-gradient(lime,green)",
     display: "flex",
     height: 200,
     justifyContent: "center",
@@ -22,14 +22,9 @@ export const Cube = () => {
     width: 100,
   };
   const plane: CSSProperties = {
-    alignItems: "center",
     backfaceVisibility: "inherit",
     backgroundColor: "rgba(255,255,0,.255)",
-    color: "#fff",
-    display: "flex",
-    fontSize: 50,
     height: "100%",
-    justifyContent: "center",
     position: "absolute",
     width: "100%",
   };

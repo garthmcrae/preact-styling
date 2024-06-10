@@ -1,7 +1,12 @@
 import { useEffect } from "react";
+import { Components } from "../cards/Components";
+import { References } from "../cards/References";
+import { Styling } from "../cards/Styling";
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
+import { FlexContainer } from "../components/FlexContainer";
+import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
 import { HeadingPage } from "../components/HeadingPage";
 import { Hyperboloid } from "../graphics/Hyperboloid";
@@ -86,6 +91,22 @@ export function Routing() {
         </Box>
         <Box>
           <Code>{useGoToPathnameRaw}</Code>
+        </Box>
+        <Box>
+          <Heading>Articles</Heading>
+        </Box>
+        <Box>
+          <FlexContainer breakpoint={768}>
+            <FlexItem>
+              <Styling />
+            </FlexItem>
+            <FlexItem>
+              <Components />
+            </FlexItem>
+            <FlexItem>
+              <References />
+            </FlexItem>
+          </FlexContainer>
         </Box>
       </Container>
     </Page>

@@ -3,7 +3,7 @@ import { Button } from "./Button";
 import { Label } from "./Label";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
-import { border, breakpoint, padding } from "../styles";
+import { border, breakpoint } from "../styles";
 
 export const Mode = () => {
   const innerWidth = useWindowInnerWidth();
@@ -23,7 +23,7 @@ export const Mode = () => {
         paddingRight: 16,
         paddingTop: 8,
       },
-      [breakpoint + 120]: {
+      [breakpoint + 132]: {
         bottom: 0,
         left: "100vw",
         paddingBottom: 16,

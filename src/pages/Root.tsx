@@ -1,7 +1,9 @@
 import { ReactNode, useEffect } from "react";
+import { Components } from "../cards/Components";
+import { Routing } from "../cards/Routing";
+import { Styling } from "../cards/Styling";
 import { Alert } from "../components/Alert";
 import { Box } from "../components/Box";
-import { Card } from "../components/Card";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
 import { FlexContainer } from "../components/FlexContainer";
@@ -11,11 +13,7 @@ import { HeadingPage } from "../components/HeadingPage";
 import { Label } from "../components/Label";
 import { Page } from "../components/Page";
 import { Paragraph } from "../components/Paragraph";
-import { Cube } from "../graphics/Cube";
-import { Hyperboloid } from "../graphics/Hyperboloid";
-import { Octohedron } from "../graphics/Octohedron";
 import { Void } from "../graphics/Void";
-import { useGoToPathname } from "../hooks/useGoToPathname";
 
 import buildRaw from "../build.txt?raw";
 import packageRaw from "../../package.json?raw";
@@ -32,7 +30,6 @@ export function Root() {
   useEffect(() => {
     document.documentElement.style.setProperty("--focus", "crimson");
   }, []);
-  const goToPathname = useGoToPathname();
   return (
     <Page>
       <Container>
@@ -129,39 +126,15 @@ import packageRaw from "../../package.json?raw";
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <FlexContainer>
+          <FlexContainer breakpoint={768}>
             <FlexItem>
-              <Card href="/routing/" onClick={goToPathname}>
-                <div style={{ marginBottom: 16 }}>
-                  <Hyperboloid />
-                </div>
-                <Label element="h3">Routing</Label>
-                <Paragraph first last>
-                  The rendering of different routes and navigation between them.
-                </Paragraph>
-              </Card>
+              <Routing />
             </FlexItem>
             <FlexItem>
-              <Card href="/styling/" onClick={goToPathname}>
-                <div style={{ marginBottom: 16 }}>
-                  <Octohedron />
-                </div>
-                <Label element="h3">Styling</Label>
-                <Paragraph first last>
-                  The handling of styles and responsive behaviour.
-                </Paragraph>
-              </Card>
+              <Styling />
             </FlexItem>
             <FlexItem>
-              <Card href="/components/" onClick={goToPathname}>
-                <div style={{ marginBottom: 16 }}>
-                  <Cube />
-                </div>
-                <Label element="h3">Components</Label>
-                <Paragraph first last>
-                  What this looks like in practice.
-                </Paragraph>
-              </Card>
+              <Components />
             </FlexItem>
           </FlexContainer>
         </Box>

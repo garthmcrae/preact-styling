@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
 
 export const FlexItem = ({ children }: { children: ReactNode }) => {
-  const flexed = {
+  const flexItem = {
     flexBasis: 0,
     flexGrow: 1,
-    flexShrink: 1,
+    flexShrink: 0,
   };
-  return <div style={flexed}>{children}</div>;
+  return <div style={flexItem}>{children}</div>;
 };
