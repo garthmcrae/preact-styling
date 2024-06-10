@@ -10,6 +10,7 @@ import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
 import { HeadingPage } from "../components/HeadingPage";
 import { Hyperboloid } from "../graphics/Hyperboloid";
+import { Label } from "../components/Label";
 import { Page } from "../components/Page";
 import { Paragraph } from "../components/Paragraph";
 
@@ -51,6 +52,7 @@ export function Routing() {
           </Paragraph>
         </Box>
         <Box>
+          <Label>WindowLocationPathnameContext.tsx</Label>
           <Code>{windowLocationPathnameContextRaw}</Code>
         </Box>
         <Box>
@@ -60,6 +62,7 @@ export function Routing() {
           </Paragraph>
         </Box>
         <Box>
+          <Label>useWindowLocationPathname.ts</Label>
           <Code>{useWindowLocationPathnameRaw}</Code>
         </Box>
         <Box>
@@ -69,6 +72,7 @@ export function Routing() {
           </Paragraph>
         </Box>
         <Box>
+          <Label>Routes.tsx</Label>
           <Code>{routesRaw}</Code>
         </Box>
         <Box>
@@ -80,6 +84,7 @@ export function Routing() {
           </Paragraph>
         </Box>
         <Box>
+          <Label>Router.tsx</Label>
           <Code>{routerRaw}</Code>
         </Box>
         <Box>
@@ -89,6 +94,7 @@ export function Routing() {
           </Paragraph>
         </Box>
         <Box>
+          <Label>useGoToPathname.ts</Label>
           <Code>{useGoToPathnameRaw}</Code>
         </Box>
         <Box>

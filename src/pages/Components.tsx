@@ -70,6 +70,7 @@ export function Components() {
               </Paragraph>
             </Box>
             <Box>
+              <Label>Modal.tsx</Label>
               <Code>{modalRaw}</Code>
             </Box>
             <Box>
@@ -102,6 +103,7 @@ export function Components() {
                   </Paragraph>
                 </Box>
                 <Box>
+                  <Label>FocusTrap.tsx</Label>
                   <Code>{focusTrapRaw}</Code>
                 </Box>
                 <Box>
@@ -132,6 +134,7 @@ export function Components() {
           </Paragraph>
         </Box>
         <Box>
+          <Label>Picture.tsx</Label>
           <Code>{pictureRaw}</Code>
         </Box>
         <Box>
@@ -152,6 +155,7 @@ export function Components() {
           </Paragraph>
         </Box>
         <Box>
+          <Label>Hyperboloid.tsx</Label>
           <Code>{hyperboloidRaw}</Code>
         </Box>
         <Box>

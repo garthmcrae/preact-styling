@@ -9,6 +9,7 @@ import { FlexContainer } from "../components/FlexContainer";
 import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
 import { HeadingPage } from "../components/HeadingPage";
+import { Label } from "../components/Label";
 import { Octohedron } from "../graphics/Octohedron";
 import { Page } from "../components/Page";
 import { Paragraph } from "../components/Paragraph";
@@ -57,6 +58,7 @@ export function Styling() {
           </Paragraph>
         </Box>
         <Box>
+          <Label>WindowInnerWidthContext.tsx</Label>
           <Code>{windowInnerWidthContextRaw}</Code>
         </Box>
         <Box>
@@ -66,6 +68,7 @@ export function Styling() {
           </Paragraph>
         </Box>
         <Box>
+          <Label>useWindowInnerWidth.ts</Label>
           <Code>{useWindowInnerWidthRaw}</Code>
         </Box>
         <Box>
@@ -75,6 +78,7 @@ export function Styling() {
           </Paragraph>
         </Box>
         <Box>
+          <Label>atMediaMinWidth.ts</Label>
           <Code>{atMediaMinWidthRaw}</Code>
         </Box>
         <Box>
@@ -84,6 +88,7 @@ export function Styling() {
           </Paragraph>
         </Box>
         <Box>
+          <Label>Heading.tsx</Label>
           <Code>{headingRaw}</Code>
         </Box>
         <Box>
@@ -94,6 +99,7 @@ export function Styling() {
           </Paragraph>
         </Box>
         <Box>
+          <Label>FlexContainer.tsx</Label>
           <Code>{flexContainerRaw}</Code>
         </Box>
         <Box>
