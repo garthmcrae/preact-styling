@@ -41,7 +41,7 @@ export function Routing() {
           </Paragraph>
         </Box>
         <Box>
-          <Heading>Implementation</Heading>
+          <Heading>How</Heading>
         </Box>
         <Box>
           <Paragraph first last>
@@ -85,8 +85,7 @@ export function Routing() {
         <Box>
           <Paragraph first last>
             The following can be used in conjunction with an anchor or called
-            with a string for example on click or form submission. The window
-            scroll position is also returned to zero.
+            with a string for example on click or form submission.
           </Paragraph>
         </Box>
         <Box>

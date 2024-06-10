@@ -34,7 +34,9 @@ export function References() {
         </Box>
         <Box>
           <Paragraph first last>
-            Further reading.
+            Further reading. Final thoughts and also a reminder to talk about
+            scroll behaviour on the root element (this was new to me but I tell
+            you what, not bad at all).
           </Paragraph>
         </Box>
         <Box>

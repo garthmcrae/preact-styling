@@ -49,7 +49,7 @@ export function Styling() {
           </Paragraph>
         </Box>
         <Box>
-          <Heading>The code</Heading>
+          <Heading>How</Heading>
         </Box>
         <Box>
           <Paragraph first last>

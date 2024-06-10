@@ -49,9 +49,10 @@ export function Root() {
         </Box>
         <Alert>
           <Box>
-            <Label element="h2">Information</Label>
+            <Label element="h2">Warning</Label>
             <Paragraph first last>
-              This is a work in progress.
+              This is a work in progress and there will be spelling errors
+              ahead.
             </Paragraph>
           </Box>
         </Alert>

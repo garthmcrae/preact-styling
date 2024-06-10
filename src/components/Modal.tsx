@@ -5,7 +5,13 @@ import { Close } from "./Close";
 import { FocusTrap } from "./FocusTrap";
 import { border, fadeInUp, padding } from "../styles";
 
-export function Modal({ children }: { children: ReactNode }) {
+export function Modal({
+  children,
+  name,
+}: {
+  children: ReactNode;
+  name: string;
+}) {
   const ref = useRef<HTMLButtonElement>(null);
   const [showModal, setShowModal] = useState(false);
   const close: CSSProperties = {
@@ -57,7 +63,7 @@ export function Modal({ children }: { children: ReactNode }) {
   return (
     <>
       <Button ref={ref} onClick={handleShowModal}>
-        show modal
+        {name}
       </Button>
       {showModal &&
         createPortal(
