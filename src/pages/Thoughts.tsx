@@ -45,10 +45,15 @@ export function Thoughts() {
             Reminder to talk about scroll behaviour on the root element (this
             was new to me but I tell you what, not bad at all).
           </Paragraph>
-          <Paragraph last>
+          <Paragraph>
             This has been an interesting exercise to date and I'm curious to see
             where this goes. It would be nice to one day create my last CSS,
             SCSS module file or other and not know that that was the last time.
+          </Paragraph>
+          <Paragraph last>
+            Also worth noting this came together really quickly. I think it's
+            because I never had to switch gears between the TS(X) and CSS you
+            just write components.
           </Paragraph>
         </Box>
         <Box>
