@@ -4,6 +4,7 @@ import { Routing } from "../cards/Routing";
 import { Styling } from "../cards/Styling";
 import { Box } from "../components/Box";
 import { Card } from "../components/Card";
+import { Code } from "../components/Code";
 import { Container } from "../components/Container";
 import { FlexContainer } from "../components/FlexContainer";
 import { FlexItem } from "../components/FlexItem";
@@ -15,9 +16,7 @@ import { Paragraph } from "../components/Paragraph";
 import { Plane } from "../graphics/Plane";
 import { Pyramid } from "../graphics/Pyramid";
 
-// https://www.youtube.com/watch?v=1gZmkpsVGkk
-// npm run build -- > src/build.txt
-// https://medium.com/@davidyf96/how-to-use-media-queries-in-javascript-6489d46822d8
+import buildRaw from "../build.txt?raw";
 
 export function Thoughts() {
   useEffect(() => {
@@ -142,6 +141,21 @@ export function Thoughts() {
               </Card>
             </FlexItem>
           </FlexContainer>
+        </Box>
+        <Box>
+          <Heading>Build output</Heading>
+        </Box>
+        <Box>
+          <Paragraph first last>
+            I'm running the following to write the build output to a file so we
+            can see what size the final built assets are.
+          </Paragraph>
+        </Box>
+        <Box>
+          <Code>{"npm run build > src/build.txt"}</Code>
+        </Box>
+        <Box>
+          <Code>{buildRaw}</Code>
         </Box>
         <Box>
           <Heading>Articles</Heading>

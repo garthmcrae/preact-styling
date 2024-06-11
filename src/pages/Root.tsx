@@ -15,7 +15,6 @@ import { Page } from "../components/Page";
 import { Paragraph } from "../components/Paragraph";
 import { Void } from "../graphics/Void";
 
-import buildRaw from "../build.txt?raw";
 import packageRaw from "../../package.json?raw";
 
 const Strike = ({ children }: { children: ReactNode }) => (
@@ -68,7 +67,6 @@ export function Root() {
         </Box>
         <Box>
           <Code>{`
-import buildRaw from "../build.txt?raw";
 import packageRaw from "../../package.json?raw";
           `}</Code>
         </Box>
@@ -107,21 +105,6 @@ import packageRaw from "../../package.json?raw";
             Rollup and Vite if you haven't already as well.
           </Paragraph>
           <Paragraph last>Last but not least TypeScript.</Paragraph>
-        </Box>
-        <Box>
-          <Heading>Build output</Heading>
-        </Box>
-        <Box>
-          <Paragraph first last>
-            I'm running the following to write the build output to a file so we
-            can see what size the final built assets are.
-          </Paragraph>
-        </Box>
-        <Box>
-          <Code>{"npm run build > src/build.txt"}</Code>
-        </Box>
-        <Box>
-          <Code>{buildRaw}</Code>
         </Box>
         <Box>
           <Heading>Articles</Heading>
