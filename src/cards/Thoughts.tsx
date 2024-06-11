@@ -13,7 +13,7 @@ export const Thoughts = () => {
       </div>
       <Label element="h3">Thoughts</Label>
       <Paragraph first last>
-        Further reading.
+        Next steps for this exercise and further reading.
       </Paragraph>
     </Card>
   );
