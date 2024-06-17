@@ -1,28 +1,33 @@
 import { useWindowLocationPathname } from "./useWindowLocationPathname";
+import { MouseEvent, TouchEvent } from '../compat'
 
 export const useGoToPathname = () => {
   const { setLocationPathname } = useWindowLocationPathname();
 
-  const goToPathname = (argument: MouseEvent | TouchEvent | string) => {
+  const goToPathname = (argument: string | MouseEvent | TouchEvent) => {
     if (document.activeElement instanceof HTMLElement) {
       document.activeElement.blur();
     }
     window.focus();
-    if (typeof argument === 'string' || argument instanceof String) {
-      window.history.pushState({}, "", argument as string);
+
+    if (typeof argument === "string") {
+      window.history.pushState({}, "", argument);
       setLocationPathname(argument);
       return;
     }
     const element = argument.target as HTMLAnchorElement;
-    if (element.tagName === 'A') {
+    if (element.tagName === "A") {
       argument.preventDefault();
       const pathname = element.getAttribute("href");
       window.history.pushState({}, "", pathname);
       setLocationPathname(pathname);
       return;
     }
+
     return;
   };
 
   return goToPathname;
 };
+
+export default useGoToPathname;

@@ -1,4 +1,5 @@
 import { CSSProperties, forwardRef, ReactNode, Ref } from "react";
+import { MouseEvent, TouchEvent } from "../compat";
 import { border, padding } from "../styles";
 
 export const Button = forwardRef(
@@ -9,7 +10,7 @@ export const Button = forwardRef(
       type = "button",
     }: {
       children: ReactNode;
-      onClick?: (event: MouseEvent) => void;
+      onClick?: (event: MouseEvent | TouchEvent) => void;
       type?: "button" | "submit";
     },
     ref

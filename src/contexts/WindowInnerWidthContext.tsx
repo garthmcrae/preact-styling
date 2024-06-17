@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
+import { createContext, ReactNode, useLayoutEffect, useState } from "react";
 
 export const WindowInnerWidthContext = createContext<number>(0);
 
@@ -8,7 +8,7 @@ export const WindowInnerWidthContextProvider = ({
   children: ReactNode;
 }) => {
   const [innerWidth, setInnerWidth] = useState<number>(window.innerWidth);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleResize = () => {
       setInnerWidth(window.innerWidth);
     };

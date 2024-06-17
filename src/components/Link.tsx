@@ -1,16 +1,17 @@
 import { CSSProperties, ReactNode } from "react";
+import { MouseEvent } from "../compat";
 import { border, padding } from "../styles";
 
 export const Link = ({
   children,
   href,
-  onClick,
+  onClick = () => null,
 }: {
   children: ReactNode;
   href: string;
-  onClick?: (argument: MouseEvent) => void;
+  onClick?: (event: MouseEvent) => void;
 }) => {
-  const link: CSSProperties = {
+  const linkStyle: CSSProperties = {
     ...border,
     boxSizing: "border-box",
     color: "inherit",
@@ -21,8 +22,9 @@ export const Link = ({
     ...padding,
     textDecoration: "none",
   };
+
   return (
-    <a style={link} href={href} onClick={onClick}>
+    <a style={linkStyle} href={href} onClick={onClick}>
       {children}
     </a>
   );

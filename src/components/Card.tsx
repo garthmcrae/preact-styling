@@ -1,4 +1,5 @@
 import { CSSProperties, ReactNode } from "react";
+import { MouseEvent, TouchEvent } from "../compat";
 import { border } from "../styles";
 
 export const Card = ({
@@ -9,7 +10,7 @@ export const Card = ({
 }: {
   children: ReactNode;
   href: string;
-  onClick?: (argument: MouseEvent) => void;
+  onClick?: (event: MouseEvent | TouchEvent) => void;
   target?: string;
 }) => {
   const link: CSSProperties = {
@@ -32,13 +33,10 @@ export const Card = ({
     pointerEvents: "none",
   };
   return (
-    <a
-      style={link}
-      href={href}
-      onClick={(event) => onClick(event)}
-      target={target}
-    >
+    <a style={link} href={href} onClick={onClick} target={target}>
       <div style={content}>{children}</div>
     </a>
   );
 };
+
+export default Card;
