@@ -1,5 +1,4 @@
 import { CSSProperties, ReactNode } from "react";
-import { MouseEvent, TouchEvent } from "../compat";
 import { border } from "../styles";
 
 export const Card = ({
@@ -10,7 +9,7 @@ export const Card = ({
 }: {
   children: ReactNode;
   href: string;
-  onClick?: (event: MouseEvent | TouchEvent) => void;
+  onClick?: (event: MouseEvent | MouseEvent) => void;
   target?: string;
 }) => {
   const link: CSSProperties = {

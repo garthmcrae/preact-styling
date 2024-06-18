@@ -1,5 +1,4 @@
 import { CSSProperties, ReactNode } from "react";
-import { MouseEvent } from "../compat";
 import { border, padding } from "../styles";
 
 export const Link = ({

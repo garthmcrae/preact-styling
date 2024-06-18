@@ -1,5 +1,4 @@
 import { CSSProperties, forwardRef, ReactNode, Ref } from "react";
-import { MouseEvent, TouchEvent } from "../compat";
 import { border, padding } from "../styles";
 
 export const Button = forwardRef(

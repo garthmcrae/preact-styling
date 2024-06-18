@@ -1,5 +1,4 @@
 import { useWindowLocationPathname } from "./useWindowLocationPathname";
-import { MouseEvent, TouchEvent } from '../compat'
 
 export const useGoToPathname = () => {
   const { setLocationPathname } = useWindowLocationPathname();
