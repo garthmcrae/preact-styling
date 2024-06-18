@@ -9,7 +9,7 @@ export const Card = ({
 }: {
   children: ReactNode;
   href: string;
-  onClick?: (event: MouseEvent | MouseEvent) => void;
+  onClick?: (event: MouseEvent | TouchEvent) => void;
   target?: string;
 }) => {
   const link: CSSProperties = {

@@ -1,4 +1,9 @@
-declare global {
-  type MouseEvent = MouseEvent;
-  type TouchEvent = TouchEvent;
+export * from 'react';
+
+type GlobalThisMouseEvent = MouseEvent;
+type GlobalThisTouchEvent = TouchEvent;
+
+declare module 'react' {
+  export type MouseEvent = GlobalThisMouseEvent;
+  export type TouchEvent = GlobalThisTouchEvent;
 }

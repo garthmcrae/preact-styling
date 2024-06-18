@@ -1,4 +1,11 @@
-import { CSSProperties, forwardRef, ReactNode, Ref } from "react";
+import {
+  CSSProperties,
+  forwardRef,
+  MouseEvent,
+  ReactNode,
+  Ref,
+  TouchEvent,
+} from "react";
 import { border, padding } from "../styles";
 
 export const Button = forwardRef(

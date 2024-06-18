@@ -1,3 +1,4 @@
+import { MouseEvent, TouchEvent } from "react";
 import { useWindowLocationPathname } from "./useWindowLocationPathname";
 
 export const useGoToPathname = () => {
