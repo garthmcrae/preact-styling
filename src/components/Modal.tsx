@@ -5,45 +5,48 @@ import { Close } from "./Close";
 import { FocusTrap } from "./FocusTrap";
 import { border, fadeInUp, padding } from "../styles";
 
+const close: CSSProperties = {
+  position: "absolute",
+  right: 16,
+  top: 16,
+};
+const content: CSSProperties = {
+  backgroundColor: "var(--background-color)",
+  ...border,
+  ...padding,
+  transform: `translateY(0)`,
+  transition: "background-color 100ms ease-in-out",
+  zIndex: 2,
+};
+const modal: CSSProperties = {
+  backgroundColor: "transparent",
+  bottom: 0,
+  left: 0,
+  overflowY: "auto",
+  padding: 32,
+  position: "fixed",
+  right: 0,
+  top: 0,
+  zIndex: 2,
+};
+
 export function Modal({
   children,
   name,
+  nested,
 }: {
   children: ReactNode;
   name: string;
+  nested?: boolean;
 }) {
   const ref = useRef<HTMLButtonElement>(null);
   const [showModal, setShowModal] = useState(false);
-  const close: CSSProperties = {
-    position: "absolute",
-    right: 16,
-    top: 16,
-  };
-  const content: CSSProperties = {
-    backgroundColor: "var(--background-color)",
-    ...border,
-    ...padding,
-    transform: `translateY(0)`,
-    transition: "background-color 200ms ease-in-out",
-    zIndex: 2,
-  };
-  const modal: CSSProperties = {
-    backgroundColor: "transparent",
-    bottom: 0,
-    left: 0,
-    overflowY: "auto",
-    padding: 32,
-    position: "fixed",
-    right: 0,
-    top: 0,
-    zIndex: 2,
-  };
   const handleShowModal = () => {
-    document.body.style.overflow = "hidden";
+    if (!nested) document.body.style.overflow = "hidden";
     setShowModal(true);
   };
   const handleHideModal = () => {
-    document.body.style.overflow = "unset";
+    if (!nested) document.body.style.overflow = "unset";
     setShowModal(false);
     if (ref.current) {
       ref.current.focus();

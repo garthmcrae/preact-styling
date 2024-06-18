@@ -2,27 +2,11 @@
 > preact-styling@0.0.0 build
 > tsc && vite build
 
-src/cards/Components.tsx(10,31): error TS2322: Type '(argument: string | MouseEvent | TouchEvent) => void' is not assignable to type '(event: MouseEvent | TouchEvent) => void'.
-src/cards/Components.tsx(11,7): error TS2322: Type 'Element' is not assignable to type 'string'.
-src/cards/Components.tsx(14,7): error TS2322: Type 'Element' is not assignable to type 'string'.
-src/cards/Components.tsx(15,7): error TS2322: Type 'Element' is not assignable to type 'string'.
-src/cards/Root.tsx(10,20): error TS2322: Type '(argument: string | MouseEvent | TouchEvent) => void' is not assignable to type '(event: MouseEvent | TouchEvent) => void'.
-src/cards/Root.tsx(11,7): error TS2322: Type 'Element' is not assignable to type 'string'.
-src/cards/Root.tsx(14,7): error TS2322: Type 'Element' is not assignable to type 'string'.
-src/cards/Root.tsx(15,7): error TS2322: Type 'Element' is not assignable to type 'string'.
-src/cards/Routing.tsx(10,28): error TS2322: Type '(argument: string | MouseEvent | TouchEvent) => void' is not assignable to type '(event: MouseEvent | TouchEvent) => void'.
-src/cards/Routing.tsx(11,7): error TS2322: Type 'Element' is not assignable to type 'string'.
-src/cards/Routing.tsx(14,7): error TS2322: Type 'Element' is not assignable to type 'string'.
-src/cards/Routing.tsx(15,7): error TS2322: Type 'Element' is not assignable to type 'string'.
-src/cards/Styling.tsx(10,28): error TS2322: Type '(argument: string | MouseEvent | TouchEvent) => void' is not assignable to type '(event: MouseEvent | TouchEvent) => void'.
-src/cards/Styling.tsx(11,7): error TS2322: Type 'Element' is not assignable to type 'string'.
-src/cards/Styling.tsx(14,7): error TS2322: Type 'Element' is not assignable to type 'string'.
-src/cards/Styling.tsx(15,7): error TS2322: Type 'Element' is not assignable to type 'string'.
-src/cards/Thoughts.tsx(10,29): error TS2322: Type '(argument: string | MouseEvent | TouchEvent) => void' is not assignable to type '(event: MouseEvent | TouchEvent) => void'.
-  Types of parameters 'argument' and 'event' are incompatible.
-    Type 'MouseEvent | TouchEvent' is not assignable to type 'string | MouseEvent'.
-      Type 'TouchEvent' is not assignable to type 'string | MouseEvent'.
-        Type 'TouchEvent' is missing the following properties from type 'MouseEvent': button, buttons, clientX, clientY, and 15 more.
-src/cards/Thoughts.tsx(11,7): error TS2322: Type 'Element' is not assignable to type 'string'.
-src/cards/Thoughts.tsx(14,7): error TS2322: Type 'Element' is not assignable to type 'string'.
-src/cards/Thoughts.tsx(15,7): error TS2322: Type 'Element' is not assignable to type 'string'.
+vite v5.2.11 building for production...
+transforming...
+✓ 77 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                 1.79 kB │ gzip:  0.80 kB
+dist/assets/index-BrRsICZ3.js  64.04 kB │ gzip: 19.71 kB
+✓ built in 367ms

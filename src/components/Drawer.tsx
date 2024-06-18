@@ -25,7 +25,7 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
         paddingTop: 14,
         textDecoration: "none",
         transition:
-          "background-color 200ms ease-in-out, padding 100ms ease-in-out",
+          "background-color 100ms ease-in-out, padding 100ms ease-in-out",
         width: "max-content",
       },
       [breakpoint]: {
@@ -45,7 +45,7 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
         top: 16,
         transform: `translateX(${toggle ? 272 : 0}px)`,
         transition:
-          "background-color 200ms ease-in-out, transform 300ms ease-in-out",
+          "background-color 100ms ease-in-out, transform 300ms ease-in-out",
         width: 224,
         zIndex: 2,
       },
@@ -54,7 +54,7 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
         padding: 0,
         position: "static",
         transform: "translateX(0)",
-        transition: "background-color 200ms ease-in-out",
+        transition: "background-color 100ms ease-in-out",
         width: "unset",
       },
     },

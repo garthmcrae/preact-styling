@@ -27,6 +27,5 @@ export const Paragraph = ({
     },
     innerWidth
   );
-
   return <p style={paragraph}>{children}</p>;
 };

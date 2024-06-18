@@ -85,7 +85,7 @@ export function Components() {
               </Paragraph>
             </Box>
             <Box>
-              <Modal name="Nested modal">
+              <Modal nested name="Nested modal">
                 <Box>
                   <Heading>Nested modal title</Heading>
                 </Box>

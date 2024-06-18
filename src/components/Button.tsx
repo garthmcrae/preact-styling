@@ -8,6 +8,21 @@ import {
 } from "react";
 import { border, padding } from "../styles";
 
+const button: CSSProperties = {
+  appearance: "none",
+  backgroundColor: "var(--background-color)",
+  ...border,
+  boxSizing: "border-box",
+  color: "inherit",
+  cursor: "pointer",
+  display: "block",
+  fontSize: 32,
+  lineHeight: 1,
+  ...padding,
+  textAlign: "center",
+  transition: "background-color 100ms ease-in-out",
+};
+
 export const Button = forwardRef(
   (
     {
@@ -21,20 +36,6 @@ export const Button = forwardRef(
     },
     ref
   ) => {
-    const button: CSSProperties = {
-      appearance: "none",
-      backgroundColor: "var(--background-color)",
-      ...border,
-      boxSizing: "border-box",
-      color: "inherit",
-      cursor: "pointer",
-      display: "block",
-      fontSize: 32,
-      lineHeight: 1,
-      ...padding,
-      textAlign: "center",
-      transition: "background-color 200ms ease-in-out",
-    };
     return (
       <button
         style={button}

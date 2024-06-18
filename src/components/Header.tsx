@@ -9,6 +9,34 @@ import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { border, breakpoint, fadeInUp } from "../styles";
 
+const icon: CSSProperties = {
+  height: 24,
+  left: 2,
+  position: "absolute",
+  top: 2,
+  width: 24,
+};
+const nav: CSSProperties = {
+  padding: 16,
+};
+const skip: CSSProperties = {
+  ...border,
+  color: "inherit",
+  cursor: "pointer",
+  display: "block",
+  fontSize: 20,
+  fontWeight: 500,
+  lineHeight: 1,
+  marginBottom: 16,
+  paddingBottom: 5,
+  paddingLeft: 26,
+  paddingRight: 6,
+  paddingTop: 3,
+  position: "relative",
+  textDecoration: "none",
+  width: "max-content",
+};
+
 export const Header = () => {
   const goToPathname = useGoToPathname();
   const innerWidth = useWindowInnerWidth();
@@ -32,42 +60,13 @@ export const Header = () => {
     },
     innerWidth
   );
-  const nav: CSSProperties = {
-    padding: 16,
-  };
-  const skip: CSSProperties = {
-    ...border,
-    color: "inherit",
-    cursor: "pointer",
-    display: "block",
-    fontSize: 20,
-    fontWeight: 500,
-    lineHeight: 1,
-    marginBottom: 16,
-    paddingBottom: 5,
-    paddingLeft: 26,
-    paddingRight: 6,
-    paddingTop: 3,
-    position: "relative",
-    textDecoration: "none",
-    width: "max-content",
-  };
   return (
     <>
       <header>
         <Container>
           <nav style={nav} aria-describedby="nav-heading">
             <a style={skip} href="#content">
-              <Icon
-                d={hash}
-                style={{
-                  height: 24,
-                  left: 2,
-                  position: "absolute",
-                  top: 2,
-                  width: 24,
-                }}
-              />
+              <Icon d={hash} style={icon} />
               content
             </a>
             <Drawer>

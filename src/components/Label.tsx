@@ -1,5 +1,12 @@
 import { CSSProperties, ReactNode } from "react";
 
+const label: CSSProperties = {
+  fontSize: 12,
+  fontWeight: 500,
+  marginBottom: 12,
+  marginTop: 0,
+};
+
 export const Label = ({
   children,
   element = "h2",
@@ -12,12 +19,6 @@ export const Label = ({
   id?: string;
 }) => {
   const Element = element;
-  const label: CSSProperties = {
-    fontSize: 12,
-    fontWeight: 500,
-    marginBottom: 12,
-    marginTop: 0,
-  };
   return (
     <Element style={label} id={id} htmlFor={htmlFor}>
       {children}

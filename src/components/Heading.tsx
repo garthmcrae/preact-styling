@@ -25,6 +25,5 @@ export const Heading = ({
     },
     innerWidth
   );
-
   return <Element style={heading}>{children}</Element>;
 };

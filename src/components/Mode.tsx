@@ -5,16 +5,26 @@ import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 import { border, breakpoint } from "../styles";
 
+const container: CSSProperties = {
+  backgroundColor: "var(--background-color)",
+  ...border,
+  padding: 16,
+  transition: "background-color 100ms ease-in-out",
+  width: "max-content",
+};
+const list: CSSProperties = {
+  display: "flex",
+  flexWrap: "wrap",
+  gap: 16,
+  listStyle: "none",
+  marginBottom: 0,
+  marginTop: 0,
+  paddingInlineStart: 0,
+};
+
 export const Mode = () => {
   const innerWidth = useWindowInnerWidth();
   const [mode, setMode] = useState("low");
-  const container: CSSProperties = {
-    backgroundColor: "var(--background-color)",
-    ...border,
-    padding: 16,
-    transition: "background-color 200ms ease-in-out",
-    width: "max-content",
-  };
   const control = atMediaMinWidth(
     {
       0: {
@@ -35,15 +45,6 @@ export const Mode = () => {
     },
     innerWidth
   );
-  const list: CSSProperties = {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: 16,
-    listStyle: "none",
-    marginBottom: 0,
-    marginTop: 0,
-    paddingInlineStart: 0,
-  };
   useEffect(() => {
     if (mode === "dark") {
       setMode("dark");

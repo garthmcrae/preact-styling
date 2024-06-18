@@ -4,20 +4,21 @@ import { Close } from "./Close";
 import { Expand } from "./Expand";
 import { border } from "../styles";
 
+const alert: CSSProperties = {
+  alignItems: "flex-start",
+  ...border,
+  display: "flex",
+  justifyContent: "space-between",
+};
+const close: CSSProperties = {
+  flexGrow: 0,
+  flexShrink: 0,
+  padding: 14,
+};
+
 export const Alert = ({ children }: { children: ReactNode }) => {
   const [toggle, setToggle] = useState<boolean>(true);
   const handleToggle = () => setToggle((prevToggle) => !prevToggle);
-  const alert: CSSProperties = {
-    alignItems: "flex-start",
-    ...border,
-    display: "flex",
-    justifyContent: "space-between",
-  };
-  const close: CSSProperties = {
-    flexGrow: 0,
-    flexShrink: 0,
-    padding: 14,
-  };
   return (
     <Expand expand={toggle}>
       <Box>
