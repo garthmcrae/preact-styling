@@ -7,7 +7,7 @@ import { Link } from "./Link";
 import { useGoToPathname } from "../hooks/useGoToPathname";
 import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
-import { border, breakpoint, fadeInUp } from "../styles";
+import { border, breakpoint } from "../styles";
 
 const icon: CSSProperties = {
   height: 24,
@@ -80,7 +80,7 @@ export const Header = () => {
                   "/thoughts/",
                 ].map((item, index) => (
                   <li
-                    style={{ ...fadeInUp, animationDelay: `${index * 100}ms` }}
+                    // style={{ ...fadeInUp, animationDelay: `${index * 100}ms` }}
                     key={item}
                   >
                     <Link href={item} onClick={goToPathname}>

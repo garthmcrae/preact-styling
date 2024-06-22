@@ -2,7 +2,7 @@ import { CSSProperties, ReactNode } from "react";
 
 const label: CSSProperties = {
   fontSize: 12,
-  fontWeight: 500,
+  fontWeight: 700,
   marginBottom: 12,
   marginTop: 0,
 };
