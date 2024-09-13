@@ -19,7 +19,7 @@ export const Picture = ({ url }: { url: string }) => {
       image.onerror = null;
     };
   }, [url]);
-  const styles: CSSProperties = {
+  const picture: CSSProperties = {
     aspectRatio: "1 / 1",
     backgroundImage: `url(${url})`,
     backgroundSize: "cover",
@@ -27,5 +27,5 @@ export const Picture = ({ url }: { url: string }) => {
     transition: "opacity 300ms ease-in-out",
     width: "100%",
   };
-  return <div style={styles} />;
+  return <div style={picture} />;
 };

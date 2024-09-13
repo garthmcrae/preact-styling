@@ -39,9 +39,7 @@ export function Components() {
           <Paragraph>
             I wrote a few for this project but don't worry I'm not going to do a
             write up on all of them — a few to note. The rest you can view on my
-            Github. I'm also suspiscious when reviewing the bundle that the
-            string literals for the code aren't minified, add to build and also
-            render slowly.
+            Github.
           </Paragraph>
         </Box>
         <Box>

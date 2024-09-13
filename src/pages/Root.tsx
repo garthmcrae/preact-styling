@@ -21,7 +21,7 @@ const Strike = ({ children }: { children: ReactNode }) => (
   <span style={{ textDecoration: "line-through" }}>{children}</span>
 );
 
-const Color = ({ children }: { children: ReactNode }) => (
+const Accent = ({ children }: { children: ReactNode }) => (
   <span style={{ color: "crimson" }}>{children}</span>
 );
 
@@ -37,12 +37,14 @@ export function Root() {
         </Box>
         <Box>
           <HeadingPage>
-            What happens if you <Color>don't</Color> add all the dependencies?
+            React <Accent>NO</Accent>
           </HeadingPage>
         </Box>
         <Box>
           <Paragraph first last>
-            This is an exercise to explore using React without adding additional{" "}
+            <Accent>What happens if you don't add all the dependencies?</Accent>{" "}
+            This is an exercise to explore building responsive React
+            applications without adding any additional{" "}
             <Strike>CSS in JS</Strike> packages (including React itself).
           </Paragraph>
         </Box>
@@ -50,19 +52,35 @@ export function Root() {
           <Box>
             <Label element="h2">Warning</Label>
             <Paragraph first last>
-              This is a work in progress and there will be spelling errors
-              ahead.
+              This is a work in progress and there may be spelling errors.
             </Paragraph>
           </Box>
         </Alert>
         <Box>
-          <Heading>Summary</Heading>
+          <Heading>Tooling</Heading>
         </Box>
         <Box>
-          <Paragraph first last>
-            Something I found really nifty was Vite allows you to easily import
-            raw files as a string so adding code examples to this page was super
-            easy.
+          <Paragraph first>
+            For build we are using Vite the "next generation frontend tooling".
+            It consists of a development server and "a build command that
+            bundles your code with Rollup, pre-configured to output highly
+            optimized static assets for production".
+          </Paragraph>
+          <Paragraph>
+            Rollup is also the JavaScript module bundler. If I was to publish
+            any of the files from this project to NPM I would use Rollup to
+            bundle the module.
+          </Paragraph>
+          <Paragraph>
+            So Rollup pre-configured — great. Highly recommend checking out
+            Rollup and Vite if you haven't already.
+          </Paragraph>
+          <Paragraph last>
+            Something I found really neat was Vite allows you to easily import
+            raw files as a string so adding code examples to this project was a
+            cinch. Although I'm also suspiscious when reviewing the bundle that
+            the string literals for the code aren't minified, add to build and
+            also render slowly.
           </Paragraph>
         </Box>
         <Box>
@@ -85,26 +103,15 @@ import packageRaw from "../../package.json?raw";
             React project. Preact is a "fast 3kB alternative to React with the
             same modern API". For an additional ~2kB you can include a React
             compatibility layer which means at surface level components look
-            identical.
+            identical and can be copied and used in either React or Preact
+            projects.
           </Paragraph>
           <Paragraph>
             If you haven't already I recommend checking it out.
           </Paragraph>
-          <Paragraph>
-            For build we are using Vite the "next generation frontend tooling".
-            It consists of a development server and "a build command that
-            bundles your code with Rollup, pre-configured to output highly
-            optimized static assets for production".
+          <Paragraph last>
+            Last but not least this project also uses TypeScript.
           </Paragraph>
-          <Paragraph>
-            Rollup is also the JavaScript module bundler. If I was to publish
-            this to NPM I would use Rollup to bundle the module.
-          </Paragraph>
-          <Paragraph>
-            So Rollup pre-configured — great. Highly recommend checking out
-            Rollup and Vite if you haven't already as well.
-          </Paragraph>
-          <Paragraph last>Last but not least TypeScript.</Paragraph>
         </Box>
         <Box>
           <Heading>Articles</Heading>

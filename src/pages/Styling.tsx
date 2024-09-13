@@ -93,7 +93,7 @@ export function Styling() {
         </Box>
         <Box>
           <Paragraph first last>
-            Breakpoint can also be exposed as a property so you can pass in the
+            Breakpoints can also be exposed as a property so you can pass in the
             minimum width you want a component to respond on a case by case
             basis.
           </Paragraph>
@@ -131,9 +131,9 @@ const styles: CSSProperties = {
         </Box>
         <Box>
           <Paragraph first last>
-            Consistent sort orders make it easier for compression. Editors have
-            formatting to sort selections in ascending order which makes this
-            low effort.
+            Consistent sort orders make it easier for built files to be
+            compressed. Editors have formatting to sort selections in ascending
+            order which makes this low effort.
           </Paragraph>
         </Box>
         <Box>

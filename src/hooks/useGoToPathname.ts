@@ -9,7 +9,6 @@ export const useGoToPathname = () => {
       document.activeElement.blur();
     }
     window.focus();
-
     if (typeof argument === "string") {
       window.history.pushState({}, "", argument);
       setLocationPathname(argument);
@@ -23,11 +22,7 @@ export const useGoToPathname = () => {
       setLocationPathname(pathname);
       return;
     }
-
     return;
   };
-
   return goToPathname;
 };
-
-export default useGoToPathname;

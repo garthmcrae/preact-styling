@@ -9,11 +9,20 @@ export const WindowInnerWidthContextProvider = ({
 }) => {
   const [innerWidth, setInnerWidth] = useState<number>(window.innerWidth);
   useLayoutEffect(() => {
+    let timeoutId: number | null | undefined = null;
     const handleResize = () => {
-      setInnerWidth(window.innerWidth);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      timeoutId = setTimeout(() => {
+        setInnerWidth(window.innerWidth);
+      }, 33.33); // 30 updates per second
     };
     window.addEventListener("resize", handleResize);
     return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
       window.removeEventListener("resize", handleResize);
     };
   }, []);

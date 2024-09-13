@@ -16,6 +16,7 @@ const button: CSSProperties = {
   color: "inherit",
   cursor: "pointer",
   display: "block",
+  fontFamily: "inherit",
   fontSize: 32,
   lineHeight: 1,
   ...padding,
@@ -39,7 +40,7 @@ export const Button = forwardRef(
     return (
       <button
         style={button}
-        aria-label="Toggle"
+        aria-label="toggle"
         onClick={onClick}
         ref={ref as Ref<HTMLButtonElement>}
         type={type}

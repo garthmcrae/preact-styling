@@ -1,9 +1,8 @@
 import { CSSProperties, useEffect, useState } from "react";
 import { Button } from "./Button";
 import { Label } from "./Label";
-import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
-import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 import { border, breakpoint } from "../styles";
+import { useAtMediaMinWidth } from "../hooks/useAtMediaMinWidth";
 
 const container: CSSProperties = {
   backgroundColor: "var(--background-color)",
@@ -23,28 +22,24 @@ const list: CSSProperties = {
 };
 
 export const Mode = () => {
-  const innerWidth = useWindowInnerWidth();
   const [mode, setMode] = useState("low");
-  const control = atMediaMinWidth(
-    {
-      0: {
-        paddingBottom: 8,
-        paddingLeft: 16,
-        paddingRight: 16,
-        paddingTop: 8,
-      },
-      [breakpoint + 132]: {
-        bottom: 0,
-        left: "100vw",
-        paddingBottom: 16,
-        paddingTop: 16,
-        position: "fixed",
-        transform: "rotate(-90deg)",
-        transformOrigin: "bottom left",
-      },
+  const control = useAtMediaMinWidth({
+    0: {
+      paddingBottom: 8,
+      paddingLeft: 16,
+      paddingRight: 16,
+      paddingTop: 8,
     },
-    innerWidth
-  );
+    [breakpoint + 132]: {
+      bottom: 0,
+      left: "100vw",
+      paddingBottom: 16,
+      paddingTop: 16,
+      position: "fixed",
+      transform: "rotate(-90deg)",
+      transformOrigin: "bottom left",
+    },
+  });
   useEffect(() => {
     if (mode === "dark") {
       setMode("dark");
@@ -69,12 +64,12 @@ export const Mode = () => {
         <Label>Modes</Label>
         <ul style={list}>
           <li>
-            <Button aria-label="Toggle" onClick={() => setMode("dark")}>
+            <Button aria-label="toggle" onClick={() => setMode("dark")}>
               dark
             </Button>
           </li>
           <li>
-            <Button aria-label="Toggle" onClick={() => setMode("light")}>
+            <Button aria-label="toggle" onClick={() => setMode("light")}>
               light
             </Button>
           </li>

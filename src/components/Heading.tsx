@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
-import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
-import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 import { breakpoint } from "../styles";
+import { useAtMediaMinWidth } from "../hooks/useAtMediaMinWidth";
 
 export const Heading = ({
   children,
@@ -10,20 +9,16 @@ export const Heading = ({
   children: ReactNode;
   element?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }) => {
-  const innerWidth = useWindowInnerWidth();
   const Element = element;
-  const heading = atMediaMinWidth(
-    {
-      0: {
-        fontSize: 32,
-        lineHeight: 1,
-        margin: 0,
-      },
-      [breakpoint]: {
-        fontSize: 64,
-      },
+  const heading = useAtMediaMinWidth({
+    0: {
+      fontSize: 32,
+      lineHeight: 1,
+      margin: 0,
     },
-    innerWidth
-  );
+    [breakpoint]: {
+      fontSize: 64,
+    },
+  });
   return <Element style={heading}>{children}</Element>;
 };
