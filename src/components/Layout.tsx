@@ -6,8 +6,9 @@ const layout: CSSProperties = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-start",
-  lineHeight: 1,
+  maxWidth: "100%",
   minHeight: "100vh",
+  overflowX: "hidden",
 };
 
 export const Layout = ({ children }: { children: ReactNode }) => {

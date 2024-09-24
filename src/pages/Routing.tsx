@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Components } from "../cards/Components";
 import { Thoughts } from "../cards/Thoughts";
 import { Styling } from "../cards/Styling";
@@ -21,9 +20,6 @@ import useWindowLocationPathnameRaw from "../hooks/useWindowLocationPathname.ts?
 import windowLocationPathnameContextRaw from "../contexts/WindowLocationPathnameContext.tsx?raw";
 
 export function Routing() {
-  useEffect(() => {
-    document.documentElement.style.setProperty("--focus", "blue");
-  }, []);
   return (
     <Page>
       <Container>

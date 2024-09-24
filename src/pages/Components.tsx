@@ -1,7 +1,7 @@
-import { useEffect } from "react";
 import { Thoughts } from "../cards/Thoughts";
 import { Root } from "../cards/Root";
 import { Routing } from "../cards/Routing";
+
 import { Alert } from "../components/Alert";
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
@@ -23,9 +23,6 @@ import pictureRaw from "../components/Picture.tsx?raw";
 import hyperboloidRaw from "../graphics/Hyperboloid.tsx?raw";
 
 export function Components() {
-  useEffect(() => {
-    document.documentElement.style.setProperty("--focus", "lime");
-  }, []);
   return (
     <Page>
       <Container>
@@ -59,8 +56,7 @@ export function Components() {
                 consdierations to cater for accessibility. This is true and I've
                 always reached for libraries. That being said it has also
                 prevented me from ever interacting with React's portals and ever
-                reviewing and implementing focus traps myself (*cough*, Bing /
-                GPT-4).
+                reviewing and implementing focus traps myself (GPT-4).
               </Paragraph>
             </Box>
             <Box>

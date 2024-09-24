@@ -14,13 +14,14 @@
     :root {
       --background-color: #242427;
       --color: #d4d4d4;
-      --focus: crimson;
+      /* --color: #555; */
+      --focus: var(--color);
       -moz-osx-font-smoothing: grayscale;
       -webkit-font-smoothing: antialiased;
       background-color: var(--background-color);
       color-scheme: light dark;
       color: var(--color);
-      font-family: system-ui, sans-serif;
+      font-family: monospace, system-ui, sans-serif;
       font-size: 16px;
       font-synthesis: none;
       font-weight: 400;
@@ -33,7 +34,7 @@
     a:hover,
     button:hover {
       outline-color: var(--focus);
-      outline-offset: 4px;
+      outline-offset: 2px;
       outline-style: solid;
       outline-width: 2px;
     }

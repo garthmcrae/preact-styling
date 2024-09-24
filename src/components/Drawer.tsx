@@ -1,65 +1,42 @@
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
 import { Icon, lunch } from "./Icon";
 import { useOnClickOutside } from "../hooks/useClickOutside";
-import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
-import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
-import { border, breakpoint } from "../styles";
+import { border } from "../styles";
+
+const container: CSSProperties = {
+  position: "relative",
+};
+const control: CSSProperties = {
+  appearance: "none",
+  backgroundColor: "var(--background-color)",
+  ...border,
+  color: "inherit",
+  cursor: "pointer",
+  display: "block",
+  paddingBottom: 14,
+  paddingLeft: 14,
+  paddingRight: 14,
+  paddingTop: 14,
+  textDecoration: "none",
+  transition: "background-color 100ms ease-in-out, padding 100ms ease-in-out",
+  width: "max-content",
+};
+const drawer: CSSProperties = {
+  backgroundColor: "var(--background-color)",
+  ...border,
+  left: 56 + 16,
+  padding: 14,
+  position: "absolute",
+  top: 0,
+  transition: "background-color 100ms ease-in-out, transform 300ms ease-in-out",
+  width: 224,
+  zIndex: 2,
+};
 
 export const Drawer = ({ children }: { children: ReactNode }) => {
   const ref = useRef(null);
   const [toggle, setToggle] = useState(false);
   useOnClickOutside(ref, () => setToggle(false));
-  const innerWidth = useWindowInnerWidth();
-  const control = atMediaMinWidth(
-    {
-      0: {
-        appearance: "none",
-        backgroundColor: "var(--background-color)",
-        ...border,
-        color: "inherit",
-        cursor: "pointer",
-        display: "block",
-        paddingBottom: 14,
-        paddingLeft: 14,
-        paddingRight: 14,
-        paddingTop: 14,
-        textDecoration: "none",
-        transition:
-          "background-color 100ms ease-in-out, padding 100ms ease-in-out",
-        width: "max-content",
-      },
-      [breakpoint]: {
-        display: "none",
-      },
-    },
-    innerWidth
-  );
-  const drawer = atMediaMinWidth(
-    {
-      0: {
-        backgroundColor: "var(--background-color)",
-        ...border,
-        left: -256,
-        padding: 14,
-        position: "absolute",
-        top: 16,
-        transform: `translateX(${toggle ? 272 : 0}px)`,
-        transition:
-          "background-color 100ms ease-in-out, transform 300ms ease-in-out",
-        width: 224,
-        zIndex: 2,
-      },
-      [breakpoint]: {
-        borderWidth: 0,
-        padding: 0,
-        position: "static",
-        transform: "translateX(0)",
-        transition: "background-color 100ms ease-in-out",
-        width: "unset",
-      },
-    },
-    innerWidth
-  );
   const handleToggle = () => setToggle((prevToggle) => !prevToggle);
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
@@ -76,7 +53,7 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
     };
   }, []);
   return (
-    <>
+    <div style={container}>
       <button
         aria-label="Toggle navigation"
         onClick={handleToggle}
@@ -91,9 +68,13 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
           }}
         />
       </button>
-      <div style={drawer} ref={ref}>
+      <div
+        onClick={() => setToggle(false)}
+        ref={ref}
+        style={{ ...drawer, transform: `translateX(${toggle ? -272 : 0}px)` }}
+      >
         {children}
       </div>
-    </>
+    </div>
   );
 };

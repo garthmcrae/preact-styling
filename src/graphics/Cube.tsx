@@ -1,14 +1,21 @@
 import { CSSProperties } from "react";
 
+const outline: CSSProperties = {
+  outlineColor: "inherit",
+  outlineOffset: -2,
+  outlineStyle: "solid",
+  outlineWidth: 2,
+};
+
 export const Cube = () => {
   const container: CSSProperties = {
     alignItems: "center",
-    backgroundImage: "radial-gradient(lime,green)",
     display: "flex",
     height: 200,
     justifyContent: "center",
+    ...outline,
     perspective: 550,
-    width: "100%",
+    width: 200,
   };
   const element: CSSProperties = {
     animationName: "rotate",
@@ -23,8 +30,8 @@ export const Cube = () => {
   };
   const plane: CSSProperties = {
     backfaceVisibility: "inherit",
-    backgroundColor: "rgba(255,255,0,.255)",
     height: "100%",
+    ...outline,
     position: "absolute",
     width: "100%",
   };

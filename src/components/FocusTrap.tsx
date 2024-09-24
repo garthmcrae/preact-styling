@@ -10,7 +10,7 @@ export const FocusTrap = ({ children }: { children: ReactNode }) => {
     const lastElement = focusableElements?.[
       focusableElements.length - 1
     ] as HTMLElement;
-    firstElement.focus();
+    if (ref.current) ref.current.focus();
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Tab") {
         if (event.shiftKey && document.activeElement === firstElement) {
@@ -27,5 +27,9 @@ export const FocusTrap = ({ children }: { children: ReactNode }) => {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
-  return <div ref={ref}>{children}</div>;
+  return (
+    <div ref={ref} tabIndex={-1}>
+      {children}
+    </div>
+  );
 };

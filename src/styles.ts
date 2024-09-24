@@ -16,8 +16,8 @@ export const fadeInUp: CSSProperties = {
 };
 
 export const padding = {
-  paddingBottom: 14,
-  paddingLeft: 14,
-  paddingRight: 14,
+  paddingBottom: 6,
+  paddingLeft: 6,
+  paddingRight: 6,
   paddingTop: 6,
 }

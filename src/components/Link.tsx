@@ -7,7 +7,7 @@ const link: CSSProperties = {
   color: "inherit",
   cursor: "pointer",
   display: "block",
-  fontSize: 32,
+  fontSize: 24,
   lineHeight: 1,
   ...padding,
   textDecoration: "none",

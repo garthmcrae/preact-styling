@@ -1,7 +1,7 @@
-import { useEffect } from "react";
 import { Components } from "../cards/Components";
 import { Thoughts } from "../cards/Thoughts";
 import { Root } from "../cards/Root";
+
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
@@ -21,9 +21,6 @@ import windowInnerWidthContextRaw from "../contexts/WindowInnerWidthContext.tsx?
 import useWindowInnerWidthRaw from "../hooks/useWindowInnerWidth.ts?raw";
 
 export function Styling() {
-  useEffect(() => {
-    document.documentElement.style.setProperty("--focus", "magenta");
-  }, []);
   return (
     <Page>
       <Container>

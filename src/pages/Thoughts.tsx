@@ -1,7 +1,7 @@
-import { useEffect } from "react";
 import { Root } from "../cards/Root";
 import { Routing } from "../cards/Routing";
 import { Styling } from "../cards/Styling";
+
 import { Box } from "../components/Box";
 import { Card } from "../components/Card";
 import { Code } from "../components/Code";
@@ -13,15 +13,13 @@ import { HeadingPage } from "../components/HeadingPage";
 import { Label } from "../components/Label";
 import { Page } from "../components/Page";
 import { Paragraph } from "../components/Paragraph";
+
 import { Plane } from "../graphics/Plane";
 import { Pyramid } from "../graphics/Pyramid";
 
 import buildRaw from "../build.txt?raw";
 
 export function Thoughts() {
-  useEffect(() => {
-    document.documentElement.style.setProperty("--focus", "orange");
-  }, []);
   return (
     <Page>
       <Container>

@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import { Components } from "../cards/Components";
 import { Routing } from "../cards/Routing";
 import { Styling } from "../cards/Styling";
@@ -21,14 +21,7 @@ const Strike = ({ children }: { children: ReactNode }) => (
   <span style={{ textDecoration: "line-through" }}>{children}</span>
 );
 
-const Accent = ({ children }: { children: ReactNode }) => (
-  <span style={{ color: "crimson" }}>{children}</span>
-);
-
 export function Root() {
-  useEffect(() => {
-    document.documentElement.style.setProperty("--focus", "crimson");
-  }, []);
   return (
     <Page>
       <Container>
@@ -36,23 +29,25 @@ export function Root() {
           <Void />
         </Box>
         <Box>
-          <HeadingPage>
-            React <Accent>NO</Accent>
-          </HeadingPage>
+          <HeadingPage>Hello</HeadingPage>
         </Box>
         <Box>
-          <Paragraph first last>
-            <Accent>What happens if you don't add all the dependencies?</Accent>{" "}
-            This is an exercise to explore building responsive React
-            applications without adding any additional{" "}
-            <Strike>CSS in JS</Strike> packages (including React itself).
+          <Paragraph first>
+            What happens if you don't add all the dependencies? This is an
+            exercise to explore building responsive React applications without
+            adding any additional <Strike>CSS in JS</Strike> packages (including
+            React itself).
+          </Paragraph>
+          <Paragraph last>
+            If you need to build a lightweight performant web site or web
+            application this approach may be a viable solution for you.
           </Paragraph>
         </Box>
         <Alert>
           <Box>
             <Label element="h2">Warning</Label>
             <Paragraph first last>
-              This is a work in progress and there may be spelling errors.
+              This project is a work in progress.
             </Paragraph>
           </Box>
         </Alert>

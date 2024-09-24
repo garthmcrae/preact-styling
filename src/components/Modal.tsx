@@ -70,8 +70,8 @@ export function Modal({
       </Button>
       {showModal &&
         createPortal(
-          <FocusTrap>
-            <div style={modal} tabIndex={0}>
+          <div style={modal}>
+            <FocusTrap>
               <div style={fadeInUp}>
                 <div style={content}>
                   {children}
@@ -80,8 +80,8 @@ export function Modal({
                   </div>
                 </div>
               </div>
-            </div>
-          </FocusTrap>,
+            </FocusTrap>
+          </div>,
           document.body
         )}
     </>

@@ -1,7 +1,7 @@
-import { useEffect } from "react";
 import { Components } from "../cards/Components";
 import { Routing } from "../cards/Routing";
 import { Styling } from "../cards/Styling";
+
 import { Box } from "../components/Box";
 import { Container } from "../components/Container";
 import { FlexContainer } from "../components/FlexContainer";
@@ -13,9 +13,6 @@ import { Paragraph } from "../components/Paragraph";
 import { Void } from "../graphics/Void";
 
 export function NotFound() {
-  useEffect(() => {
-    document.documentElement.style.setProperty("--focus", "crimson");
-  }, []);
   return (
     <Page>
       <Container>
