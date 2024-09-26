@@ -24,7 +24,7 @@ const control: CSSProperties = {
 const drawer: CSSProperties = {
   backgroundColor: "var(--background-color)",
   ...border,
-  left: 56 + 16,
+  left: 56 + 16 + 4,
   padding: 14,
   position: "absolute",
   top: 0,

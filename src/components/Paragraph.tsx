@@ -19,7 +19,7 @@ export const Paragraph = ({
       marginTop: first ? 0 : 16,
     },
     [breakpoint]: {
-      fontSize: 32,
+      fontSize: 24,
     },
   });
   return <p style={paragraph}>{children}</p>;

@@ -1,7 +1,7 @@
 import { Card } from "../components/Card";
 import { Label } from "../components/Label";
 import { Paragraph } from "../components/Paragraph";
-import { Cube } from "../graphics/Cube";
+import { Void } from "../graphics/Void";
 import { useGoToPathname } from "../hooks/useGoToPathname";
 
 export const Components = () => {
@@ -9,9 +9,9 @@ export const Components = () => {
   return (
     <Card href="/components/" onClick={goToPathname}>
       <div style={{ marginBottom: 16 }}>
-        <Cube />
+        <Void />
       </div>
-      <Label element="h3"> Components </Label>
+      <Label element="h3">/components/</Label>
       <Paragraph first last>
         What this looks like in practice.
       </Paragraph>

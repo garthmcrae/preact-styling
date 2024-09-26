@@ -11,7 +11,7 @@ export const Thoughts = () => {
       <div style={{ marginBottom: 16 }}>
         <Plane />
       </div>
-      <Label element="h3">Thoughts</Label>
+      <Label element="h3">/thoughts/</Label>
       <Paragraph first last>
         Next steps for this exercise and further reading.
       </Paragraph>

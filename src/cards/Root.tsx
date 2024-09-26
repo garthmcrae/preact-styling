@@ -1,7 +1,7 @@
 import { Card } from "../components/Card";
 import { Label } from "../components/Label";
 import { Paragraph } from "../components/Paragraph";
-import { Void } from "../graphics/Void";
+import { Cube } from "../graphics/Cube";
 import { useGoToPathname } from "../hooks/useGoToPathname";
 
 export const Root = () => {
@@ -9,7 +9,7 @@ export const Root = () => {
   return (
     <Card href="/" onClick={goToPathname}>
       <div style={{ marginBottom: 16 }}>
-        <Void />
+        <Cube />
       </div>
       <Label element="h3">/</Label>
       <Paragraph first last>

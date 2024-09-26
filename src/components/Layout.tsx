@@ -8,7 +8,7 @@ const layout: CSSProperties = {
   justifyContent: "flex-start",
   maxWidth: "100%",
   minHeight: "100vh",
-  overflowX: "hidden",
+  overflow: "hidden",
 };
 
 export const Layout = ({ children }: { children: ReactNode }) => {

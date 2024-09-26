@@ -4,17 +4,17 @@ import { Drawer } from "./Drawer";
 import { Label } from "./Label";
 import { Link } from "./Link";
 import { useGoToPathname } from "../hooks/useGoToPathname";
-import { border, fadeInUp, padding } from "../styles";
+import { fadeInUp } from "../styles";
 
 const brand: CSSProperties = {
   backgroundColor: "var(--color)",
   color: "var(--background-color)",
   display: "block",
-  fontSize: 40,
-  paddingBottom: 4,
-  paddingLeft: 12,
-  paddingRight: 12,
-  paddingTop: 4,
+  fontSize: 32,
+  paddingBottom: 8,
+  paddingLeft: 16,
+  paddingRight: 16,
+  paddingTop: 8,
   textAlign: "center",
   textDecoration: "none",
 };
@@ -37,29 +37,36 @@ const nav: CSSProperties = {
   padding: 16,
 };
 const skip: CSSProperties = {
-  ...border,
   color: "inherit",
   cursor: "pointer",
   display: "block",
-  fontSize: 24,
-  fontWeight: 500,
+  fontSize: 12,
+  fontWeight: 700,
   lineHeight: 1,
-  ...padding,
+  marginBottom: 0,
+  marginLeft: 16,
+  marginRight: "auto",
+  marginTop: 16,
+  paddingBottom: 2,
+  paddingLeft: 2,
+  paddingRight: 2,
+  paddingTop: 2,
   textDecoration: "none",
+  width: "max-content",
 };
 
 export const Header = () => {
   const goToPathname = useGoToPathname();
   return (
     <>
+      <a style={skip} href="#content">
+        Skip to content
+      </a>
       <header>
         <Container>
           <nav style={nav} aria-describedby="nav-heading">
             <a style={brand} href="/">
-              NO
-            </a>
-            <a style={skip} href="#content">
-              Skip to content
+              **** NO
             </a>
             <div style={{ marginLeft: "auto" }}>
               <Drawer>

@@ -7,10 +7,11 @@ import { Container } from "../components/Container";
 import { FlexContainer } from "../components/FlexContainer";
 import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
-import { HeadingPage } from "../components/HeadingPage";
 import { Hyperboloid } from "../graphics/Hyperboloid";
 import { Label } from "../components/Label";
 import { Page } from "../components/Page";
+import { PageBanner } from "../components/PageBanner";
+import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 
 import routesRaw from "../components/Routes?raw";
@@ -23,12 +24,14 @@ export function Routing() {
   return (
     <Page>
       <Container>
-        <Box>
-          <Hyperboloid />
-        </Box>
-        <Box>
-          <HeadingPage>Routing</HeadingPage>
-        </Box>
+        <PageBanner>
+          <Box>
+            <Hyperboloid />
+          </Box>
+          <Box>
+            <PageHeading>ROUTING</PageHeading>
+          </Box>
+        </PageBanner>
         <Box>
           <Paragraph first last>
             Routing allows users to navigate to and from pages within an

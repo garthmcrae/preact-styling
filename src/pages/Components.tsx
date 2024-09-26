@@ -6,16 +6,17 @@ import { Alert } from "../components/Alert";
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
-import { Cube } from "../graphics/Cube";
 import { FlexContainer } from "../components/FlexContainer";
 import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
-import { HeadingPage } from "../components/HeadingPage";
 import { Label } from "../components/Label";
 import { Modal } from "../components/Modal";
 import { Page } from "../components/Page";
+import { PageBanner } from "../components/PageBanner";
+import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 import { Picture } from "../components/Picture";
+import { Void } from "../graphics/Void";
 
 import focusTrapRaw from "../components/FocusTrap.tsx?raw";
 import modalRaw from "../components/Modal.tsx?raw";
@@ -26,12 +27,14 @@ export function Components() {
   return (
     <Page>
       <Container>
-        <Box>
-          <Cube />
-        </Box>
-        <Box>
-          <HeadingPage>Components</HeadingPage>
-        </Box>
+        <PageBanner>
+          <Box>
+            <Void />
+          </Box>
+          <Box>
+            <PageHeading>COMPONENTS</PageHeading>
+          </Box>
+        </PageBanner>
         <Box>
           <Paragraph>
             I wrote a few for this project but don't worry I'm not going to do a

@@ -32,7 +32,7 @@ export const Mode = () => {
     },
     [breakpoint + 132]: {
       bottom: 0,
-      left: "100vw",
+      left: breakpoint + 132,
       paddingBottom: 16,
       paddingTop: 16,
       position: "fixed",

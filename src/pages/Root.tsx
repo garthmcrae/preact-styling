@@ -9,11 +9,12 @@ import { Container } from "../components/Container";
 import { FlexContainer } from "../components/FlexContainer";
 import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
-import { HeadingPage } from "../components/HeadingPage";
 import { Label } from "../components/Label";
 import { Page } from "../components/Page";
+import { PageBanner } from "../components/PageBanner";
+import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
-import { Void } from "../graphics/Void";
+import { Cube } from "../graphics/Cube";
 
 import packageRaw from "../../package.json?raw";
 
@@ -25,18 +26,19 @@ export function Root() {
   return (
     <Page>
       <Container>
-        <Box>
-          <Void />
-        </Box>
-        <Box>
-          <HeadingPage>Hello</HeadingPage>
-        </Box>
+        <PageBanner>
+          <Box>
+            <Cube />
+          </Box>
+          <Box>
+            <PageHeading>**** YES</PageHeading>
+          </Box>
+        </PageBanner>
         <Box>
           <Paragraph first>
-            What happens if you don't add all the dependencies? This is an
-            exercise to explore building responsive React applications without
-            adding any additional <Strike>CSS in JS</Strike> packages (including
-            React itself).
+            This project explores building a responsive React application
+            without adding any additional <Strike>CSS in JS</Strike> packages
+            (including React itself).
           </Paragraph>
           <Paragraph last>
             If you need to build a lightweight performant web site or web

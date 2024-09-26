@@ -28,7 +28,7 @@ export const FocusTrap = ({ children }: { children: ReactNode }) => {
     };
   }, []);
   return (
-    <div ref={ref} tabIndex={-1}>
+    <div ref={ref} style={{ outline: "none" }} tabIndex={-1}>
       {children}
     </div>
   );

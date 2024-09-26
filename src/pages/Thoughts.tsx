@@ -9,9 +9,10 @@ import { Container } from "../components/Container";
 import { FlexContainer } from "../components/FlexContainer";
 import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
-import { HeadingPage } from "../components/HeadingPage";
 import { Label } from "../components/Label";
 import { Page } from "../components/Page";
+import { PageBanner } from "../components/PageBanner";
+import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 
 import { Plane } from "../graphics/Plane";
@@ -23,12 +24,14 @@ export function Thoughts() {
   return (
     <Page>
       <Container>
-        <Box>
-          <Plane />
-        </Box>
-        <Box>
-          <HeadingPage>Thoughts</HeadingPage>
-        </Box>
+        <PageBanner>
+          <Box>
+            <Plane />
+          </Box>
+          <Box>
+            <PageHeading>THOUGHTS</PageHeading>
+          </Box>
+        </PageBanner>
         <Box>
           <Paragraph first>
             Next steps for this exercise — publish some of this to NPM. Validate

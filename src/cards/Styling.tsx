@@ -11,7 +11,7 @@ export const Styling = () => {
       <div style={{ marginBottom: 16 }}>
         <Octohedron />
       </div>
-      <Label element="h3">Styling</Label>
+      <Label element="h3">/styling/</Label>
       <Paragraph first last>
         The handling of styles and responsive behaviour.
       </Paragraph>

@@ -8,10 +8,11 @@ import { Container } from "../components/Container";
 import { FlexContainer } from "../components/FlexContainer";
 import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
-import { HeadingPage } from "../components/HeadingPage";
 import { Label } from "../components/Label";
 import { Octohedron } from "../graphics/Octohedron";
 import { Page } from "../components/Page";
+import { PageBanner } from "../components/PageBanner";
+import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 
 import atMediaMinWidthRaw from "../utilities/atMediaMinWidth.ts?raw";
@@ -24,12 +25,14 @@ export function Styling() {
   return (
     <Page>
       <Container>
-        <Box>
-          <Octohedron />
-        </Box>
-        <Box>
-          <HeadingPage>Styling</HeadingPage>
-        </Box>
+        <PageBanner>
+          <Box>
+            <Octohedron />
+          </Box>
+          <Box>
+            <PageHeading>STYLING</PageHeading>
+          </Box>
+        </PageBanner>
         <Box>
           <Paragraph first>
             The style property has limitations, including media queries, access

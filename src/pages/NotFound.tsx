@@ -7,8 +7,9 @@ import { Container } from "../components/Container";
 import { FlexContainer } from "../components/FlexContainer";
 import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
-import { HeadingPage } from "../components/HeadingPage";
 import { Page } from "../components/Page";
+import { PageBanner } from "../components/PageBanner";
+import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 import { Void } from "../graphics/Void";
 
@@ -16,12 +17,14 @@ export function NotFound() {
   return (
     <Page>
       <Container>
-        <Box>
-          <Void />
-        </Box>
-        <Box>
-          <HeadingPage>Not found</HeadingPage>
-        </Box>
+        <PageBanner>
+          <Box>
+            <Void />
+          </Box>
+          <Box>
+            <PageHeading>****</PageHeading>
+          </Box>
+        </PageBanner>
         <Box>
           <Paragraph>
             You have either navigated here directly or been redirected here

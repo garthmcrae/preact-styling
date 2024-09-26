@@ -2,11 +2,14 @@ import { CSSProperties } from "react";
 
 export const breakpoint = 960;
 
+export const borderWidth = 2;
+export const borderRadius = 0;
+
 export const border: CSSProperties = {
   borderColor: "currentcolor",
-  borderRadius: 0,
+  borderRadius,
   borderStyle: "solid",
-  borderWidth: 2,
+  borderWidth,
 };
 
 export const fadeInUp: CSSProperties = {
@@ -16,8 +19,8 @@ export const fadeInUp: CSSProperties = {
 };
 
 export const padding = {
-  paddingBottom: 6,
-  paddingLeft: 6,
-  paddingRight: 6,
-  paddingTop: 6,
+  paddingBottom: 8 - borderWidth,
+  paddingLeft: 8 - borderWidth,
+  paddingRight: 8 - borderWidth,
+  paddingTop: 8 - borderWidth,
 }
