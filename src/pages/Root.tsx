@@ -41,8 +41,9 @@ export function Root() {
             (including React itself).
           </Paragraph>
           <Paragraph last>
-            If you need to build a lightweight performant web site or web
-            application this approach may be a viable solution for you.
+            If you need to build a lightweight and performant web application or
+            web site and you are familiar with React this approach may be a
+            viable solution for you.
           </Paragraph>
         </Box>
         <Alert>

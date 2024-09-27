@@ -27,7 +27,7 @@ const drawer: CSSProperties = {
   left: 56 + 16 + 4,
   padding: 14,
   position: "absolute",
-  top: 0,
+  top: -4,
   transition: "background-color 100ms ease-in-out, transform 300ms ease-in-out",
   width: 224,
   zIndex: 2,
