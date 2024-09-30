@@ -33,21 +33,21 @@ export function Routing() {
           </Box>
         </PageBanner>
         <Box>
+          <Heading>Routing</Heading>
+        </Box>
+        <Box>
           <Paragraph first last>
             Routing allows users to navigate to and from pages within an
             application. A component or page based on a specific pathname
             entered via the URL or updated when a user clicks on a link. Routes
-            can also be linked to when a user enters the application.
+            can also be deep linked to when a user enters the application.
           </Paragraph>
         </Box>
         <Box>
-          <Heading>How</Heading>
-        </Box>
-        <Box>
           <Paragraph first last>
-            A context provides the window's location pathname also listening to
-            the popstate event to update when a user navigates back and forth
-            using the browser controls.
+            To do this a context provides the window's location pathname also
+            listening to the popstate event to update when a user navigates back
+            and forth using the browser controls.
           </Paragraph>
         </Box>
         <Box>
@@ -76,10 +76,7 @@ export function Routing() {
         </Box>
         <Box>
           <Paragraph first last>
-            Usage as follows. Note the trailing slashes — by default browsers
-            add the trailing slash to pathnames on refresh. Defining paths with
-            trailing slashes prevents the need to have additional logic to
-            handle trailing slashes.
+            Usage as follows.
           </Paragraph>
         </Box>
         <Box>
@@ -87,9 +84,16 @@ export function Routing() {
           <Code>{routerRaw}</Code>
         </Box>
         <Box>
-          <Paragraph first last>
+          <Paragraph first>
+            Note the trailing slashes — by default browsers add the trailing
+            slash to pathnames on refresh. Defining paths with trailing slashes
+            prevents the need to have additional logic to handle trailing
+            slashes.
+          </Paragraph>
+          <Paragraph last>
             The following can be used in conjunction with an anchor or called
-            with a string for example on click or form submission.
+            with a string for example on click or form submission to send a user
+            to a different route.
           </Paragraph>
         </Box>
         <Box>

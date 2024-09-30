@@ -35,10 +35,12 @@ export function Root() {
           </Box>
         </PageBanner>
         <Box>
+          <Heading>Hello</Heading>
+        </Box>
+        <Box>
           <Paragraph first>
             This project explores building a responsive React application
-            without adding any additional <Strike>CSS in JS</Strike> packages
-            (including React itself).
+            without adding any <Strike>CSS in JS</Strike> packages.
           </Paragraph>
           <Paragraph last>
             If you need to build a lightweight and performant web application or
@@ -55,9 +57,6 @@ export function Root() {
           </Box>
         </Alert>
         <Box>
-          <Heading>Tooling</Heading>
-        </Box>
-        <Box>
           <Paragraph first>
             For build we are using Vite the "next generation frontend tooling".
             It consists of a development server and "a build command that
@@ -70,26 +69,22 @@ export function Root() {
             bundle the module.
           </Paragraph>
           <Paragraph>
-            So Rollup pre-configured — great. Highly recommend checking out
-            Rollup and Vite if you haven't already.
+            I highly recommend checking out Rollup and Vite if you haven't
+            already.
           </Paragraph>
           <Paragraph last>
             Something I found really neat was Vite allows you to easily import
             raw files as a string so adding code examples to this project was a
-            cinch. Although I'm also suspiscious when reviewing the bundle that
-            the string literals for the code aren't minified, add to build and
-            also render slowly.
+            cinch, that being said when reviewing the bundle I observed that the
+            string literals for the code aren't minified (which makes sense) and
+            that these add to build and also render slowly.
           </Paragraph>
         </Box>
         <Box>
+          <Label element="h3">Raw file import example</Label>
           <Code>{`
 import packageRaw from "../../package.json?raw";
           `}</Code>
-        </Box>
-        <Box>
-          <Paragraph first last>
-            So now with that let's take a look at some files.
-          </Paragraph>
         </Box>
         <Box>
           <Label element="h3">package.json</Label>
@@ -97,12 +92,12 @@ import packageRaw from "../../package.json?raw";
         </Box>
         <Box>
           <Paragraph first>
-            Bit of a give away here in the name — this is a Preact project not a
-            React project. Preact is a "fast 3kB alternative to React with the
-            same modern API". For an additional ~2kB you can include a React
-            compatibility layer which means at surface level components look
-            identical and can be copied and used in either React or Preact
-            projects.
+            Bit of a give away here in the project name — this is a Preact
+            project not a React project. Preact is a "fast 3kB alternative to
+            React with the same modern API". For an additional ~2kB you can
+            include a React compatibility layer which means at surface level
+            components look identical and can be copied and used in either React
+            or Preact projects.
           </Paragraph>
           <Paragraph>
             If you haven't already I recommend checking it out.

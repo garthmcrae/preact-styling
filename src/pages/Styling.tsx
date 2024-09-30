@@ -34,6 +34,9 @@ export function Styling() {
           </Box>
         </PageBanner>
         <Box>
+          <Heading>Styling</Heading>
+        </Box>
+        <Box>
           <Paragraph first>
             The style property has limitations, including media queries, access
             to pseudo classes, and targeting pseudo or descendant elements.
