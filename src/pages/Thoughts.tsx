@@ -33,6 +33,9 @@ export function Thoughts() {
           </Box>
         </PageBanner>
         <Box>
+          <Heading>Reactions</Heading>
+        </Box>
+        <Box>
           <Paragraph first>
             Next steps for this exercise — publish some of this to NPM. Validate
             if Preact modules are compatible with React projects. Install a
@@ -55,14 +58,6 @@ export function Thoughts() {
             Also worth noting this came together really quickly. I think it's
             because I never had to switch gears between the TS(X) and CSS you
             just write components.
-          </Paragraph>
-        </Box>
-        <Box>
-          <Heading>References</Heading>
-        </Box>
-        <Box>
-          <Paragraph>
-            Worth a look but please also do your own research.
           </Paragraph>
         </Box>
         <Box>
@@ -147,9 +142,6 @@ export function Thoughts() {
               </Card>
             </FlexItem>
           </FlexContainer>
-        </Box>
-        <Box>
-          <Heading>Build output</Heading>
         </Box>
         <Box>
           <Paragraph first last>

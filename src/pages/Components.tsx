@@ -36,6 +36,9 @@ export function Components() {
           </Box>
         </PageBanner>
         <Box>
+          <Heading>Overreact</Heading>
+        </Box>
+        <Box>
           <Paragraph>
             I wrote a few for this project but don't worry I'm not going to do a
             write up on all of them — a few to note. The rest you can view on my

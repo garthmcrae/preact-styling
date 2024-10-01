@@ -35,7 +35,7 @@ export function Root() {
           </Box>
         </PageBanner>
         <Box>
-          <Heading>Hello</Heading>
+          <Heading>Hello world</Heading>
         </Box>
         <Box>
           <Paragraph first>

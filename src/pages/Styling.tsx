@@ -34,7 +34,7 @@ export function Styling() {
           </Box>
         </PageBanner>
         <Box>
-          <Heading>Styling</Heading>
+          <Heading>Get inline</Heading>
         </Box>
         <Box>
           <Paragraph first>
@@ -46,17 +46,12 @@ export function Styling() {
             them can negatively impact accessibility. Our focus then remains on
             solving media queries.
           </Paragraph>
-          <Paragraph last>
+          <Paragraph>
             Also worth noting that the objective isn't to completely remove the
             need for styling. Some global styles and keyframe animations are
             included in this project in a style tag in the index HTML.
           </Paragraph>
-        </Box>
-        <Box>
-          <Heading>How</Heading>
-        </Box>
-        <Box>
-          <Paragraph first last>
+          <Paragraph last>
             A context provides the window's inner width to components.
           </Paragraph>
         </Box>
@@ -104,9 +99,6 @@ export function Styling() {
         <Box>
           <Label>FlexContainer.tsx</Label>
           <Code>{flexContainerRaw}</Code>
-        </Box>
-        <Box>
-          <Heading>Notes</Heading>
         </Box>
         <Box>
           <Paragraph first last>

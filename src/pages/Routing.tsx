@@ -33,7 +33,7 @@ export function Routing() {
           </Box>
         </PageBanner>
         <Box>
-          <Heading>Routing</Heading>
+          <Heading>Page found</Heading>
         </Box>
         <Box>
           <Paragraph first last>
