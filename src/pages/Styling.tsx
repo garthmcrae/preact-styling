@@ -19,6 +19,7 @@ import atMediaMinWidthRaw from "../utilities/atMediaMinWidth.ts?raw";
 import flexContainerRaw from "../components/FlexContainer.tsx?raw";
 import headingRaw from "../components/Heading.tsx?raw";
 import windowInnerWidthContextRaw from "../contexts/WindowInnerWidthContext.tsx?raw";
+import useAtMediaMinWidthRaw from "../hooks/useAtMediaMinWidth.ts?raw";
 import useWindowInnerWidthRaw from "../hooks/useWindowInnerWidth.ts?raw";
 
 export function Styling() {
@@ -44,7 +45,7 @@ export function Styling() {
             nodes, making descendant elements less of an issue. Pseudo classes
             are generally handled by browser defaults, and modifying or removing
             them can negatively impact accessibility. Our focus then remains on
-            solving media queries.
+            solving responsive behaviour.
           </Paragraph>
           <Paragraph>
             Also worth noting that the objective isn't to completely remove the
@@ -52,7 +53,8 @@ export function Styling() {
             included in this project in a style tag in the index HTML.
           </Paragraph>
           <Paragraph last>
-            A context provides the window's inner width to components.
+            To handle returning styles at different window widths a context is
+            used to provide the window's inner width.
           </Paragraph>
         </Box>
         <Box>
@@ -86,6 +88,16 @@ export function Styling() {
           </Paragraph>
         </Box>
         <Box>
+          <Label>useAtMediaMinWidth.ts</Label>
+          <Code>{useAtMediaMinWidthRaw}</Code>
+        </Box>
+        <Box>
+          <Paragraph first last>
+            Wrapping both these in a hook to reduce the number of imports
+            required when consumed.
+          </Paragraph>
+        </Box>
+        <Box>
           <Label>Heading.tsx</Label>
           <Code>{headingRaw}</Code>
         </Box>
@@ -106,10 +118,11 @@ export function Styling() {
             object. While it might seem convenient to name object properties
             freely, keep in mind that the resulting bundle will only minify the
             name of the object itself, not any of its nested properties. This
-            can lead to a larger built file, as observed in this project.
+            can lead to a larger build output.
           </Paragraph>
         </Box>
         <Box>
+          <Label>Example</Label>
           <Code>{`
 // DO THIS
 const elementStyles: CSSProperties = {

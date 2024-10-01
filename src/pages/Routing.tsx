@@ -36,15 +36,13 @@ export function Routing() {
           <Heading>Page found</Heading>
         </Box>
         <Box>
-          <Paragraph first last>
+          <Paragraph first>
             Routing allows users to navigate to and from pages within an
             application. A component or page based on a specific pathname
             entered via the URL or updated when a user clicks on a link. Routes
             can also be deep linked to when a user enters the application.
           </Paragraph>
-        </Box>
-        <Box>
-          <Paragraph first last>
+          <Paragraph last>
             To do this a context provides the window's location pathname also
             listening to the popstate event to update when a user navigates back
             and forth using the browser controls.
@@ -67,7 +65,7 @@ export function Routing() {
         <Box>
           <Paragraph first last>
             The routes component returns a child based on the current pathname.
-            If no pathname exists it will route users to a not found pathname.
+            If no pathname exists it will route users to a 'not found' pathname.
           </Paragraph>
         </Box>
         <Box>

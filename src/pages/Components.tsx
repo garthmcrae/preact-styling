@@ -40,15 +40,42 @@ export function Components() {
         </Box>
         <Box>
           <Paragraph>
-            I wrote a few for this project but don't worry I'm not going to do a
-            write up on all of them — a few to note. The rest you can view on my
-            Github.
+            Examples of a few components and placeholders for a few to come. All
+            to date can be viewed on my Github.
           </Paragraph>
         </Box>
         <Box>
-          <Heading>Modals</Heading>
+          <Label>Accordion</Label>
+          <Paragraph>...</Paragraph>
         </Box>
         <Box>
+          <Label>Alerts</Label>
+          <Paragraph>...</Paragraph>
+        </Box>
+        <Box>
+          <Label>Alert dismissable</Label>
+          <Paragraph>...</Paragraph>
+        </Box>
+        <Box>
+          <Label>Button</Label>
+          <Paragraph>...</Paragraph>
+        </Box>
+        <Box>
+          <Label>Drawer</Label>
+          <Paragraph>...</Paragraph>
+        </Box>
+        <Box>
+          <Label>Label</Label>
+          <Paragraph>
+            The label above this text is the Label component.
+          </Paragraph>
+        </Box>
+        <Box>
+          <Label>Menu</Label>
+          <Paragraph>...</Paragraph>
+        </Box>
+        <Box>
+          <Label>Modals</Label>
           <Paragraph>How appropriate to document a modal in a modal.</Paragraph>
         </Box>
         <Box>
@@ -119,15 +146,17 @@ export function Components() {
           </Modal>
         </Box>
         <Box>
-          <Heading>Pictures</Heading>
-        </Box>
-        <Box>
+          <Label>Pictures</Label>
           <Paragraph first last>
             Not in the bundle. Not blocking. Worth a thought but not more as it
             is a seperate topic — just be considerate as there is no point in
             optimising your code if you are just going to dump huge assets about
             the place.
           </Paragraph>
+        </Box>
+        <Box>
+          <Label>Paragraph</Label>
+          <Paragraph>This text is the Paragraph component.</Paragraph>
         </Box>
         <Box>
           <Label>Picture.tsx</Label>
@@ -142,9 +171,7 @@ export function Components() {
           />
         </Box>
         <Box>
-          <Heading>Graphics</Heading>
-        </Box>
-        <Box>
+          <Label>Graphics</Label>
           <Paragraph first last>
             The header and card are not GIFs would you believe. All the styles
             are inline CSS properties with the exception of the keyframe
