@@ -30,9 +30,9 @@ export const Mode = () => {
       paddingRight: 16,
       paddingTop: 8,
     },
-    [breakpoint + 132]: {
+    [breakpoint + 124]: {
       bottom: 0,
-      left: breakpoint + 132,
+      left: breakpoint + 124,
       paddingBottom: 16,
       paddingTop: 16,
       position: "fixed",

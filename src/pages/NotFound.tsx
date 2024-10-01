@@ -35,7 +35,7 @@ export function NotFound() {
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <FlexContainer breakpoint={768}>
+          <FlexContainer breakpoint={834}>
             <FlexItem>
               <Routing />
             </FlexItem>

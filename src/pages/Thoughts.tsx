@@ -61,7 +61,7 @@ export function Thoughts() {
           </Paragraph>
         </Box>
         <Box>
-          <FlexContainer breakpoint={768}>
+          <FlexContainer breakpoint={834}>
             <FlexItem>
               <Card href="https://preactjs.com" target="_blank">
                 <div style={{ marginBottom: 16 }}>
@@ -98,7 +98,7 @@ export function Thoughts() {
           </FlexContainer>
         </Box>
         <Box>
-          <FlexContainer breakpoint={768}>
+          <FlexContainer breakpoint={834}>
             <FlexItem>
               <Card
                 href="https://developer.mozilla.org/docs/Web/API/HTMLElement/style"
@@ -159,7 +159,7 @@ export function Thoughts() {
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <FlexContainer breakpoint={768}>
+          <FlexContainer breakpoint={834}>
             <FlexItem>
               <Root />
             </FlexItem>

@@ -102,7 +102,7 @@ export function Routing() {
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <FlexContainer breakpoint={768}>
+          <FlexContainer breakpoint={834}>
             <FlexItem>
               <Styling />
             </FlexItem>

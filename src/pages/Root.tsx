@@ -110,7 +110,7 @@ import packageRaw from "../../package.json?raw";
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <FlexContainer breakpoint={768}>
+          <FlexContainer breakpoint={834}>
             <FlexItem>
               <Routing />
             </FlexItem>

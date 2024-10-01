@@ -186,7 +186,7 @@ export function Components() {
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <FlexContainer breakpoint={768}>
+          <FlexContainer breakpoint={834}>
             <FlexItem>
               <Thoughts />
             </FlexItem>

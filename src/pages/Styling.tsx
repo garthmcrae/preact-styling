@@ -148,7 +148,7 @@ const styles: CSSProperties = {
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <FlexContainer breakpoint={768}>
+          <FlexContainer breakpoint={834}>
             <FlexItem>
               <Components />
             </FlexItem>

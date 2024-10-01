@@ -16,7 +16,7 @@ export const FlexContainer = ({
       0: {
         display: "flex",
         flexDirection: "column",
-        gap: 32,
+        gap: 16,
         alignItems: "stretch",
       },
       [breakpoint]: {
