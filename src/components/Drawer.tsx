@@ -62,7 +62,6 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
         <Icon
           d={lunch}
           style={{
-            display: "block",
             height: 24,
             width: 24,
           }}
@@ -71,7 +70,7 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
       <div
         onClick={() => setToggle(false)}
         ref={ref}
-        style={{ ...drawer, transform: `translateX(${toggle ? -272 : 0}px)` }}
+        style={{ ...drawer, transform: `translateX(${toggle ? -268 : 0}px)` }}
       >
         {children}
       </div>

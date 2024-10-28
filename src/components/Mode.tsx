@@ -43,18 +43,18 @@ export const Mode = () => {
   useEffect(() => {
     if (mode === "dark") {
       setMode("dark");
-      document.documentElement.style.setProperty("--color", "#d4d4d4");
+      document.documentElement.style.setProperty("--color", "#d7d4d4");
       document.documentElement.style.setProperty(
         "--background-color",
-        "#242427"
+        "#191921"
       );
     }
     if (mode === "light") {
       setMode("light");
-      document.documentElement.style.setProperty("--color", "#242427");
+      document.documentElement.style.setProperty("--color", "#191921");
       document.documentElement.style.setProperty(
         "--background-color",
-        "#d4d4d4"
+        "#d7d4d4"
       );
     }
   }, [mode]);

@@ -66,7 +66,7 @@ export const Header = () => {
         <Container>
           <nav style={nav} aria-describedby="nav-heading">
             <a style={brand} href="/">
-              **** NO
+              **** **
             </a>
             <div style={{ marginLeft: "auto" }}>
               <Drawer>

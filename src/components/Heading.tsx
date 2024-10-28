@@ -17,7 +17,7 @@ export const Heading = ({
       margin: 0,
     },
     [breakpoint]: {
-      fontSize: 64,
+      fontSize: 40,
     },
   });
   return <Element style={heading}>{children}</Element>;

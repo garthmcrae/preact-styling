@@ -6,5 +6,4 @@ export const Page = ({ children }: { children: ReactNode }) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
   return <div style={fadeInUp}>{children}</div>;
-  // return <div>{children}</div>;
 };

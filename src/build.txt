@@ -4,9 +4,9 @@
 
 vite v5.2.11 building for production...
 transforming...
-✓ 82 modules transformed.
+✓ 86 modules transformed.
 rendering chunks...
 computing gzip size...
-dist/index.html                 1.87 kB │ gzip:  0.84 kB
-dist/assets/index-3joJdSSO.js  74.49 kB │ gzip: 23.58 kB
-✓ built in 344ms
+dist/index.html                 1.87 kB │ gzip:  0.83 kB
+dist/assets/index-BZ7ibd32.js  70.98 kB │ gzip: 23.08 kB
+✓ built in 418ms

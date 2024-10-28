@@ -6,8 +6,7 @@ import { Alert } from "../components/Alert";
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
-import { FlexContainer } from "../components/FlexContainer";
-import { FlexItem } from "../components/FlexItem";
+import { Control } from "../components/Control";
 import { Heading } from "../components/Heading";
 import { Label } from "../components/Label";
 import { Modal } from "../components/Modal";
@@ -16,12 +15,12 @@ import { PageBanner } from "../components/PageBanner";
 import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 import { Picture } from "../components/Picture";
-import { Void } from "../graphics/Void";
+import { Void } from "../objects/Void";
 
 import focusTrapRaw from "../components/FocusTrap.tsx?raw";
 import modalRaw from "../components/Modal.tsx?raw";
 import pictureRaw from "../components/Picture.tsx?raw";
-import hyperboloidRaw from "../graphics/Hyperboloid.tsx?raw";
+import hyperboloidRaw from "../objects/Hyperboloid.tsx?raw";
 
 export function Components() {
   return (
@@ -186,17 +185,27 @@ export function Components() {
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <FlexContainer breakpoint={834}>
-            <FlexItem>
-              <Thoughts />
-            </FlexItem>
-            <FlexItem>
-              <Root />
-            </FlexItem>
-            <FlexItem>
-              <Routing />
-            </FlexItem>
-          </FlexContainer>
+          <Control
+            style={{
+              0: { display: "flex", flexDirection: "column", gap: 16 },
+              932: { flexDirection: "row" },
+            }}
+          >
+            {[<Thoughts />, <Root />, <Routing />].map((card, index) => (
+              <Control
+                key={`article${index}`}
+                style={{
+                  932: {
+                    flexBasis: "auto",
+                    flexGrow: 1,
+                    flexShrink: 1,
+                  },
+                }}
+              >
+                {card}
+              </Control>
+            ))}
+          </Control>
         </Box>
       </Container>
     </Page>

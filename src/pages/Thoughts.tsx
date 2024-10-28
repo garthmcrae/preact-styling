@@ -6,6 +6,7 @@ import { Box } from "../components/Box";
 import { Card } from "../components/Card";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
+import { Control } from "../components/Control";
 import { FlexContainer } from "../components/FlexContainer";
 import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
@@ -15,8 +16,8 @@ import { PageBanner } from "../components/PageBanner";
 import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 
-import { Plane } from "../graphics/Plane";
-import { Pyramid } from "../graphics/Pyramid";
+import { Plane } from "../objects/Plane";
+import { Pyramid } from "../objects/Pyramid";
 
 import buildRaw from "../build.txt?raw";
 
@@ -36,28 +37,10 @@ export function Thoughts() {
           <Heading>Reactions</Heading>
         </Box>
         <Box>
-          <Paragraph first>
-            Next steps for this exercise — publish some of this to NPM. Validate
-            if Preact modules are compatible with React projects. Install a
-            React library into a Preact project. Memoize those style objects or
-            move those that aren't using window width to outside the consuming
-            functions (reduce unnecessary re-renders because apparently style
-            objects within a component function are not equal between subsequant
-            renders but needs further reading).
-          </Paragraph>
-          <Paragraph>
-            Reminder to talk about scroll behaviour on the root element (this
-            was new to me but I tell you what, not bad at all).
-          </Paragraph>
-          <Paragraph>
-            This has been an interesting exercise to date and I'm curious to see
-            where this goes. It would be nice to one day create my last CSS,
-            SCSS module file or other and not know that that was the last time.
-          </Paragraph>
-          <Paragraph last>
-            Also worth noting this came together really quickly. I think it's
-            because I never had to switch gears between the TS(X) and CSS you
-            just write components.
+          <Paragraph first last>
+            Worth noting this came together really quickly. I think it's because
+            I never had to switch gears between the TS(X) and CSS you just write
+            components.
           </Paragraph>
         </Box>
         <Box>
@@ -146,7 +129,8 @@ export function Thoughts() {
         <Box>
           <Paragraph first last>
             I'm running the following to write the build output to a file so we
-            can see what size the final built assets are.
+            can see what size the final built files are. As you can see it's
+            **** all.
           </Paragraph>
         </Box>
         <Box>
@@ -159,17 +143,27 @@ export function Thoughts() {
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <FlexContainer breakpoint={834}>
-            <FlexItem>
-              <Root />
-            </FlexItem>
-            <FlexItem>
-              <Routing />
-            </FlexItem>
-            <FlexItem>
-              <Styling />
-            </FlexItem>
-          </FlexContainer>
+          <Control
+            style={{
+              0: { display: "flex", flexDirection: "column", gap: 16 },
+              932: { flexDirection: "row" },
+            }}
+          >
+            {[<Root />, <Routing />, <Styling />].map((card, index) => (
+              <Control
+                key={`article${index}`}
+                style={{
+                  932: {
+                    flexBasis: "auto",
+                    flexGrow: 1,
+                    flexShrink: 1,
+                  },
+                }}
+              >
+                {card}
+              </Control>
+            ))}
+          </Control>
         </Box>
       </Container>
     </Page>

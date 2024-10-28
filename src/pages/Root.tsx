@@ -6,15 +6,14 @@ import { Alert } from "../components/Alert";
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
-import { FlexContainer } from "../components/FlexContainer";
-import { FlexItem } from "../components/FlexItem";
+import { Control } from "../components/Control";
 import { Heading } from "../components/Heading";
 import { Label } from "../components/Label";
 import { Page } from "../components/Page";
 import { PageBanner } from "../components/PageBanner";
 import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
-import { Cube } from "../graphics/Cube";
+import { Cube } from "../objects/Cube";
 
 import packageRaw from "../../package.json?raw";
 
@@ -64,20 +63,16 @@ export function Root() {
             optimized static assets for production".
           </Paragraph>
           <Paragraph>
-            Rollup is also the JavaScript module bundler. If I was to publish
+            Rollup is also "the JavaScript module bundler". If I was to publish
             any of the files from this project to NPM I would use Rollup to
             bundle the module.
-          </Paragraph>
-          <Paragraph>
-            I highly recommend checking out Rollup and Vite if you haven't
-            already.
           </Paragraph>
           <Paragraph last>
             Something I found really neat was Vite allows you to easily import
             raw files as a string so adding code examples to this project was a
-            cinch, that being said when reviewing the bundle I observed that the
-            string literals for the code aren't minified (which makes sense) and
-            that these add to build and also render slowly.
+            cinch, that being said when reviewing the bundle and testing I did
+            observe that the string literals for the code aren't minified (which
+            makes sense) and also render slowly.
           </Paragraph>
         </Box>
         <Box>
@@ -99,9 +94,6 @@ import packageRaw from "../../package.json?raw";
             components look identical and can be copied and used in either React
             or Preact projects.
           </Paragraph>
-          <Paragraph>
-            If you haven't already I recommend checking it out.
-          </Paragraph>
           <Paragraph last>
             Last but not least this project also uses TypeScript.
           </Paragraph>
@@ -110,17 +102,27 @@ import packageRaw from "../../package.json?raw";
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <FlexContainer breakpoint={834}>
-            <FlexItem>
-              <Routing />
-            </FlexItem>
-            <FlexItem>
-              <Styling />
-            </FlexItem>
-            <FlexItem>
-              <Components />
-            </FlexItem>
-          </FlexContainer>
+          <Control
+            style={{
+              0: { display: "flex", flexDirection: "column", gap: 16 },
+              932: { flexDirection: "row" },
+            }}
+          >
+            {[<Routing />, <Styling />, <Components />].map((card, index) => (
+              <Control
+                key={`article${index}`}
+                style={{
+                  932: {
+                    flexBasis: "auto",
+                    flexGrow: 1,
+                    flexShrink: 1,
+                  },
+                }}
+              >
+                {card}
+              </Control>
+            ))}
+          </Control>
         </Box>
       </Container>
     </Page>

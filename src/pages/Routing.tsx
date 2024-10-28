@@ -4,10 +4,9 @@ import { Styling } from "../cards/Styling";
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
-import { FlexContainer } from "../components/FlexContainer";
-import { FlexItem } from "../components/FlexItem";
+import { Control } from "../components/Control";
 import { Heading } from "../components/Heading";
-import { Hyperboloid } from "../graphics/Hyperboloid";
+import { Hyperboloid } from "../objects/Hyperboloid";
 import { Label } from "../components/Label";
 import { Page } from "../components/Page";
 import { PageBanner } from "../components/PageBanner";
@@ -37,15 +36,13 @@ export function Routing() {
         </Box>
         <Box>
           <Paragraph first>
-            Routing allows users to navigate to and from pages within an
-            application. A component or page based on a specific pathname
-            entered via the URL or updated when a user clicks on a link. Routes
-            can also be deep linked to when a user enters the application.
+            Routing allows users to link to pages and navigate to and from pages
+            within an application.
           </Paragraph>
           <Paragraph last>
-            To do this a context provides the window's location pathname also
-            listening to the popstate event to update when a user navigates back
-            and forth using the browser controls.
+            To do this a context provides the window's location pathname and
+            also listens to the popstate event to update the pathname when a
+            user navigates back and forth using the browser controls.
           </Paragraph>
         </Box>
         <Box>
@@ -102,17 +99,27 @@ export function Routing() {
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <FlexContainer breakpoint={834}>
-            <FlexItem>
-              <Styling />
-            </FlexItem>
-            <FlexItem>
-              <Components />
-            </FlexItem>
-            <FlexItem>
-              <Thoughts />
-            </FlexItem>
-          </FlexContainer>
+          <Control
+            style={{
+              0: { display: "flex", flexDirection: "column", gap: 16 },
+              932: { flexDirection: "row" },
+            }}
+          >
+            {[<Styling />, <Components />, <Thoughts />].map((card, index) => (
+              <Control
+                key={`article${index}`}
+                style={{
+                  932: {
+                    flexBasis: "auto",
+                    flexGrow: 1,
+                    flexShrink: 1,
+                  },
+                }}
+              >
+                {card}
+              </Control>
+            ))}
+          </Control>
         </Box>
       </Container>
     </Page>

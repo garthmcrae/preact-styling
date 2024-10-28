@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
-import { atMediaMinWidth } from "../utilities/atMediaMinWidth";
-import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
+import { useAtMediaMinWidth } from "../hooks/useAtMediaMinWidth";
 import { breakpoint as defaultBreakpoint } from "../styles";
 
 export const FlexContainer = ({
@@ -10,21 +9,17 @@ export const FlexContainer = ({
   breakpoint?: number;
   children: ReactNode;
 }) => {
-  const innerWidth = useWindowInnerWidth();
-  const flexContainer = atMediaMinWidth(
-    {
-      0: {
-        display: "flex",
-        flexDirection: "column",
-        gap: 16,
-        alignItems: "stretch",
-      },
-      [breakpoint]: {
-        flexDirection: "row",
-      },
+  const flexContainer = useAtMediaMinWidth({
+    0: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 16,
+      alignItems: "stretch",
     },
-    innerWidth
-  );
+    [breakpoint]: {
+      flexDirection: "row",
+    },
+  });
 
   return <div style={flexContainer}>{children}</div>;
 };

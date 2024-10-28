@@ -5,11 +5,10 @@ import { Root } from "../cards/Root";
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
-import { FlexContainer } from "../components/FlexContainer";
-import { FlexItem } from "../components/FlexItem";
+import { Control } from "../components/Control";
 import { Heading } from "../components/Heading";
 import { Label } from "../components/Label";
-import { Octohedron } from "../graphics/Octohedron";
+import { Octohedron } from "../objects/Octohedron";
 import { Page } from "../components/Page";
 import { PageBanner } from "../components/PageBanner";
 import { PageHeading } from "../components/PageHeading";
@@ -41,11 +40,11 @@ export function Styling() {
           <Paragraph first>
             The style property has limitations, including media queries, access
             to pseudo classes, and targeting pseudo or descendant elements.
-            However, when working in TSX, we can apply styles to any required
-            nodes, making descendant elements less of an issue. Pseudo classes
-            are generally handled by browser defaults, and modifying or removing
-            them can negatively impact accessibility. Our focus then remains on
-            solving responsive behaviour.
+            However, when working in (J/T)SX, we can apply styles to any nodes
+            as needed making the selection of descendant elements less of an
+            issue. Pseudo classes are generally handled by browser defaults, and
+            modifying or removing them can negatively impact accessibility. Our
+            focus then remains on solving responsive behaviour.
           </Paragraph>
           <Paragraph>
             Also worth noting that the objective isn't to completely remove the
@@ -148,17 +147,27 @@ const styles: CSSProperties = {
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <FlexContainer breakpoint={834}>
-            <FlexItem>
-              <Components />
-            </FlexItem>
-            <FlexItem>
-              <Thoughts />
-            </FlexItem>
-            <FlexItem>
-              <Root />
-            </FlexItem>
-          </FlexContainer>
+          <Control
+            style={{
+              0: { display: "flex", flexDirection: "column", gap: 16 },
+              932: { flexDirection: "row" },
+            }}
+          >
+            {[<Components />, <Thoughts />, <Root />].map((card, index) => (
+              <Control
+                key={`article${index}`}
+                style={{
+                  932: {
+                    flexBasis: "auto",
+                    flexGrow: 1,
+                    flexShrink: 1,
+                  },
+                }}
+              >
+                {card}
+              </Control>
+            ))}
+          </Control>
         </Box>
       </Container>
     </Page>
