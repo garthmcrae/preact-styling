@@ -1,12 +1,14 @@
 import { ReactNode } from "react";
+
+import { Cards } from "../cards/Cards";
 import { Components } from "../cards/Components";
 import { Routing } from "../cards/Routing";
 import { Styling } from "../cards/Styling";
+
 import { Alert } from "../components/Alert";
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
-import { Control } from "../components/Control";
 import { Heading } from "../components/Heading";
 import { Label } from "../components/Label";
 import { Page } from "../components/Page";
@@ -16,12 +18,15 @@ import { Paragraph } from "../components/Paragraph";
 import { Cube } from "../objects/Cube";
 
 import packageRaw from "../../package.json?raw";
+import useGithubStars from "../hooks/useGithubStars";
 
 const Strike = ({ children }: { children: ReactNode }) => (
   <span style={{ textDecoration: "line-through" }}>{children}</span>
 );
 
 export function Root() {
+  const stars = useGithubStars("garthmcrae/preact-styling");
+  console.log(stars);
   return (
     <Page>
       <Container>
@@ -102,27 +107,7 @@ import packageRaw from "../../package.json?raw";
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <Control
-            style={{
-              0: { display: "flex", flexDirection: "column", gap: 16 },
-              932: { flexDirection: "row" },
-            }}
-          >
-            {[<Routing />, <Styling />, <Components />].map((card, index) => (
-              <Control
-                key={`article${index}`}
-                style={{
-                  932: {
-                    flexBasis: "auto",
-                    flexGrow: 1,
-                    flexShrink: 1,
-                  },
-                }}
-              >
-                {card}
-              </Control>
-            ))}
-          </Control>
+          <Cards>{[<Routing />, <Styling />, <Components />]}</Cards>
         </Box>
       </Container>
     </Page>

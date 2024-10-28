@@ -1,11 +1,11 @@
 import { CSSProperties, ReactNode } from "react";
-import { Button } from "./Button";
-import { Icon, down } from "./Icon";
+import { Button } from "../components/Button";
+import { Icon, down } from "../components/Icon";
 
 const container: CSSProperties = {
   display: "flex",
   flexDirection: "column",
-  height: "calc(100vh - 120px)",
+  height: "calc(100vh - 224px)",
   minHeight: 408,
 };
 const content: CSSProperties = {
@@ -14,8 +14,6 @@ const content: CSSProperties = {
   flexGrow: 1,
   flexDirection: "column",
   justifyContent: "center",
-  height: "calc(100vh - 120px)",
-  minHeight: 408,
 };
 const indicator: CSSProperties = {
   flexGrow: 0,

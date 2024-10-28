@@ -8,7 +8,6 @@ export const Pyramid = () => {
         const size = `${
           position < 0 ? 50 - Math.abs(position) : 50 + position
         }%`;
-        console.log(position, size);
         return (
           <ObjectSlice
             key={position}

@@ -1,10 +1,11 @@
+import { Cards } from "../cards/Cards";
 import { Components } from "../cards/Components";
 import { Thoughts } from "../cards/Thoughts";
 import { Styling } from "../cards/Styling";
+
 import { Box } from "../components/Box";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
-import { Control } from "../components/Control";
 import { Heading } from "../components/Heading";
 import { Hyperboloid } from "../objects/Hyperboloid";
 import { Label } from "../components/Label";
@@ -99,27 +100,7 @@ export function Routing() {
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <Control
-            style={{
-              0: { display: "flex", flexDirection: "column", gap: 16 },
-              932: { flexDirection: "row" },
-            }}
-          >
-            {[<Styling />, <Components />, <Thoughts />].map((card, index) => (
-              <Control
-                key={`article${index}`}
-                style={{
-                  932: {
-                    flexBasis: "auto",
-                    flexGrow: 1,
-                    flexShrink: 1,
-                  },
-                }}
-              >
-                {card}
-              </Control>
-            ))}
-          </Control>
+          <Cards>{[<Styling />, <Components />, <Thoughts />]}</Cards>
         </Box>
       </Container>
     </Page>

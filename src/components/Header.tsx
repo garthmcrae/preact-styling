@@ -1,8 +1,8 @@
 import { CSSProperties } from "react";
-import { Container } from "./Container";
-import { Drawer } from "./Drawer";
-import { Label } from "./Label";
-import { Link } from "./Link";
+import { Container } from "../components/Container";
+import { Drawer } from "../components/Drawer";
+import { Label } from "../components/Label";
+import { Link } from "../components/Link";
 import { useGoToPathname } from "../hooks/useGoToPathname";
 import { fadeInUp } from "../styles";
 

@@ -1,3 +1,4 @@
+import { Cards } from "../cards/Cards";
 import { Root } from "../cards/Root";
 import { Routing } from "../cards/Routing";
 import { Styling } from "../cards/Styling";
@@ -6,7 +7,6 @@ import { Box } from "../components/Box";
 import { Card } from "../components/Card";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
-import { Control } from "../components/Control";
 import { FlexContainer } from "../components/FlexContainer";
 import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
@@ -143,27 +143,7 @@ export function Thoughts() {
           <Heading>Articles</Heading>
         </Box>
         <Box>
-          <Control
-            style={{
-              0: { display: "flex", flexDirection: "column", gap: 16 },
-              932: { flexDirection: "row" },
-            }}
-          >
-            {[<Root />, <Routing />, <Styling />].map((card, index) => (
-              <Control
-                key={`article${index}`}
-                style={{
-                  932: {
-                    flexBasis: "auto",
-                    flexGrow: 1,
-                    flexShrink: 1,
-                  },
-                }}
-              >
-                {card}
-              </Control>
-            ))}
-          </Control>
+          <Cards>{[<Root />, <Routing />, <Styling />]}</Cards>
         </Box>
       </Container>
     </Page>
