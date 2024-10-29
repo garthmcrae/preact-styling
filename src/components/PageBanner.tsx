@@ -5,7 +5,7 @@ import { Icon, down } from "../components/Icon";
 const container: CSSProperties = {
   display: "flex",
   flexDirection: "column",
-  height: "calc(100vh - 224px)",
+  height: "calc(100vh - 208px)",
   minHeight: 408,
 };
 const content: CSSProperties = {
