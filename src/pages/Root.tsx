@@ -25,8 +25,7 @@ const Strike = ({ children }: { children: ReactNode }) => (
 );
 
 export function Root() {
-  const stars = useGithubStars("garthmcrae/preact-styling");
-  console.log(stars);
+  const { stars } = useGithubStars("garthmcrae/preact-styling");
   return (
     <Page>
       <Container>
@@ -42,6 +41,11 @@ export function Root() {
           <Heading>Hello world</Heading>
         </Box>
         <Box>
+          <Paragraph first last>
+            Github stars: {stars}
+          </Paragraph>
+        </Box>
+        <Box>
           <Paragraph first>
             This project explores building a responsive React application
             without adding any <Strike>CSS in JS</Strike> packages.
@@ -52,14 +56,16 @@ export function Root() {
             viable solution for you.
           </Paragraph>
         </Box>
-        <Alert>
-          <Box>
-            <Label element="h2">Warning</Label>
-            <Paragraph first last>
-              This project is a work in progress.
-            </Paragraph>
-          </Box>
-        </Alert>
+        <Box>
+          <Alert>
+            <Box>
+              <Label element="h2">Warning</Label>
+              <Paragraph first last>
+                This project is a work in progress.
+              </Paragraph>
+            </Box>
+          </Alert>
+        </Box>
         <Box>
           <Paragraph first>
             For build we are using Vite the "next generation frontend tooling".

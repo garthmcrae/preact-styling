@@ -5,6 +5,7 @@ import { Routing } from "../cards/Routing";
 
 import { Alert } from "../components/Alert";
 import { Box } from "../components/Box";
+import { Button } from "../components/Button";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
 import { Heading } from "../components/Heading";
@@ -14,12 +15,12 @@ import { Page } from "../components/Page";
 import { PageBanner } from "../components/PageBanner";
 import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
-import { Picture } from "../components/Picture";
+import { Image } from "../components/Image";
 import { Void } from "../objects/Void";
 
 import focusTrapRaw from "../components/FocusTrap.tsx?raw";
 import modalRaw from "../components/Modal.tsx?raw";
-import pictureRaw from "../components/Picture.tsx?raw";
+import imageRaw from "../components/Image.tsx?raw";
 import hyperboloidRaw from "../objects/Hyperboloid.tsx?raw";
 
 export function Components() {
@@ -44,19 +45,33 @@ export function Components() {
           </Paragraph>
         </Box>
         <Box>
-          <Label>Accordion</Label>
-          <Paragraph>...</Paragraph>
-        </Box>
-        <Box>
-          <Label>Alerts</Label>
-          <Paragraph>...</Paragraph>
+          <Label>Alert</Label>
+          <Alert>
+            <Box>
+              <Label element="h3">Alert</Label>
+              <Paragraph first last>
+                This is an alert.
+              </Paragraph>
+            </Box>
+          </Alert>
         </Box>
         <Box>
           <Label>Alert dismissable</Label>
-          <Paragraph>...</Paragraph>
+          <Alert dismissable>
+            <Box>
+              <Label element="h3">Alert</Label>
+              <Paragraph first last>
+                This is a dismissable alert.
+              </Paragraph>
+            </Box>
+          </Alert>
         </Box>
         <Box>
           <Label>Button</Label>
+          <Button>Click me</Button>
+        </Box>
+        <Box>
+          <Label>Control</Label>
           <Paragraph>...</Paragraph>
         </Box>
         <Box>
@@ -158,12 +173,12 @@ export function Components() {
           <Paragraph>This text is the Paragraph component.</Paragraph>
         </Box>
         <Box>
-          <Label>Picture.tsx</Label>
-          <Code>{pictureRaw}</Code>
+          <Label>Image.tsx</Label>
+          <Code>{imageRaw}</Code>
         </Box>
         <Box>
           <Label>1+ MB image</Label>
-          <Picture
+          <Image
             url={
               "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=3011&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }

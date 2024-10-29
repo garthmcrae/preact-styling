@@ -4,20 +4,15 @@ import { Routing } from "../cards/Routing";
 import { Styling } from "../cards/Styling";
 
 import { Box } from "../components/Box";
-import { Card } from "../components/Card";
 import { Code } from "../components/Code";
 import { Container } from "../components/Container";
-import { FlexContainer } from "../components/FlexContainer";
-import { FlexItem } from "../components/FlexItem";
 import { Heading } from "../components/Heading";
-import { Label } from "../components/Label";
 import { Page } from "../components/Page";
 import { PageBanner } from "../components/PageBanner";
 import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 
 import { Plane } from "../objects/Plane";
-import { Pyramid } from "../objects/Pyramid";
 
 import buildRaw from "../build.txt?raw";
 
@@ -36,14 +31,7 @@ export function Thoughts() {
         <Box>
           <Heading>Reactions</Heading>
         </Box>
-        <Box>
-          <Paragraph first last>
-            Worth noting this came together really quickly. I think it's because
-            I never had to switch gears between the TS(X) and CSS you just write
-            components.
-          </Paragraph>
-        </Box>
-        <Box>
+        {/* <Box>
           <FlexContainer breakpoint={834}>
             <FlexItem>
               <Card href="https://preactjs.com" target="_blank">
@@ -79,8 +67,8 @@ export function Thoughts() {
               </Card>
             </FlexItem>
           </FlexContainer>
-        </Box>
-        <Box>
+        </Box> */}
+        {/* <Box>
           <FlexContainer breakpoint={834}>
             <FlexItem>
               <Card
@@ -125,9 +113,14 @@ export function Thoughts() {
               </Card>
             </FlexItem>
           </FlexContainer>
-        </Box>
+        </Box> */}
         <Box>
-          <Paragraph first last>
+          <Paragraph first>
+            Worth noting this came together really quickly. I think it's because
+            I never had to switch gears between the TS(X) and CSS you just write
+            components.
+          </Paragraph>
+          <Paragraph last>
             I'm running the following to write the build output to a file so we
             can see what size the final built files are. As you can see it's
             **** all.

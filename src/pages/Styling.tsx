@@ -38,14 +38,11 @@ export function Styling() {
         </Box>
         <Box>
           <Paragraph first>
-            The style property has limitations, including media queries, access
-            to pseudo classes, and targeting pseudo or descendant elements.
-            However, when working in (J/T)SX, we can apply styles to any
-            elements as needed making the selection of descendant elements less
-            of an issue. Pseudo classes are generally handled by browser
-            defaults, and modifying or removing them can negatively impact
-            accessibility. Our focus then remains on solving responsive
-            behaviour.
+            The style property has limitations, including media queries and
+            targeting pseudo or descendant elements. However, in (J/T)SX, we can
+            apply styles to any elements directly, making the selection of
+            descendant elements less of an issue. Our main focus remains on
+            achieving responsive behavior.
           </Paragraph>
           <Paragraph>
             Also worth noting that the objective isn't to completely remove the

@@ -1,25 +1,26 @@
 import { useState, useEffect, CSSProperties } from "react";
+import { HTMLImageConstructor } from "../utilities/HTMLImageConstructor";
 
-export const Picture = ({ url }: { url: string }) => {
+export const Image = ({ url }: { url: string }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   useEffect(() => {
-    const image = new Image();
-    image.src = url;
+    const HTMLImage = new HTMLImageConstructor();
+    HTMLImage.src = url;
 
-    image.onload = () => {
+    HTMLImage.onload = () => {
       setImageLoaded(true);
     };
 
-    image.onerror = () => {
+    HTMLImage.onerror = () => {
       console.error("Error loading image");
     };
 
     return () => {
-      image.onload = null;
-      image.onerror = null;
+      HTMLImage.onload = null;
+      HTMLImage.onerror = null;
     };
   }, [url]);
-  const picture: CSSProperties = {
+  const image: CSSProperties = {
     aspectRatio: "1 / 1",
     backgroundImage: `url(${url})`,
     backgroundSize: "cover",
@@ -27,5 +28,5 @@ export const Picture = ({ url }: { url: string }) => {
     transition: "opacity 300ms ease-in-out",
     width: "100%",
   };
-  return <div style={picture} />;
+  return <div style={image} />;
 };
