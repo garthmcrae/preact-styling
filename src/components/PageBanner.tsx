@@ -18,7 +18,7 @@ const content: CSSProperties = {
 const indicator: CSSProperties = {
   flexGrow: 0,
   flexShrink: 0,
-  marginBottom: 16 + 60,
+  marginBottom: 16 + 112,
   marginLeft: "auto",
   marginRight: 16,
   marginTop: 16,
