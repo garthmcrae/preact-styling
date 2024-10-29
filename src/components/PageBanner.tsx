@@ -5,7 +5,7 @@ import { Icon, down } from "../components/Icon";
 const container: CSSProperties = {
   display: "flex",
   flexDirection: "column",
-  height: "calc(100vh - 208px)",
+  height: "calc(100vh - 120px)",
   minHeight: 408,
 };
 const content: CSSProperties = {
@@ -18,7 +18,7 @@ const content: CSSProperties = {
 const indicator: CSSProperties = {
   flexGrow: 0,
   flexShrink: 0,
-  marginBottom: 16,
+  marginBottom: 16 + 60,
   marginLeft: "auto",
   marginRight: 16,
   marginTop: 16,
