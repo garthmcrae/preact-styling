@@ -79,6 +79,27 @@ export function Components() {
           <Paragraph>...</Paragraph>
         </Box>
         <Box>
+          <Label>Images</Label>
+          <Paragraph first last>
+            Not in the bundle. Not blocking. Worth a thought but not more as it
+            is a seperate topic — just be considerate as there is no point in
+            optimising your code if you are just going to dump huge assets about
+            the place.
+          </Paragraph>
+        </Box>
+        <Box>
+          <Label>Image.tsx</Label>
+          <Code>{imageRaw}</Code>
+        </Box>
+        <Box>
+          <Label>1+ MB image</Label>
+          <Image
+            url={
+              "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=3011&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+          />
+        </Box>
+        <Box>
           <Label>Label</Label>
           <Paragraph>
             The label above this text is the Label component.
@@ -90,20 +111,20 @@ export function Components() {
         </Box>
         <Box>
           <Label>Modals</Label>
-          <Paragraph>How appropriate to document a modal in a modal.</Paragraph>
-        </Box>
-        <Box>
           <Modal name="the modal">
             <Box>
               <Heading>Thoughts on modals</Heading>
             </Box>
             <Box>
-              <Paragraph first last>
+              <Paragraph first>
+                How appropriate to document a modal in a modal.
+              </Paragraph>
+              <Paragraph last>
                 I've always heard modals are complex and have a lot of
                 consdierations to cater for accessibility. This is true and I've
                 always reached for libraries. That being said it has also
                 prevented me from ever interacting with React's portals and ever
-                reviewing and implementing focus traps myself (GPT-4).
+                reviewing and implementing focus traps myself.
               </Paragraph>
             </Box>
             <Box>
@@ -160,29 +181,8 @@ export function Components() {
           </Modal>
         </Box>
         <Box>
-          <Label>Pictures</Label>
-          <Paragraph first last>
-            Not in the bundle. Not blocking. Worth a thought but not more as it
-            is a seperate topic — just be considerate as there is no point in
-            optimising your code if you are just going to dump huge assets about
-            the place.
-          </Paragraph>
-        </Box>
-        <Box>
           <Label>Paragraph</Label>
           <Paragraph>This text is the Paragraph component.</Paragraph>
-        </Box>
-        <Box>
-          <Label>Image.tsx</Label>
-          <Code>{imageRaw}</Code>
-        </Box>
-        <Box>
-          <Label>1+ MB image</Label>
-          <Image
-            url={
-              "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=3011&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            }
-          />
         </Box>
         <Box>
           <Label>Graphics</Label>

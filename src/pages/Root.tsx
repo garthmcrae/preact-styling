@@ -25,7 +25,7 @@ const Strike = ({ children }: { children: ReactNode }) => (
 );
 
 export function Root() {
-  const { stars } = useGithubStars("garthmcrae/preact-styling");
+  const { stars } = useGithubStars("garthmcrae/reactno");
   return (
     <Page>
       <Container>
@@ -47,13 +47,13 @@ export function Root() {
         </Box>
         <Box>
           <Paragraph first>
-            This project explores building a responsive React application
-            without adding any <Strike>CSS in JS</Strike> packages.
+            React No explores building a responsive React application without
+            adding any <Strike>CSS in JS</Strike> packages.
           </Paragraph>
           <Paragraph last>
             If you need to build a lightweight and performant web application or
             web site and you are familiar with React this approach may be a
-            viable solution for you.
+            viable solution for you. React No, **** **.
           </Paragraph>
         </Box>
         <Box>
@@ -61,7 +61,8 @@ export function Root() {
             <Box>
               <Label element="h2">Warning</Label>
               <Paragraph first last>
-                This project is a work in progress.
+                React No is a work in progress and open to feedback. Please
+                checkout Github for the code.
               </Paragraph>
             </Box>
           </Alert>
@@ -98,12 +99,11 @@ import packageRaw from "../../package.json?raw";
         </Box>
         <Box>
           <Paragraph first>
-            Bit of a give away here in the project name — this is a Preact
-            project not a React project. Preact is a "fast 3kB alternative to
-            React with the same modern API". For an additional ~2kB you can
-            include a React compatibility layer which means at surface level
-            components look identical and can be copied and used in either React
-            or Preact projects.
+            React? No — this is a Preact project not a React project. Preact is
+            a "fast 3kB alternative to React with the same modern API". For an
+            additional ~2kB you can include a React compatibility layer which
+            means at surface level components look identical and can be copied
+            and used in either React or Preact projects.
           </Paragraph>
           <Paragraph last>
             Last but not least this project also uses TypeScript.
