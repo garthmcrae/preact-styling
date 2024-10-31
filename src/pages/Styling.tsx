@@ -15,7 +15,6 @@ import { PageHeading } from "../components/PageHeading";
 import { Paragraph } from "../components/Paragraph";
 
 import atMediaMinWidthRaw from "../utilities/atMediaMinWidth.ts?raw";
-import flexContainerRaw from "../components/FlexContainer.tsx?raw";
 import headingRaw from "../components/Heading.tsx?raw";
 import windowInnerWidthContextRaw from "../contexts/WindowInnerWidthContext.tsx?raw";
 import useAtMediaMinWidthRaw from "../hooks/useAtMediaMinWidth.ts?raw";
@@ -99,18 +98,12 @@ export function Styling() {
           <Code>{headingRaw}</Code>
         </Box>
         <Box>
-          <Paragraph first last>
+          <Paragraph first>
             Breakpoints can also be exposed as a property so you can pass in the
             minimum width you want a component to respond on a case by case
             basis.
           </Paragraph>
-        </Box>
-        <Box>
-          <Label>FlexContainer.tsx</Label>
-          <Code>{flexContainerRaw}</Code>
-        </Box>
-        <Box>
-          <Paragraph first last>
+          <Paragraph last>
             When authoring styles, avoid nesting properties within a single
             object. While it might seem convenient to name object properties
             freely, keep in mind that the resulting bundle will only minify the

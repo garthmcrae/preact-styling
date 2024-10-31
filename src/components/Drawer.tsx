@@ -2,6 +2,7 @@ import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
 import { Icon, lunch } from "./Icon";
 import { useOnClickOutside } from "../hooks/useClickOutside";
 import { border } from "../styles";
+import { useWindowInnerWidth } from "../hooks/useWindowInnerWidth";
 
 const container: CSSProperties = {
   position: "relative",
@@ -12,7 +13,6 @@ const control: CSSProperties = {
   ...border,
   color: "inherit",
   cursor: "pointer",
-  display: "block",
   paddingBottom: 14,
   paddingLeft: 14,
   paddingRight: 14,
@@ -24,9 +24,9 @@ const control: CSSProperties = {
 const drawer: CSSProperties = {
   backgroundColor: "var(--background-color)",
   ...border,
-  left: 56 + 16,
   padding: 14,
   position: "absolute",
+  right: -1 * (256 + 16),
   top: -4,
   transition: "background-color 100ms ease-in-out, transform 300ms ease-in-out",
   width: 224,
@@ -34,12 +34,14 @@ const drawer: CSSProperties = {
 };
 
 export const Drawer = ({ children }: { children: ReactNode }) => {
-  const ref = useRef(null);
+  const windowInnerWidth = useWindowInnerWidth();
   const [toggle, setToggle] = useState(false);
-  useOnClickOutside(ref, () => setToggle(false));
   const handleToggle = () => setToggle((prevToggle) => !prevToggle);
+  const ref = useRef(null);
+  useOnClickOutside(ref, () => setToggle(false));
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
+      if (window.innerWidth > 1232) return;
       if (event.code === "Equal") {
         handleToggle();
       }
@@ -57,7 +59,10 @@ export const Drawer = ({ children }: { children: ReactNode }) => {
       <button
         aria-label="Toggle navigation"
         onClick={handleToggle}
-        style={control}
+        style={{
+          ...control,
+          display: windowInnerWidth <= 1232 ? "block" : "none",
+        }}
       >
         <Icon
           d={lunch}

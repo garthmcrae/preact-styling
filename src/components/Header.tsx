@@ -91,6 +91,16 @@ export const Header = () => {
                       </Link>
                     </li>
                   ))}
+                  <li
+                    style={{
+                      ...fadeInUp,
+                      animationDelay: `${5 * 100}ms`,
+                    }}
+                  >
+                    <Link href="https://github.com/garthmcrae/reactno">
+                      github.com
+                    </Link>
+                  </li>
                 </ul>
               </Drawer>
             </div>
